@@ -28,14 +28,17 @@ public class UiScript : MonoBehaviour {
     {
         ManagerScript.Instance.Restart();
     }
-    
 
-
+    //used for the google login button
+    public void SignIn()
+    {
+        PlayGamesScript.SignIn();
+    }
     public void Increment()
     {
         PlayGamesScript.IncrementAchievement(GPGSIds.achievement_touch_screen, 5);
     }
-
+    //this just unlocks the achievement for now
     public void Unlock()
     {
         PlayGamesScript.UnlockAchievement(GPGSIds.achievement_touch_screen);

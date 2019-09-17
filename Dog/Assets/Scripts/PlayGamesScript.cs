@@ -15,8 +15,9 @@ public class PlayGamesScript : MonoBehaviour {
 
         SignIn();
     }
+    //public static void SignIn() makes other C# files use this
 
-    void SignIn()
+    public static void SignIn()
     {
         Social.localUser.Authenticate(success => { });
     }
