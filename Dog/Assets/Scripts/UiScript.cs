@@ -58,4 +58,6 @@ public class UiScript : MonoBehaviour {
     {
         PointsTxt.text = ManagerScript.Counter.ToString();
     }
+
+
 }

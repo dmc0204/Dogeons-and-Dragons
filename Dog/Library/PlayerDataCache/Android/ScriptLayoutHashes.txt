@@ -1,10 +1,11 @@
 Android
 PlayerPath?
-C:/Users/Pengu/Desktop/DogeonsTitle2.apk
+C:/Users/Pengu/Desktop/DogeonsAndDragonsV1.apk
 SceneListBegin?
 Assets/Scenes/TitleScreen.unity
 Assets/Scenes/Level Select.unity
 Assets/Scenes/Level1.unity
+Assets/Scenes/CreditsScreen.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -178,3 +179,4 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayGamesScript
 11149ddfd6dec48125eca4058f3c0ae8 Assembly-CSharp.dll:.PlayerController
+d3bd1e85cbc65826cd74cc5041e8ff7a Assembly-CSharp.dll:.Credits
