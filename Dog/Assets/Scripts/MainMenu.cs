@@ -39,6 +39,10 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("Inventory");
     }
+    public void LevelsBtn()
+    {
+        SceneManager.LoadScene("Levels");
+    }
 	// Update is called once per frame
 	void Update () {
 		

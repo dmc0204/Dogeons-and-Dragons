@@ -331,8 +331,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2113720449}
-        m_MethodName: LoadMenu
+      - m_Target: {fileID: 2113720451}
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -583,7 +583,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.6009254
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -931,7 +931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1999614299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -949,8 +949,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.6416667, y: 0.5}
-  m_AnchoredPosition: {x: 183.57, y: 379.42}
-  m_SizeDelta: {x: -23.14, y: 41.05}
+  m_AnchoredPosition: {x: 186.17, y: 381.15}
+  m_SizeDelta: {x: -28.35, y: 37.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999614300
 MonoBehaviour:
@@ -994,7 +994,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1999614301}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2113720451}
+        m_MethodName: PauseScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1999614301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,7 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.454902, g: 0.454902, b: 0.454902, a: 0}
+  m_Color: {r: 0.6698113, g: 0.091625154, b: 0.091625154, a: 0.7490196}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1044,7 +1055,7 @@ GameObject:
   - component: {fileID: 2113720446}
   - component: {fileID: 2113720445}
   - component: {fileID: 2113720450}
-  - component: {fileID: 2113720449}
+  - component: {fileID: 2113720451}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: MainCamera
@@ -1133,19 +1144,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2113720449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113720444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f7b334e719a4f4cb491cb07dd5b5c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1142329319}
 --- !u!114 &2113720450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,3 +1156,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d169bc86b010c43894a232c5ca7a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2113720451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113720444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874f0f7659f29c342b79b5df840c3332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseMenu: {fileID: 1142329319}
+  PauseButton: {fileID: 1999614298}
