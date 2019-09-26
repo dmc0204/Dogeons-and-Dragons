@@ -13,10 +13,10 @@ EditorBuildSettings:
     guid: 97f62d945090f9040b24d9d1b94a69b8
   - enabled: 0
     path: 
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 0a6d3992f0038ec438e08b57c27949cd
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/CreditsScreen.unity
     guid: 83fcf72bead8beb4087d21c5faf2faa7
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inventory.unity
     guid: 48bd82a295c664646935ed4694e4c868
+  - enabled: 1
+    path: Assets/Scenes/Levels.unity
+    guid: 34586264d6587c34b8648b15b96fae42
   m_configObjects: {}
