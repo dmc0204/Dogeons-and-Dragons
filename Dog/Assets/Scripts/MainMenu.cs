@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour {
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level Select");
     }
 
     public void Options()
@@ -43,6 +43,7 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("Levels");
     }
+
 	// Update is called once per frame
 	void Update () {
 		
