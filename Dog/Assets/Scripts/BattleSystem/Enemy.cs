@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    
     private float health = 100;
-
-
+    
+    //below is for enemy to move towards position
+    public Transform target;
+    public float speed;
     void TakeDamage(int damageAmount)
     {
         health = health - damageAmount;
@@ -24,12 +26,24 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //EnemyBody = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //below is for enenmy to move and how fast too
+        float step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, target.position, step);
     }
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.name == "Player")
+        {
+            Debug.Log("Squirrels are infected with colliders!");
+            
+            //Destroy(this.gameObject);
+        }
+    }
+
 }

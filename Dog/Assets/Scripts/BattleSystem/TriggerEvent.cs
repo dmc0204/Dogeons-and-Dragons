@@ -9,8 +9,8 @@ public class TriggerEvent : MonoBehaviour
     {
         if (coll.gameObject.name == "Player")
         {
-            Debug.Log("Squirrels are infected with colliders!");
-            
+            Debug.Log("Squirrels are infected with colliders V2222222222222222222222222222222!");
+            //Destroy(this.gameObject);
         }
     }
 
