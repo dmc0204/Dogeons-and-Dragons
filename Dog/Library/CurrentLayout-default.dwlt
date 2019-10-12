@@ -411,9 +411,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3e350000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2afbffff
+      m_ExpandedIDs: 6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -655,9 +655,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e350000
-    m_LastClickedID: 13630
-    m_ExpandedIDs: 00000000223100008231000086320000de330000b8360000c438000000ca9a3b
+    m_SelectedIDs: f8340000
+    m_LastClickedID: 13560
+    m_ExpandedIDs: 00000000e43000004431000048320000a03300006e3600008838000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -685,7 +685,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002231000082310000de330000b8360000c4380000
+    m_ExpandedIDs: 00000000e430000044310000a03300006e36000088380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -712,8 +712,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000740d0000922e0000ae2e0000ba2f0000882f0000ac0a0000c22e00007e2a0000223400000a38000078380000943a00008a0b0000504700008e0b0000e60a000028340000207ffeff2c340000c83600003c2d0000c22d000092330000ca3300002a3500002e2c0000262b0000e82c0000282b0000222d0000f4290000583000002c2b0000842b0000523400009c320000a02d0000f22b00009e2d0000303b0000183300006a350000f8320000ac330000d83400009c330000bc34000050360000ae32000026310000d23400006055000000000000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000740d0000922e0000ae2e0000ba2f0000882f0000ac0a0000c22e00007e2a0000223400000a38000078380000943a00008a0b0000504700008e0b0000e60a000028340000207ffeff2c340000c83600003c2d0000c22d000092330000ca3300002a3500002e2c0000262b0000e82c0000282b0000222d0000f4290000583000002c2b0000842b0000523400009c320000a02d0000f22b00009e2d0000303b0000183300006a350000f8320000ac330000d83400009c330000bc34000050360000ae320000263100006055000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
