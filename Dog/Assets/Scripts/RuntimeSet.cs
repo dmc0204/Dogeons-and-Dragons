@@ -12,3 +12,4 @@ public abstract class RuntimeSet<T> : ScriptableObject
         if (Things.Contains(t)) Things.Remove(t);
     }
 }
+
