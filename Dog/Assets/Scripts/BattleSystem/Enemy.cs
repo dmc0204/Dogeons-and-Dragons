@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     
     private float health = 100;
-    
+    public Animator hitsquirrel;
     //below is for enemy to move towards position
     public Transform target;
     public float speed;
@@ -26,7 +26,9 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         //EnemyBody = this.GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -40,9 +42,10 @@ public class Enemy : MonoBehaviour
     {
         if (coll.gameObject.name == "Player")
         {
-            Debug.Log("Squirrels are infected with colliders!");
-            
-            //Destroy(this.gameObject);
+            //Debug.Log("Squirrels are infected with colliders!");
+            speed = 0;
+            hitsquirrel.SetTrigger("SquirrelDeath");
+
         }
     }
 
