@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1904
     height: 981
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4e550000
-      m_LastClickedID: 21838
-      m_ExpandedIDs: 42a2ffff64a2ffff5edfffffd6f3ffff96f5ffffd4f7ffffdef7ffff04f8ffff503b000062410000c04100004c46000060460000aa460000f85400004e55000062550000ac550000
+      m_SelectedIDs: 7e290000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -110.79049, y: 355.90323, z: -1097.8928}
     speed: 2
-    m_Value: {x: -84.95143, y: 350.9116, z: -1092.5858}
+    m_Value: {x: -110.79049, y: 355.90323, z: -1097.8928}
   m_RenderMode: 2
   m_CameraMode:
     drawMode: 2
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 1232.6736
     speed: 2
-    m_Value: 1179.5919
+    m_Value: 1232.6736
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -682,20 +682,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Pictures/Background Design
+    - Assets/Scripts/BattleSystem
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Pictures/Background Design
+  - Assets/Scripts/BattleSystem
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\mjonas\Desktop\Capstone\Dogeons-and-Dragons\Dog
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 207}
-    m_SelectedIDs: ee370000
-    m_LastClickedID: 14318
-    m_ExpandedIDs: 0000000048330000aa330000da3400007c36000060380000a2390000c03b000000ca9a3b
+    scrollPos: {x: 0, y: 159}
+    m_SelectedIDs: e8370000
+    m_LastClickedID: 14312
+    m_ExpandedIDs: 000000009e3100000032000034330000de340000cc3600001e380000d23a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -723,7 +723,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000048330000aa3300007c360000a2390000c03b0000
+    m_ExpandedIDs: 000000009e31000000320000de3400001e380000d23a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1272,5 +1272,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 10622
   m_LastVerticalScrollValue: 0
