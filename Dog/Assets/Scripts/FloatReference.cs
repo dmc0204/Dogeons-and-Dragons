@@ -11,3 +11,4 @@ public class FloatReference
 
     public float Value;
 }
+
