@@ -10,3 +10,6 @@ Many pictures are being made in pixel form at the moment and will be beautiful w
 9/20/19
 
 Pause menus are done! Scenes and scripts are being planned out on how they should be done as schedule goes on.
+
+10/12/2019
+A Button and Sp Button work. Battle system is getting a good start. 

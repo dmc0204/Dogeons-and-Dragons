@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< HEAD
 using UnityEngine.UI;
+=======
+
+>>>>>>> parent of 6cad998... Merge pull request #10 from dmc0204/Marcel-Branch
 public class Enemy : MonoBehaviour
 {
     
     private float health = 100;
+<<<<<<< HEAD
     public Animator hitsquirrel;
+=======
+    
+>>>>>>> parent of 6cad998... Merge pull request #10 from dmc0204/Marcel-Branch
     //below is for enemy to move towards position
     public Transform target;
     public float speed;
@@ -26,9 +34,13 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
        
         //EnemyBody = this.GetComponent<Rigidbody2D>();
         
+=======
+        //EnemyBody = this.GetComponent<Rigidbody2D>();
+>>>>>>> parent of 6cad998... Merge pull request #10 from dmc0204/Marcel-Branch
     }
 
     // Update is called once per frame
@@ -42,10 +54,16 @@ public class Enemy : MonoBehaviour
     {
         if (coll.gameObject.name == "Player")
         {
+<<<<<<< HEAD
             //Debug.Log("Squirrels are infected with colliders!");
             speed = 0;
             hitsquirrel.SetTrigger("SquirrelDeath");
 
+=======
+            Debug.Log("Squirrels are infected with colliders!");
+            
+            //Destroy(this.gameObject);
+>>>>>>> parent of 6cad998... Merge pull request #10 from dmc0204/Marcel-Branch
         }
     }
 
