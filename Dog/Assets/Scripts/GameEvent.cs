@@ -22,4 +22,5 @@ public class GameEvent : ScriptableObject{
     public void DeregisterListener(GameEventListener listener) {
         listeners.Remove(listener);
     }
+
 }
