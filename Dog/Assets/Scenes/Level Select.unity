@@ -130,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 4402545581538100620, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
       propertyPath: m_Name
-      value: TabPanel2
+      value: ContinuePanel
       objectReference: {fileID: 0}
     - target: {fileID: 4402545581538100620, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
@@ -200,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 3644584121717697930, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -427.65002
+      value: -427.64008
       objectReference: {fileID: 0}
     - target: {fileID: 3644584121717697930, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
@@ -499,7 +499,7 @@ PrefabInstance:
     - target: {fileID: 4402545581538100620, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
       propertyPath: m_Name
-      value: TabPanel3
+      value: InventoryPanel
       objectReference: {fileID: 0}
     - target: {fileID: 4402545581538100620, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 1334324761}
   - component: {fileID: 1334324760}
   m_Layer: 0
-  m_Name: 480by800
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1875,7 +1875,7 @@ PrefabInstance:
     - target: {fileID: 4402545581538100620, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
       propertyPath: m_Name
-      value: TabPanel
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 4402545581538100620, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}

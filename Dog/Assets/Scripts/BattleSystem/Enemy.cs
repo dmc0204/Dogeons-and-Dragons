@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
-    
-    private float health = 100;
+
+
+  private float health = 100;
     public Animator hitsquirrel;
     //below is for enemy to move towards position
     public Transform target;
@@ -36,7 +38,9 @@ public class Enemy : MonoBehaviour
     {
         //below is for enenmy to move and how fast too
         float step = speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+        //transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+
+
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -47,6 +51,8 @@ public class Enemy : MonoBehaviour
             hitsquirrel.SetTrigger("SquirrelDeath");
 
         }
+
+
     }
 
 }
