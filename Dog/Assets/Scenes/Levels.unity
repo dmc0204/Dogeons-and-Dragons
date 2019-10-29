@@ -925,7 +925,6 @@ GameObject:
   - component: {fileID: 535726100}
   - component: {fileID: 535726103}
   - component: {fileID: 535726099}
-  - component: {fileID: 535726102}
   m_Layer: 5
   m_Name: SpBtn
   m_TagString: Untagged
@@ -1031,25 +1030,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535726097}
   m_CullTransparentMesh: 0
---- !u!95 &535726102
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535726097}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b58fb12628d8ccc4a874a3b887ae86d6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &535726103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1396,33 +1376,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853836814}
   m_CullTransparentMesh: 0
---- !u!1 &1028984571 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2106447775334054599, guid: d0fcd50348e3da24b833249b686504ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 1533817186}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1028984572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028984571}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 804061191841c8943832f666bf4791c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitsquirrel: {fileID: 1028984573}
-  target: {fileID: 1041041242}
-  speed: 0
---- !u!95 &1028984573 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2106447775334054598, guid: d0fcd50348e3da24b833249b686504ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 1533817186}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1041041242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 232058773358069768, guid: 166236e746ef628409ddde48c28c6cff,
@@ -2100,8 +2053,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1348563657}
   - component: {fileID: 1348563658}
+  - component: {fileID: 1348563659}
   m_Layer: 0
-  m_Name: forest background
+  m_Name: background
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2159,7 +2113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 08db75587297da24396de76d486db47b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2167,9 +2121,23 @@ SpriteRenderer:
   m_Size: {x: 4.8, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1348563659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348563656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c4ba8ca11e9774ca079b2e98dd90eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundSpriteRenderer: {fileID: 0}
+  level: {fileID: 11400000, guid: 52c6da3b1578b76479a5614454a068fd, type: 2}
 --- !u!1001 &1533817186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2180,7 +2148,7 @@ PrefabInstance:
     - target: {fileID: 2106447775334054599, guid: d0fcd50348e3da24b833249b686504ca,
         type: 3}
       propertyPath: m_Name
-      value: Slime
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2106447775334054599, guid: d0fcd50348e3da24b833249b686504ca,
         type: 3}
@@ -2191,6 +2159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106447775334054598, guid: d0fcd50348e3da24b833249b686504ca,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2106447775334054597, guid: d0fcd50348e3da24b833249b686504ca,
         type: 3}
@@ -2317,6 +2290,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7658623337110103030, guid: d0fcd50348e3da24b833249b686504ca,
+        type: 3}
+      propertyPath: enemyAnimator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658623337110103030, guid: d0fcd50348e3da24b833249b686504ca,
+        type: 3}
+      propertyPath: myCoolVariable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658623337110103030, guid: d0fcd50348e3da24b833249b686504ca,
+        type: 3}
+      propertyPath: myCoolLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: 52c6da3b1578b76479a5614454a068fd,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fcd50348e3da24b833249b686504ca, type: 3}
 --- !u!1 &1622543750

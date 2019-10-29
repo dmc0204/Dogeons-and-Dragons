@@ -19,6 +19,12 @@ public class EnemyContainer : MonoBehaviour
 
     public Slider healthbar;
 
+    public SpriteRenderer enemyBodySpriteRenderer;
+
+    public SpriteRenderer enemyArmSpriteRenderer;
+
+    public Animator enemyAnimator;
+
     float calcHealth()
     {
         return currentHP / myCoolVariable.MaxHealth;
@@ -41,6 +47,10 @@ public class EnemyContainer : MonoBehaviour
         currentAttack = myCoolVariable.BaseAttack;
         currentDefense = myCoolVariable.BaseDefense;
         currentSpeed = myCoolVariable.BaseSpeed;
+        enemyArmSpriteRenderer.sprite = myCoolVariable.arm;
+        enemyBodySpriteRenderer.sprite = myCoolVariable.body;
+        enemyAnimator = GetComponent<Animator>();
+        enemyAnimator.runtimeAnimatorController = myCoolVariable.animator;
         healthbar.value = calcHealth();
     }
 

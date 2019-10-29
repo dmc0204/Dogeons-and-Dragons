@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 368543389579951487, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_Size: {x: 0.41, y: 1.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2106447775206978374
@@ -149,8 +149,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -458641133534639524, guid: 5f4931c70e897e74ba1decd3729c53f6,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,7 +157,7 @@ SpriteRenderer:
   m_Size: {x: 0.6, y: 0.57}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2106447775334054599
@@ -171,6 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106447775334054597}
   - component: {fileID: 2106447775334054598}
+  - component: {fileID: 7658623337110103030}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -213,3 +213,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7658623337110103030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106447775334054599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ee15087a3867d45a9ce77bfe630031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCoolLevel: {fileID: 0}
+  myCoolVariable: {fileID: 11400000, guid: 7ed5ec31e7bbb7d47910c4a0a07d3718, type: 2}
+  currentHP: 0
+  currentAttack: 0
+  currentDefense: 0
+  currentSpeed: 0
+  healthbar: {fileID: 0}
+  enemyBodySpriteRenderer: {fileID: 2106447775206978372}
+  enemyArmSpriteRenderer: {fileID: 2106447774261935902}
+  enemyBodySprite: {fileID: 0}
+  enemyArmSprite: {fileID: 0}

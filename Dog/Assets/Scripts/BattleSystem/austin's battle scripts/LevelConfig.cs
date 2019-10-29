@@ -6,16 +6,20 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Content/Level Config")]
 public class LevelConfig : ScriptableObject
 {
-    Queue<EnemyStatsConfig> enemiesHere;
+    public static EnemyStatsConfig[] enemies;
+
+    //public var enemiesHere = new Queue(enemies);
 
     //List<DogContainer> yourTeam;
 
-    Image background;
+    public Sprite background;
 
-    float damageTaken, damageDealt;
+    public float damageTaken, damageDealt;
     //funcs to track these, get passed numbers
 
-    bool dogDied;
+    public bool dogDied;
+
+
 
     //TODO: queue functions that are accessible
     public bool isEmpty()
@@ -33,4 +37,11 @@ public class LevelConfig : ScriptableObject
     {
         return enemiesHere.Dequeue();
     }
+
+    public void Start()
+    {
+        var enemiesHere = new Queue(enemies);
+    }
+
+
 }
