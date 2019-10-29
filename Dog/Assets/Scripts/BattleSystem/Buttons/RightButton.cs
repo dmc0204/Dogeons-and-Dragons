@@ -24,11 +24,14 @@ public class RightButton : MonoBehaviour, IPointerClickHandler
             
             if (this.gameObject.name == "ABtn")
             {
-                Debug.Log("ABTN attacks");
+                //Debug.Log("ABTN attacks");
+
+
+
                 
             }else if (this.gameObject.name == "SpBtn")
             {
-                Debug.Log("SPBTN SPECIALIZES");
+                //Debug.Log("SPBTN SPECIALIZES");
                
             }
         }
