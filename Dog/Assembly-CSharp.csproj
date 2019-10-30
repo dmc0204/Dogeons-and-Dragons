@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\bgInitialize.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\Achievement.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\CommonStatusCodes.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\CommonTypes.cs" />
@@ -233,7 +234,13 @@
      <Compile Include="Assets\GPGSIds.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\ABtnHit.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\ABtnTouch.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\austin&apos;s battle scripts\EnemyContainer.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\austin&apos;s battle scripts\enemyHealthBarController.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\austin&apos;s battle scripts\EnemyStatsConfig.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\austin&apos;s battle scripts\LevelConfig.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\austin&apos;s battle scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\BattleHandler.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\Buttons\RightButton.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Enemy.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\SpBtnTouch.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\TriggerEvent.cs" />
