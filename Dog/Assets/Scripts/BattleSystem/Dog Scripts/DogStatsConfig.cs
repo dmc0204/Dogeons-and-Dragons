@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DogStatsConfig : MonoBehaviour
+[CreateAssetMenu(menuName = "Content/Dog Stats Config")]
+public class DogStatsConfig : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Range(1, 50)]
+    public float MaxHealth, BaseAttack, BaseDefense, BaseSpeed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string dogName;
+
+    public Sprite head, body, FLleg, FRleg, BLleg, BRleg;
+
+    public RuntimeAnimatorController animator;
 }

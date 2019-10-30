@@ -11,9 +11,7 @@ public class EnemyStatsConfig : ScriptableObject
 
     public string enemyName;
 
-    public Sprite body;
-
-    public Sprite arm;
+    public Sprite body, arm;
 
     public RuntimeAnimatorController animator;
 
