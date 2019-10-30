@@ -8,7 +8,7 @@ public class LevelConfig : ScriptableObject
 {
     public EnemyStatsConfig[] enemies;
 
-    //List<DogContainer> yourTeam;
+    public DogStatsConfig[] yourTeam;
 
     public Sprite background;
 
@@ -17,7 +17,7 @@ public class LevelConfig : ScriptableObject
 
     private bool dogDied;
 
-    private int count = 0;
+    public int count;
 
     public EnemyStatsConfig getNext()
     {
@@ -25,6 +25,11 @@ public class LevelConfig : ScriptableObject
         toReturn = enemies[count];
         count++;
         return toReturn;
+    }
+
+    public void initializeCount()
+    {
+        count = 0;
     }
 
     public bool isEmpty()

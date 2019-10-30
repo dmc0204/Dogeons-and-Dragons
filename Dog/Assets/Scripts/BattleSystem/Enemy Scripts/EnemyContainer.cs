@@ -73,6 +73,7 @@ public class EnemyContainer : MonoBehaviour
 
     void Start()
     {
+        myCoolLevel.initializeCount();
         spawnEnemy();
     }
 
