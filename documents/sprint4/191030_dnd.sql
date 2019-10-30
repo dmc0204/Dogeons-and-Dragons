@@ -21,7 +21,7 @@ SET @@SESSION.SQL_LOG_BIN= 0;
 -- GTID state at the beginning of the backup 
 --
 
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '17b76ade-e259-11e9-b339-42010a8e0093:1-2677963';
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '17b76ade-e259-11e9-b339-42010a8e0093:1-2725967';
 
 --
 -- Table structure for table `BONES`
@@ -383,6 +383,32 @@ LOCK TABLES `PROGRESS` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `STORIES`
+--
+
+DROP TABLE IF EXISTS `STORIES`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `STORIES` (
+  `STORY_ID` int(42) NOT NULL AUTO_INCREMENT,
+  `TITLE` varchar(255) NOT NULL,
+  `CONTENT` varchar(3000) NOT NULL,
+  `AUTHOR` varchar(42) NOT NULL,
+  `PUB_DATE` date DEFAULT NULL,
+  PRIMARY KEY (`STORY_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `STORIES`
+--
+
+LOCK TABLES `STORIES` WRITE;
+/*!40000 ALTER TABLE `STORIES` DISABLE KEYS */;
+/*!40000 ALTER TABLE `STORIES` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `TUTORIALS`
 --
 
@@ -424,7 +450,7 @@ CREATE TABLE `UNITS` (
   `UNIT_IMAGE` varchar(42) NOT NULL,
   `SPEED` int(42) NOT NULL,
   PRIMARY KEY (`UNIT_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -433,7 +459,7 @@ CREATE TABLE `UNITS` (
 
 LOCK TABLES `UNITS` WRITE;
 /*!40000 ALTER TABLE `UNITS` DISABLE KEYS */;
-INSERT INTO `UNITS` VALUES (1,6,'Doge',4,6,5,'This is a test of insert functionality.','doge.png',5),(10,4,'Pug',5,6,5,'Small but fierce!','pug.png',6),(11,4,'Senor Doge',6,5,5,'test story.','doge_senor.png',5),(12,5,'Robo Doge Test',4,5,4,'This dog is half robot.','doge_robosuit.png',4),(13,2,'Reaper',2,2,3,'test','doge_sewer.png',2),(16,3,'',3,3,3,'This is a test.','doge.png',3),(17,3,'',3,3,3,'test story.','doge.png',3),(18,3,'Test',3,3,3,'test story.','doge.png',3),(19,3,'',1,3,3,'test','doge.png',3),(20,3,'nooo',3,3,3,'test','doge.png',3);
+INSERT INTO `UNITS` VALUES (1,6,'Doge',4,6,5,'This is a test of insert functionality.','doge.png',5),(10,4,'Pug',5,6,5,'Small but fierce!','pug.png',6),(11,4,'Senor Doge',6,5,5,'test story.','doge_senor.png',5),(12,5,'Robo Doge Test',4,5,4,'This dog is half robot.','doge_robosuit.png',4),(13,2,'Reaper',2,2,3,'test','doge_sewer.png',2),(18,3,'Test',3,3,3,'test story.','doge.png',3),(21,4,'This is a Test',4,4,3,'gr','corgi.png',4);
 /*!40000 ALTER TABLE `UNITS` ENABLE KEYS */;
 UNLOCK TABLES;
 SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
@@ -447,4 +473,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-30  2:20:49
+-- Dump completed on 2019-10-30 15:46:05
