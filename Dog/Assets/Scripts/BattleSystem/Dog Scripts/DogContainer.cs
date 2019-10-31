@@ -19,6 +19,8 @@ public class DogContainer : MonoBehaviour
 
     public Slider healthbar;
 
+    public Text name;
+
     public Animator dogAnimator;
 
     public SpriteRenderer dogBodySpriteRenderer;
@@ -27,6 +29,7 @@ public class DogContainer : MonoBehaviour
     public SpriteRenderer dogFRightSpriteRenderer;
     public SpriteRenderer dogBLeftSpriteRenderer;
     public SpriteRenderer dogBRightSpriteRenderer;
+    [SerializeField] private FloatEvent attacking;
 
     float calcHealth()
     {
@@ -54,6 +57,13 @@ public class DogContainer : MonoBehaviour
         dogAnimator = GetComponent<Animator>();
         dogAnimator.runtimeAnimatorController = activeDog.animator;
         healthbar.value = calcHealth();
+        name.text = activeDog.dogName;
+    }
+
+    void dogAttack()
+    {
+        Debug.Log("dogattack event success");
+        attacking.Raise(currentAttack);
     }
 
     void Start()

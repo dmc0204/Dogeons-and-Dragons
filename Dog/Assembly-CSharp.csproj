@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\bgInitialize.cs" />
+     <Compile Include="Assets\eventtester.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\Achievement.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\CommonStatusCodes.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\CommonTypes.cs" />
@@ -248,9 +249,16 @@
      <Compile Include="Assets\Scripts\DogHouse.cs" />
      <Compile Include="Assets\Scripts\FloatReference.cs" />
      <Compile Include="Assets\Scripts\FloatVariable.cs" />
-     <Compile Include="Assets\Scripts\GameEvent.cs" />
-     <Compile Include="Assets\Scripts\GameEventListener.cs" />
-     <Compile Include="Assets\Scripts\ImageFillSetter.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Events\BaseGameEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Events\FloatEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Events\VoidEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Listeners\BaseGameEventListener.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Listeners\FloatListener.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Listeners\IGameEventListener.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Listeners\VoidListener.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityFloatEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityVoidEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Void.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ManagerScript.cs" />

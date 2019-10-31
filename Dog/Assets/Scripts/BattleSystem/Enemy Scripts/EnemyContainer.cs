@@ -25,6 +25,8 @@ public class EnemyContainer : MonoBehaviour
 
     public Animator enemyAnimator;
 
+    public Text name;
+
     float calcHealth()
     {
         return currentHP / myCoolVariable.MaxHealth;
@@ -38,6 +40,9 @@ public class EnemyContainer : MonoBehaviour
         currentAttack = -1;
         currentDefense = -1;
         currentSpeed = -1;
+        enemyArmSpriteRenderer.sprite = null;
+        enemyBodySpriteRenderer.sprite = null;
+        name.text = null;
     }
 
     void spawnEnemy()
@@ -52,6 +57,7 @@ public class EnemyContainer : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         enemyAnimator.runtimeAnimatorController = myCoolVariable.animator;
         healthbar.value = calcHealth();
+        name.text = myCoolVariable.enemyName;
     }
 
     bool EnemyDead()
@@ -69,6 +75,22 @@ public class EnemyContainer : MonoBehaviour
     void updateHealthBar()
     {
         healthbar.value = calcHealth();
+    }
+
+    public void calculateDamageFromAttack(float attack)
+    {
+        System.Random rand = new System.Random();
+        double dubmult = rand.NextDouble() + 1;
+
+        float multiplier = (float)dubmult;
+        Debug.Log(multiplier);
+        float damage = (attack * multiplier) - currentDefense;
+        takeDamage(damage);
+    }
+
+    void takeDamage(float damage)
+    {
+        currentHP -= damage;
     }
 
     void Start()
