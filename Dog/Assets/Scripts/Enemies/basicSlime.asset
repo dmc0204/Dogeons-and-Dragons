@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eddbd52623426a646a6d3362b4aa1358, type: 3}
   m_Name: basicSlime
   m_EditorClassIdentifier: 
-  MaxHealth: 20
+  MaxHealth: 24
   BaseAttack: 5
-  BaseDefense: 5
+  BaseDefense: 15.5
   BaseSpeed: 5
   enemyName: Basic Slime
   body: {fileID: -458641133534639524, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
