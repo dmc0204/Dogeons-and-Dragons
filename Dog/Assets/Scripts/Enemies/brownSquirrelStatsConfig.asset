@@ -16,3 +16,7 @@ MonoBehaviour:
   BaseAttack: 18.9
   BaseDefense: 23.5
   BaseSpeed: 41.3
+  enemyName: 
+  body: {fileID: 0}
+  arm: {fileID: 0}
+  animator: {fileID: 0}
