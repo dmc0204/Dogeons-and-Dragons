@@ -1,0 +1,1 @@
+public class EnemyStatsEventListener : BaseGameEventListener<EnemyStatsConfig, EnemyStatsEvent, UnityEnemyStatsEvent> { }

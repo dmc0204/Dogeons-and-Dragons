@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class DogContainer : MonoBehaviour
-{
-    public LevelConfig myCoolLevel;
+public class DogController : MonoBehaviour {
+    //public LevelConfig myCoolLevel;
     public DogStatsConfig activeDog;
 
     public float currentHP;
@@ -31,18 +29,15 @@ public class DogContainer : MonoBehaviour
     public SpriteRenderer dogBRightSpriteRenderer;
     [SerializeField] private FloatEvent attacking;
 
-    float calcHealth()
-    {
+    float calcHealth () {
         return currentHP / activeDog.MaxHealth;
     }
 
-    void updateHealthBar()
-    {
-        healthbar.value = calcHealth();
+    void updateHealthBar () {
+        healthbar.value = calcHealth ();
     }
 
-    void spawnDog()
-    {
+    void spawnDog () {
         //myCoolVariable = myCoolLevel.getNext();
         currentHP = activeDog.MaxHealth;
         currentAttack = activeDog.BaseAttack;
@@ -54,25 +49,22 @@ public class DogContainer : MonoBehaviour
         dogFRightSpriteRenderer.sprite = activeDog.FRleg;
         dogBLeftSpriteRenderer.sprite = activeDog.BLleg;
         dogBRightSpriteRenderer.sprite = activeDog.BRleg;
-        dogAnimator = GetComponent<Animator>();
+        dogAnimator = GetComponent<Animator> ();
         dogAnimator.runtimeAnimatorController = activeDog.animator;
-        healthbar.value = calcHealth();
+        healthbar.value = calcHealth ();
         name.text = activeDog.dogName;
     }
 
-    void dogAttack()
-    {
-        Debug.Log("dogattack event success");
-        attacking.Raise(currentAttack);
+    void dogAttack () {
+        Debug.Log ("dogattack event success");
+        attacking.Raise (currentAttack);
     }
 
-    void Start()
-    {
-        spawnDog();
+    void Start () {
+        spawnDog ();
     }
 
-    void Update()
-    {
-        updateHealthBar();
+    void Update () {
+        updateHealthBar ();
     }
 }
