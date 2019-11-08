@@ -15,7 +15,7 @@ MonoBehaviour:
   MaxHealth: 20
   BaseAttack: 15
   BaseDefense: 15
-  BaseSpeed: 15
+  BaseSpeed: 8.3
   dogName: Doberman
   head: {fileID: 6568938268599289625, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
   body: {fileID: -7659071832633316141, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
