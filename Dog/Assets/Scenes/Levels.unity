@@ -1829,8 +1829,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -74.54, y: -177.61}
-  m_SizeDelta: {x: 63.33, y: 62.98}
+  m_AnchoredPosition: {x: -74.54, y: -179.58}
+  m_SizeDelta: {x: 63.33, y: 59.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079985097
 MonoBehaviour:
@@ -1874,7 +1874,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1079985098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232058773364913543}
+        m_MethodName: BroadcastMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1079985098
@@ -2559,7 +2570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc85fb93637d36f4781852669315f775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
   newLevel: {fileID: 11400000, guid: 52c6da3b1578b76479a5614454a068fd, type: 2}
   enemies: []
   dogs: []
@@ -3774,6 +3784,7 @@ MonoBehaviour:
   dogBRightSpriteRenderer: {fileID: 232058775192111021}
   timeAbleToBasicAttack: 0
   attacking: {fileID: 11400000, guid: a76942d4c89303247b1c06954c3a8ca7, type: 2}
+  switching: {fileID: 11400000, guid: 4af7a83fa333ae645a87643838dbdbc7, type: 2}
 --- !u!114 &232058773364913544
 MonoBehaviour:
   m_ObjectHideFlags: 0

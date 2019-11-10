@@ -30,6 +30,7 @@ public class DogController : MonoBehaviour {
 
     public float timeAbleToBasicAttack;
     [SerializeField] private FloatEvent attacking;
+    [SerializeField] private IntEvent switching;
 
     float calcHealth () {
         return currentHP / activeDog.MaxHealth;
@@ -91,6 +92,11 @@ public class DogController : MonoBehaviour {
     public void takeDamage (float damage) {
         currentHP -= damage;
         //updateHealthBar ();
+    }
+
+    //function for dog switching
+    public void switchDog (int number) {
+        switching.Raise (number);
     }
 
     void Start () {
