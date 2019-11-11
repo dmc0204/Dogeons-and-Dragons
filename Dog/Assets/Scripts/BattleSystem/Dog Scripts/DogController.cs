@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DogController : MonoBehaviour {
+public class DogController : MonoBehaviour
+{
     //public LevelConfig myCoolLevel;
     public DogStatsConfig activeDog;
 
-    public float currentHP;
+    public float currentHP, loadedHP;
 
     public float currentAttack;
 
@@ -29,20 +30,30 @@ public class DogController : MonoBehaviour {
     public SpriteRenderer dogBRightSpriteRenderer;
 
     public float timeAbleToBasicAttack;
-    [SerializeField] private FloatEvent attacking;
+    [SerializeField] private FloatEvent attacking, hpSaving;
     [SerializeField] private IntEvent switching;
 
-    float calcHealth () {
+    float calcHealth()
+    {
         return currentHP / activeDog.MaxHealth;
     }
 
-    void updateHealthBar () {
-        healthbar.value = calcHealth ();
+    void updateHealthBar()
+    {
+        healthbar.value = calcHealth();
     }
 
-    void spawnDog () {
+    void spawnDog()
+    {
         //myCoolVariable = myCoolLevel.getNext();
-        currentHP = activeDog.MaxHealth;
+        if (loadedHP == -1)
+        {
+            currentHP = activeDog.MaxHealth;
+        }
+        else
+        {
+            currentHP = loadedHP;
+        }
         currentAttack = activeDog.BaseAttack;
         currentDefense = activeDog.BaseDefense;
         currentSpeed = activeDog.BaseSpeed;
@@ -52,58 +63,85 @@ public class DogController : MonoBehaviour {
         dogFRightSpriteRenderer.sprite = activeDog.FRleg;
         dogBLeftSpriteRenderer.sprite = activeDog.BLleg;
         dogBRightSpriteRenderer.sprite = activeDog.BRleg;
-        dogAnimator = GetComponent<Animator> ();
+        dogAnimator = GetComponent<Animator>();
         dogAnimator.runtimeAnimatorController = activeDog.animator;
-        healthbar.value = calcHealth ();
+        healthbar.value = calcHealth();
         name.text = activeDog.dogName;
         timeAbleToBasicAttack = Time.time;
     }
 
+    public void loadDog(DogStatsConfig newdoggo)
+    {
+        activeDog = newdoggo;
+        spawnDog();
+    }
+
     // // // // // // // // //
     //battle functions
-    void dogAttack () {
-        if (Time.time > timeAbleToBasicAttack) {
-            timeAbleToBasicAttack = Time.time + basicAttackCooldown ();
-            attacking.Raise (currentAttack);
-            dogAnimator.SetTrigger ("attack");
-            Debug.Log ("attack good");
-        } else {
-            Debug.Log ("ITS ON COOLDOWN");
+    void dogAttack()
+    {
+        if (Time.time > timeAbleToBasicAttack)
+        {
+            timeAbleToBasicAttack = Time.time + basicAttackCooldown();
+            attacking.Raise(currentAttack);
+            dogAnimator.SetTrigger("attack");
+            Debug.Log("attack good");
+        }
+        else
+        {
+            Debug.Log("ITS ON COOLDOWN");
         }
     }
 
-    public float basicAttackCooldown () {
+    public float basicAttackCooldown()
+    {
         return 10 / currentSpeed;
     }
 
-    public void calculateDamage (float attack) {
-        System.Random rand = new System.Random ();
-        double dubmult = rand.NextDouble () + 1;
+    public void calculateDamage(float attack)
+    {
+        System.Random rand = new System.Random();
+        double dubmult = rand.NextDouble() + 1;
 
-        float multiplier = (float) dubmult;
+        float multiplier = (float)dubmult;
         //Debug.Log (multiplier);
         float damage = (attack * multiplier) - currentDefense;
         if (damage < 0)
             damage = 1;
-        takeDamage (damage);
+        takeDamage(damage);
         //TODO: tell level how much damage was taken
     }
 
-    public void takeDamage (float damage) {
+    public void takeDamage(float damage)
+    {
         currentHP -= damage;
+        if (currentHP < 0)
+        {
+            currentHP = 0;
+        }
         //updateHealthBar ();
     }
 
     //function for dog switching
-    public void switchDog (int number) {
-        switching.Raise (number);
+    public void switchDog(int number)
+    {
+        hpSaving.Raise(currentHP);
+        switching.Raise(number);
+        Debug.Log("dog switch events called");
     }
 
-    void Start () {
-        spawnDog ();
+    public void hpReceiving(float num)
+    {
+        loadedHP = num;
     }
 
-    void Update () {
-        updateHealthBar ();
+    void Start()
+    {
+        switching.Raise(0);
+    }
+
+    void Update()
+    {
+        updateHealthBar();
     }
 }
