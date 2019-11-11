@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
   m_Name: Doberman
   m_EditorClassIdentifier: 
-  MaxHealth: 20
+  MaxHealth: 30
   BaseAttack: 15
   BaseDefense: 15
-  BaseSpeed: 15
+  BaseSpeed: 19.4
   dogName: Doberman
   head: {fileID: 6568938268599289625, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
   body: {fileID: -7659071832633316141, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}

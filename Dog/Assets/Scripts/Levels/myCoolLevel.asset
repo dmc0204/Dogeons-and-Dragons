@@ -17,7 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ed5ec31e7bbb7d47910c4a0a07d3718, type: 2}
   yourTeam:
   - {fileID: 11400000, guid: 757632bab04682244b930788c3cbf79d, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4c87ecbfb407552468b65aa144dbfedd, type: 2}
   - {fileID: 0}
   background: {fileID: 21300000, guid: 08db75587297da24396de76d486db47b, type: 3}
-  count: 0
