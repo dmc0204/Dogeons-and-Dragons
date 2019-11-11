@@ -7,6 +7,10 @@ public class LevelController : MonoBehaviour
     private float damageTaken, damageDealt;
     //TODO:funcs to track these, get passed numbers
 
+    public float[] currentHP;
+
+    private int currentDog;
+
     private bool dogDied;
 
     //public int count;
@@ -19,24 +23,29 @@ public class LevelController : MonoBehaviour
     public Sprite background;
     public SpriteRenderer backgroundSpriteRenderer;
     [SerializeField] private EnemyStatsEvent gettingEnemyStats;
+    [SerializeField] private DogStatsEvent gettingDogStats;
+    [SerializeField] private FloatEvent hpSending;
 
     //initializes level values
     public void initialize()
     {
         damageTaken = 0;
         damageDealt = 0;
-        //count = 0;
-        enemies = newLevel.enemies;
+        dogDied = false;
+        NMEs = new Queue<EnemyStatsConfig>(newLevel.enemies);
         dogs = newLevel.yourTeam;
         background = newLevel.background;
         backgroundSpriteRenderer = GetComponent<SpriteRenderer>();
         backgroundSpriteRenderer.sprite = background;
     }
 
-    //initializes queue
-    public void initQueue()
+    public void initHP()
     {
-        NMEs = new Queue<EnemyStatsConfig>(enemies);
+        currentHP = new float[3];
+        for (int i = 0; i < 3; i++)
+        {
+            currentHP[i] = -1;
+        }
     }
 
     //functions to handle spawning new enemies
@@ -86,11 +95,29 @@ public class LevelController : MonoBehaviour
         //write to player object
     }
 
+
+    // // // // // // // // // // // // // //
+    //dog switching and such
+    public void switchDogs(int whichDog)
+    {
+        hpSending.Raise(currentHP[whichDog]);
+        gettingDogStats.Raise(dogs[whichDog]);
+        Debug.Log("dog switch events received");
+        currentDog = whichDog;
+    }
+
+    public void saveHP(float savedHP)
+    {
+        currentHP[currentDog] = savedHP;
+    }
+
+    // // / // // // // // // // /// 
     // Start is called before the first frame update
     void Start()
     {
         initialize();
-        initQueue();
+        initHP();
+        //initQueue();
     }
 
     // Update is called once per frame
