@@ -22,13 +22,9 @@ public class DogController : MonoBehaviour
 
     public Animator dogAnimator;
 
-    public SpriteRenderer dogBodySpriteRenderer;
-    public SpriteRenderer dogHeadSpriteRenderer;
-    public SpriteRenderer dogFLeftSpriteRenderer;
-    public SpriteRenderer dogFRightSpriteRenderer;
-    public SpriteRenderer dogBLeftSpriteRenderer;
-    public SpriteRenderer dogBRightSpriteRenderer;
+    public SpriteRenderer dogBodySpriteRenderer, dogHeadSpriteRenderer, dogFLeftSpriteRenderer, dogFRightSpriteRenderer, dogBLeftSpriteRenderer, dogBRightSpriteRenderer;
 
+    public Transform dogBodyTransform, dogHeadTransform, dogFLeftTransform, dogFRightTransform, dogBLeftTransform, dogBRightTransform;
     public float timeAbleToBasicAttack;
     [SerializeField] private FloatEvent attacking, hpSaving;
     [SerializeField] private IntEvent switching;
@@ -57,12 +53,15 @@ public class DogController : MonoBehaviour
         currentAttack = activeDog.BaseAttack;
         currentDefense = activeDog.BaseDefense;
         currentSpeed = activeDog.BaseSpeed;
+
         dogBodySpriteRenderer.sprite = activeDog.body;
         dogHeadSpriteRenderer.sprite = activeDog.head;
         dogFLeftSpriteRenderer.sprite = activeDog.FLleg;
         dogFRightSpriteRenderer.sprite = activeDog.FRleg;
         dogBLeftSpriteRenderer.sprite = activeDog.BLleg;
         dogBRightSpriteRenderer.sprite = activeDog.BRleg;
+
+        dogBodyTransform = activeDog.bodyT;
         dogAnimator = GetComponent<Animator>();
         dogAnimator.runtimeAnimatorController = activeDog.animator;
         healthbar.value = calcHealth();
