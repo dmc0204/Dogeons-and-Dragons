@@ -224,6 +224,10 @@
      <Compile Include="Assets\GooglePlayGames\Platforms\TokenClient.cs" />
      <Compile Include="Assets\GooglePlayGames\PluginVersion.cs" />
      <Compile Include="Assets\GPGSIds.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\ABtnHit.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\ABtnTouch.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\BattleHandler.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\Buttons\ButtonSound.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Buttons\RightButton.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Dog Scripts\DogController.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Dog Scripts\DogStatsConfig.cs" />
@@ -231,10 +235,9 @@
      <Compile Include="Assets\Scripts\BattleSystem\Enemy Scripts\EnemyStatsConfig.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Level Scripts\LevelConfig.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Level Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\SpBtnTouch.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\TriggerEvent.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
-     <Compile Include="Assets\Scripts\DogHouse.cs" />
-     <Compile Include="Assets\Scripts\FloatReference.cs" />
-     <Compile Include="Assets\Scripts\FloatVariable.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\BaseGameEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\DogStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\EnemyStatsEvent.cs" />
@@ -255,6 +258,7 @@
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityVoidEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Void.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Levels\BeatLevelScreen.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ManagerScript.cs" />
      <Compile Include="Assets\Scripts\PageSwipe.cs" />
@@ -263,7 +267,6 @@
      <Compile Include="Assets\Scripts\PlayGamesScript.cs" />
      <Compile Include="Assets\Scripts\Progress.cs" />
      <Compile Include="Assets\Scripts\RuntimeSet.cs" />
-     <Compile Include="Assets\Scripts\SimpleEnemy.cs" />
      <Compile Include="Assets\Scripts\UiScript.cs" />
      <None Include="Assets\GooglePlayGames\Plugins\Android\GooglePlayGamesManifest.plugin\AndroidManifest.xml" />
  <Reference Include="Unity.Timeline.Editor">
