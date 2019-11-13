@@ -28,6 +28,7 @@ public class DogController : MonoBehaviour
     public float timeAbleToBasicAttack;
     [SerializeField] private FloatEvent attacking, hpSaving;
     [SerializeField] private IntEvent switching;
+    [SerializeField] private VoidEvent dying;
 
     float calcHealth()
     {
@@ -41,7 +42,7 @@ public class DogController : MonoBehaviour
 
     void spawnDog()
     {
-        //myCoolVariable = myCoolLevel.getNext();
+        //initializes stats
         if (loadedHP == -1)
         {
             currentHP = activeDog.MaxHealth;
@@ -54,16 +55,24 @@ public class DogController : MonoBehaviour
         currentDefense = activeDog.BaseDefense;
         currentSpeed = activeDog.BaseSpeed;
 
+        //initializes sprites
         dogBodySpriteRenderer.sprite = activeDog.body;
         dogHeadSpriteRenderer.sprite = activeDog.head;
         dogFLeftSpriteRenderer.sprite = activeDog.FLleg;
         dogFRightSpriteRenderer.sprite = activeDog.FRleg;
         dogBLeftSpriteRenderer.sprite = activeDog.BLleg;
         dogBRightSpriteRenderer.sprite = activeDog.BRleg;
-
-        dogBodyTransform = activeDog.bodyT;
+        dogBodyTransform.localPosition = new Vector3(activeDog.bodyPositionX, activeDog.bodyPositionY, activeDog.bodyPositionZ);
+        dogHeadTransform.localPosition = new Vector3(activeDog.headPositionX, activeDog.headPositionY, activeDog.headPositionZ);
+        dogFLeftTransform.localPosition = new Vector3(activeDog.FLlegPositionX, activeDog.FLlegPositionY, activeDog.FLlegPositionZ);
+        dogFRightTransform.localPosition = new Vector3(activeDog.FRlegPositionX, activeDog.FRlegPositionY, activeDog.FRlegPositionZ);
+        dogBLeftTransform.localPosition = new Vector3(activeDog.BLlegPositionX, activeDog.BLlegPositionY, activeDog.BLlegPositionZ);
+        dogBRightTransform.localPosition = new Vector3(activeDog.BRlegPositionX, activeDog.BRlegPositionY, activeDog.BRlegPositionZ);
         dogAnimator = GetComponent<Animator>();
         dogAnimator.runtimeAnimatorController = activeDog.animator;
+
+
+
         healthbar.value = calcHealth();
         name.text = activeDog.dogName;
         timeAbleToBasicAttack = Time.time;
@@ -117,6 +126,7 @@ public class DogController : MonoBehaviour
         if (currentHP < 0)
         {
             currentHP = 0;
+            doggyDied();
         }
         //updateHealthBar ();
     }
@@ -134,9 +144,23 @@ public class DogController : MonoBehaviour
         loadedHP = num;
     }
 
+    //handling dog death
+    public void doggyDied()
+    {
+        dogBodySpriteRenderer.sprite = null;
+        dogHeadSpriteRenderer.sprite = null;
+        dogFLeftSpriteRenderer.sprite = null;
+        dogFRightSpriteRenderer.sprite = null;
+        dogFLeftSpriteRenderer.sprite = null;
+        dogBRightSpriteRenderer.sprite = null;
+        dogBLeftSpriteRenderer.sprite = null;
+        dying.Raise();
+    }
+
     void Start()
     {
         switching.Raise(0);
+        hpSaving.Raise(currentHP);
     }
 
     void Update()

@@ -13,7 +13,12 @@ public class DogStatsConfig : ScriptableObject
 
     public Sprite head, body, FLleg, FRleg, BLleg, BRleg;
 
-    public Transform headT, bodyT, FLlegT, FRlegT, BLlegT, BRlegT;
+    public float headPositionX, headPositionY, headPositionZ,
+        bodyPositionX, bodyPositionY, bodyPositionZ,
+        FLlegPositionX, FLlegPositionY, FLlegPositionZ,
+        FRlegPositionX, FRlegPositionY, FRlegPositionZ,
+        BLlegPositionX, BLlegPositionY, BLlegPositionZ,
+        BRlegPositionX, BRlegPositionY, BRlegPositionZ;
 
     public RuntimeAnimatorController animator;
 }

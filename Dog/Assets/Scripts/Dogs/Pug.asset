@@ -20,7 +20,25 @@ MonoBehaviour:
   head: {fileID: -585471232467939877, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}
   body: {fileID: 3451367436692217395, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}
   FLleg: {fileID: -5854938845648269932, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}
-  FRleg: {fileID: -259597803380132938, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}
-  BLleg: {fileID: 7759272682388431911, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}
+  FRleg: {fileID: 7759272682388431911, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}
+  BLleg: {fileID: -259597803380132938, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}
   BRleg: {fileID: -6449067708946905366, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}
+  headPositionX: 0.231
+  headPositionY: -0.114
+  headPositionZ: 0
+  bodyPositionX: 0.357
+  bodyPositionY: -0.074
+  bodyPositionZ: 0
+  FLlegPositionX: 0.185
+  FLlegPositionY: -0.081
+  FLlegPositionZ: 0
+  FRlegPositionX: 0.168
+  FRlegPositionY: -0.101
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.514428
+  BLlegPositionY: -0.06239723
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.545428
+  BRlegPositionY: -0.07739723
+  BRlegPositionZ: 0
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
