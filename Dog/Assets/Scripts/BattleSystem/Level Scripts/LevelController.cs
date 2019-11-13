@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
@@ -14,14 +15,19 @@ public class LevelController : MonoBehaviour
     private bool dogDied;
 
     //public int count;
+    public PlayerLevelContainer brrrr;
     public LevelConfig newLevel;
-    public EnemyStatsConfig[] enemies;
+
+    public PlayerConfig playa;
+    //public EnemyStatsConfig[] enemies;
 
     public Queue<EnemyStatsConfig> NMEs;
     public DogStatsConfig[] dogs;
 
     public Sprite background;
     public SpriteRenderer backgroundSpriteRenderer;
+
+    public Image dog0btn, dog1btn, dog2btn;
     [SerializeField] private EnemyStatsEvent gettingEnemyStats;
     [SerializeField] private DogStatsEvent gettingDogStats;
     [SerializeField] private FloatEvent hpSending;
@@ -32,8 +38,10 @@ public class LevelController : MonoBehaviour
         damageTaken = 0;
         damageDealt = 0;
         dogDied = false;
+        newLevel = brrrr.myCoolLevel;
+        playa = brrrr.myCoolPlayer;
         NMEs = new Queue<EnemyStatsConfig>(newLevel.enemies);
-        dogs = newLevel.yourTeam;
+        dogs = playa.yourTeam;
         background = newLevel.background;
         backgroundSpriteRenderer = GetComponent<SpriteRenderer>();
         backgroundSpriteRenderer.sprite = background;
@@ -65,6 +73,7 @@ public class LevelController : MonoBehaviour
     //returns next enemy in list
     public EnemyStatsConfig getNext()
     {
+
         EnemyStatsConfig toReturn;
         toReturn = NMEs.Dequeue();
         return toReturn;
@@ -100,15 +109,30 @@ public class LevelController : MonoBehaviour
     //dog switching and such
     public void switchDogs(int whichDog)
     {
+        Debug.Log("switching to: " + dogs[whichDog]);
+        Debug.Log("hp sent is: " + currentHP[whichDog]);
+
         hpSending.Raise(currentHP[whichDog]);
+
         gettingDogStats.Raise(dogs[whichDog]);
         Debug.Log("dog switch events received");
         currentDog = whichDog;
+        Debug.Log("current dog is: " + currentDog);
     }
 
     public void saveHP(float savedHP)
     {
         currentHP[currentDog] = savedHP;
+        Debug.Log("current dog is: " + currentDog);
+        Debug.Log("saved hp is: " + savedHP);
+    }
+
+    //initializes dog buttons
+    public void initBtn()
+    {
+        dog0btn.sprite = dogs[0].head;
+        dog1btn.sprite = dogs[1].head;
+        dog2btn.sprite = dogs[2].head;
     }
 
     // // / // // // // // // // /// 
@@ -117,6 +141,7 @@ public class LevelController : MonoBehaviour
     {
         initialize();
         initHP();
+        initBtn();
         //initQueue();
     }
 

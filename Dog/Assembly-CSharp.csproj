@@ -264,6 +264,8 @@
      <Compile Include="Assets\Scripts\PageSwipe.cs" />
      <Compile Include="Assets\Scripts\PauseScreen\Pause.cs" />
      <Compile Include="Assets\Scripts\PauseScreen\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Player\Player Scripts\PlayerConfig.cs" />
+     <Compile Include="Assets\Scripts\PlayerLevelContainer\PlayerLevelContainer.cs" />
      <Compile Include="Assets\Scripts\PlayGamesScript.cs" />
      <Compile Include="Assets\Scripts\Progress.cs" />
      <Compile Include="Assets\Scripts\RuntimeSet.cs" />
