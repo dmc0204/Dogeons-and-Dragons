@@ -7,4 +7,6 @@ using UnityEngine;
 public class PlayerConfig : ScriptableObject
 {
     public DogStatsConfig[] yourTeam;
+
+
 }

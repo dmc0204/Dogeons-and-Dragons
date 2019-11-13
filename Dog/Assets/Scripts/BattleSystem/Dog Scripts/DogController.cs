@@ -28,6 +28,7 @@ public class DogController : MonoBehaviour
     public float timeAbleToBasicAttack;
     [SerializeField] private FloatEvent attacking, hpSaving;
     [SerializeField] private IntEvent switching;
+    [SerializeField] private VoidEvent dying;
 
     float calcHealth()
     {
@@ -125,6 +126,7 @@ public class DogController : MonoBehaviour
         if (currentHP < 0)
         {
             currentHP = 0;
+            doggyDied();
         }
         //updateHealthBar ();
     }
@@ -140,6 +142,19 @@ public class DogController : MonoBehaviour
     public void hpReceiving(float num)
     {
         loadedHP = num;
+    }
+
+    //handling dog death
+    public void doggyDied()
+    {
+        dogBodySpriteRenderer.sprite = null;
+        dogHeadSpriteRenderer.sprite = null;
+        dogFLeftSpriteRenderer.sprite = null;
+        dogFRightSpriteRenderer.sprite = null;
+        dogFLeftSpriteRenderer.sprite = null;
+        dogBRightSpriteRenderer.sprite = null;
+        dogBLeftSpriteRenderer.sprite = null;
+        dying.Raise();
     }
 
     void Start()

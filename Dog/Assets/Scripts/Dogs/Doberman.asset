@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
   m_Name: Doberman
   m_EditorClassIdentifier: 
-  MaxHealth: 50
-  BaseAttack: 24.9
-  BaseDefense: 39.7
-  BaseSpeed: 6.2
+  MaxHealth: 6.1
+  BaseAttack: 8.8
+  BaseDefense: 16.8
+  BaseSpeed: 9.8
   dogName: Doberman
   head: {fileID: 6568938268599289625, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
   body: {fileID: -7659071832633316141, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
@@ -26,55 +26,19 @@ MonoBehaviour:
   headPositionX: 0
   headPositionY: 0
   headPositionZ: 0
-  headRotationX: 0
-  headRotationY: 0
-  headRotationZ: 0
-  headScaleX: 1
-  headScaleY: 1
-  headScaleZ: 1
   bodyPositionX: 0
   bodyPositionY: 0
   bodyPositionZ: 0
-  bodyRotationX: 0
-  bodyRotationY: 0
-  bodyRotationZ: 0
-  bodyScaleX: 1
-  bodyScaleY: 1
-  bodyScaleZ: 1
   FLlegPositionX: 0
   FLlegPositionY: 0
   FLlegPositionZ: 0
-  FLlegRotationX: 0
-  FLlegRotationY: 0
-  FLlegRotationZ: 0
-  FLlegScaleX: 0
-  FLlegScaleY: 0
-  FLlegScaleZ: 0
   FRlegPositionX: 0
   FRlegPositionY: 0
   FRlegPositionZ: 0
-  FRlegRotationX: 0
-  FRlegRotationY: 0
-  FRlegRotationZ: 0
-  FRlegScaleX: 1
-  FRlegScaleY: 1
-  FRlegScaleZ: 1
   BLlegPositionX: 0
   BLlegPositionY: 0
   BLlegPositionZ: 0
-  BLlegRotationX: 0
-  BLlegRotationY: 0
-  BLlegRotationZ: 0
-  BLlegScaleX: 1
-  BLlegScaleY: 1
-  BLlegScaleZ: 1
   BRlegPositionX: 0
   BRlegPositionY: 0
   BRlegPositionZ: 0
-  BRlegRotationX: 0
-  BRlegRotationY: 0
-  BRlegRotationZ: 0
-  BRlegScaleX: 1
-  BRlegScaleY: 1
-  BRlegScaleZ: 1
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

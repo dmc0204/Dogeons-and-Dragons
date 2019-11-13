@@ -1,7 +1,9 @@
 ﻿using System.Collections;
+//sing System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class LevelController : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class LevelController : MonoBehaviour
 
     private int currentDog;
 
-    private bool dogDied;
+    private int numDogsDied;
 
     //public int count;
     public PlayerLevelContainer brrrr;
@@ -27,7 +29,7 @@ public class LevelController : MonoBehaviour
     public Sprite background;
     public SpriteRenderer backgroundSpriteRenderer;
 
-    public Image dog0btn, dog1btn, dog2btn;
+    public Image[] dogbtn;
     [SerializeField] private EnemyStatsEvent gettingEnemyStats;
     [SerializeField] private DogStatsEvent gettingDogStats;
     [SerializeField] private FloatEvent hpSending;
@@ -37,7 +39,7 @@ public class LevelController : MonoBehaviour
     {
         damageTaken = 0;
         damageDealt = 0;
-        dogDied = false;
+        numDogsDied = 0;
         newLevel = brrrr.myCoolLevel;
         playa = brrrr.myCoolPlayer;
         NMEs = new Queue<EnemyStatsConfig>(newLevel.enemies);
@@ -49,10 +51,19 @@ public class LevelController : MonoBehaviour
 
     public void initHP()
     {
-        currentHP = new float[3];
+        currentHP = new float[dogs.Length];
         for (int i = 0; i < 3; i++)
         {
             currentHP[i] = -1;
+        }
+    }
+
+    //initializes dog buttons
+    public void initBtn()
+    {
+        for (int i = 0; i < dogs.Length; i++)
+        {
+            dogbtn[i].sprite = dogs[i].head;
         }
     }
 
@@ -89,12 +100,12 @@ public class LevelController : MonoBehaviour
         else
         {
             Debug.Log("its empty!");
-            endLevel();
+            endLevel(1);
         }
     }
     // // // // // // // // // // // // // // // // // //
 
-    public void endLevel()
+    public void endLevel(int code)
     {
         //TODO:end the level with this function
         //stop time
@@ -102,6 +113,17 @@ public class LevelController : MonoBehaviour
         //display stats
         //calculate rewards
         //write to player object
+        switch (code)
+        {
+            case 0:
+                //ends in game over, called when party dies
+                break;
+            case 1:
+                //ends in victory
+                break;
+            default:
+                break;
+        }
     }
 
 
@@ -127,13 +149,25 @@ public class LevelController : MonoBehaviour
         Debug.Log("saved hp is: " + savedHP);
     }
 
-    //initializes dog buttons
-    public void initBtn()
+    public void dogDeath()
     {
-        dog0btn.sprite = dogs[0].head;
-        dog1btn.sprite = dogs[1].head;
-        dog2btn.sprite = dogs[2].head;
+        int num;
+        saveHP(0);
+        dogbtn[currentDog].color = new Color(0, 0, 0, 1);
+        numDogsDied++;
+        if (numDogsDied < dogs.Length)
+        {
+            num = (currentDog + 1) % dogs.Length;
+            if (currentHP[num] < 0)
+            {
+                num = (currentDog + 1) % dogs.Length;
+            }
+            switchDogs(num);
+        }
+        endLevel(0);
     }
+
+
 
     // // / // // // // // // // /// 
     // Start is called before the first frame update
