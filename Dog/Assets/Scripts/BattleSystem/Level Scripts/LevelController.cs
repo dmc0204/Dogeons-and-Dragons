@@ -25,14 +25,16 @@ public class LevelController : MonoBehaviour
 
     public Queue<EnemyStatsConfig> NMEs;
     public DogStatsConfig[] dogs;
+    public ChewableConfig[] chews;
 
     public Sprite background;
     public SpriteRenderer backgroundSpriteRenderer;
 
-    public Image[] dogbtn;
+    public Image[] dogbtn, chewBtn;
     [SerializeField] private EnemyStatsEvent gettingEnemyStats;
     [SerializeField] private DogStatsEvent gettingDogStats;
     [SerializeField] private FloatEvent hpSending;
+    [SerializeField] private ChewableEvent chewing;
 
     //initializes level values
     public void initialize()
@@ -44,6 +46,7 @@ public class LevelController : MonoBehaviour
         playa = brrrr.myCoolPlayer;
         NMEs = new Queue<EnemyStatsConfig>(newLevel.enemies);
         dogs = playa.yourTeam;
+        chews = playa.yourChewies;
         background = newLevel.background;
         backgroundSpriteRenderer = GetComponent<SpriteRenderer>();
         backgroundSpriteRenderer.sprite = background;
@@ -64,6 +67,11 @@ public class LevelController : MonoBehaviour
         for (int i = 0; i < dogs.Length; i++)
         {
             dogbtn[i].sprite = dogs[i].head;
+        }
+        for (int i = 0; i < chews.Length; i++)
+        {
+            chewBtn[i].sprite = chews[i].chewySprite;
+            //chewBtn[i].color = chews[i].chewyColor;
         }
     }
 
@@ -126,7 +134,6 @@ public class LevelController : MonoBehaviour
         }
     }
 
-
     // // // // // // // // // // // // // //
     //dog switching and such
     public void switchDogs(int whichDog)
@@ -167,9 +174,12 @@ public class LevelController : MonoBehaviour
         endLevel(0);
     }
 
-
-
     // // / // // // // // // // /// 
+    //using chewable
+    public void chewableTime(int i)
+    {
+        chewing.Raise(chews[i]);
+    }
     // Start is called before the first frame update
     void Start()
     {
