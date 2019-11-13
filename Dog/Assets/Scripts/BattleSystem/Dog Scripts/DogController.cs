@@ -207,9 +207,10 @@ public class DogController : MonoBehaviour
                 {
                     upSpeed(activeChewable.value * -1);
                 }
+                chewableActive = false;
             }
         }
-        chewableActive = false;
+
     }
 
     // // // // // // // //// // // // // // // //

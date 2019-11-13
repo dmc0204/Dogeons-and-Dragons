@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
     }
     public void HomeBtn()
     {
-        Time.timescale = 1;
+        Time.timeScale = 1;
         SceneManager.LoadScene("TitleScreen");
     }
 
@@ -44,7 +44,7 @@ public class MainMenu : MonoBehaviour
     }
     public void LevelsBtn()
     {
-        Time.timescale = 1;
+        Time.timeScale = 1;
         SceneManager.LoadScene("Levels");
     }
 
