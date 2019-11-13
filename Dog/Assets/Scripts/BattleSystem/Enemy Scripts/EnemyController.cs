@@ -88,7 +88,7 @@ public class EnemyController : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         enemyAnimator.runtimeAnimatorController = myCoolVariable.animator;
         name.text = myCoolVariable.enemyName;
-        timeAbleToBasicAttack = Time.time;
+        timeAbleToBasicAttack = Time.time + basicAttackCooldown();
     }
 
     // // // // // // // // // // // //
@@ -137,9 +137,9 @@ public class EnemyController : MonoBehaviour
     {
         if ((Time.time > timeAbleToBasicAttack) && (!isEnemyDead()))
         {
+            enemyAnimator.SetTrigger("attack");
             timeAbleToBasicAttack = Time.time + basicAttackCooldown();
             enemyAttacking.Raise(currentAttack);
-            enemyAnimator.SetTrigger("attack");
         }
     }
 

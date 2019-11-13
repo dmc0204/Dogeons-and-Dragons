@@ -8,10 +8,8 @@ public class LevelConfig : ScriptableObject
 {
     public EnemyStatsConfig[] enemies;
 
-    public DogStatsConfig[] yourTeam;
-
     public Sprite background;
 
-    
+
 
 }
