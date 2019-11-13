@@ -2,6 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.4f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -44,7 +46,16 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\bgInitialize.cs" />
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.4f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.4f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\bgInitialize.cs" />
      <Compile Include="Assets\eventtester.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\Achievement.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\CommonStatusCodes.cs" />
@@ -229,6 +240,7 @@
      <Compile Include="Assets\Scripts\BattleSystem\BattleHandler.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Buttons\ButtonSound.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Buttons\RightButton.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\Chewable Scripts\ChewableConfig.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Dog Scripts\DogController.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Dog Scripts\DogStatsConfig.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Enemy Scripts\EnemyController.cs" />
@@ -239,18 +251,21 @@
      <Compile Include="Assets\Scripts\BattleSystem\TriggerEvent.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\BaseGameEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Events\ChewableEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\DogStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\EnemyStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\FloatEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\IntEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\VoidEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\BaseGameEventListener.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Listeners\ChewableEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\DogStatsEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\EnemyStatsEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\FloatListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\IGameEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\IntListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\VoidListener.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityChewableEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityDogStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityEnemyStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityFloatEvent.cs" />
@@ -327,9 +342,6 @@
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
  <HintPath>C:/Users/Austin/Documents/GitHub/Dogeons-and-Dragons/Dog/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -501,9 +513,6 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.4f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>C:/Users/Austin/Documents/GitHub/Dogeons-and-Dragons/Dog/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>

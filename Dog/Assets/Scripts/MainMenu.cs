@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour {
+public class MainMenu : MonoBehaviour
+{
 
 
 
@@ -15,21 +16,23 @@ public class MainMenu : MonoBehaviour {
     public void Options()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        
+
     }
     public void Credits()
     {
         SceneManager.LoadScene("CreditsScreen");
     }
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start()
+    {
+
+    }
     public void HomeBtn()
     {
+        Time.timescale = 1;
         SceneManager.LoadScene("TitleScreen");
     }
-	
+
 
     public void PlayBtn()
     {
@@ -41,11 +44,13 @@ public class MainMenu : MonoBehaviour {
     }
     public void LevelsBtn()
     {
+        Time.timescale = 1;
         SceneManager.LoadScene("Levels");
     }
 
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }
