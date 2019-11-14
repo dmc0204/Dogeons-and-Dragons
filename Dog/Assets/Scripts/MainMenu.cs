@@ -17,10 +17,7 @@ public class MainMenu : MonoBehaviour {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         
     }
-    public void Credits()
-    {
-        SceneManager.LoadScene("CreditsScreen");
-    }
+
     // Use this for initialization
     void Start () {
 		
@@ -31,14 +28,7 @@ public class MainMenu : MonoBehaviour {
     }
 	
 
-    public void PlayBtn()
-    {
-        SceneManager.LoadScene("DogHouse");
-    }
-    public void InventoryBtn()
-    {
-        SceneManager.LoadScene("Inventory");
-    }
+
     public void LevelsBtn()
     {
         SceneManager.LoadScene("Levels");
