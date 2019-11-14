@@ -1,0 +1,1 @@
+public class ChewableEventListener : BaseGameEventListener<ChewableConfig, ChewableEvent, UnityChewableEvent> { }

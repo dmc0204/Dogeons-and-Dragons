@@ -16,6 +16,8 @@ public class DogController : MonoBehaviour
 
     public float currentSpeed;
 
+    public bool chewableActive;
+
     public Slider healthbar;
 
     public Text name;
@@ -25,7 +27,9 @@ public class DogController : MonoBehaviour
     public SpriteRenderer dogBodySpriteRenderer, dogHeadSpriteRenderer, dogFLeftSpriteRenderer, dogFRightSpriteRenderer, dogBLeftSpriteRenderer, dogBRightSpriteRenderer;
 
     public Transform dogBodyTransform, dogHeadTransform, dogFLeftTransform, dogFRightTransform, dogBLeftTransform, dogBRightTransform;
-    public float timeAbleToBasicAttack;
+    public float timeAbleToBasicAttack, timeWhenChewableWearsOff;
+
+    public ChewableConfig activeChewable;
     [SerializeField] private FloatEvent attacking, hpSaving;
     [SerializeField] private IntEvent switching;
     [SerializeField] private VoidEvent dying;
@@ -75,7 +79,8 @@ public class DogController : MonoBehaviour
 
         healthbar.value = calcHealth();
         name.text = activeDog.dogName;
-        timeAbleToBasicAttack = Time.time;
+        timeAbleToBasicAttack = Time.time + timeAbleToBasicAttack;
+        chewableActive = false;
     }
 
     public void loadDog(DogStatsConfig newdoggo)
@@ -134,6 +139,7 @@ public class DogController : MonoBehaviour
     //function for dog switching
     public void switchDog(int number)
     {
+        timeWhenChewableWearsOff = Time.time;
         hpSaving.Raise(currentHP);
         switching.Raise(number);
         Debug.Log("dog switch events called");
@@ -157,6 +163,79 @@ public class DogController : MonoBehaviour
         dying.Raise();
     }
 
+    //chewables
+
+    public void useChewable(ChewableConfig chewable)
+    {
+        chewableActive = true;
+        activeChewable = chewable;
+        timeWhenChewableWearsOff = Time.time + chewable.time;
+        if (chewable.increaseAttack)
+        {
+            upAttack(chewable.value);
+        }
+        if (chewable.increaseDefense)
+        {
+            upDefense(chewable.value);
+        }
+        if (chewable.increaseSpeed)
+        {
+            upSpeed(chewable.value);
+        }
+        if (chewable.increaseHealth)
+        {
+            upHealth(chewable.value);
+        }
+
+    }
+
+    public void endChewableChanges()
+    {
+        if (chewableActive)
+        {
+            if (Time.time > timeWhenChewableWearsOff)
+            {
+                if (activeChewable.increaseAttack)
+                {
+                    upAttack(activeChewable.value * -1);
+                }
+                if (activeChewable.increaseDefense)
+                {
+                    upDefense(activeChewable.value * -1);
+                }
+                if (activeChewable.increaseSpeed)
+                {
+                    upSpeed(activeChewable.value * -1);
+                }
+                chewableActive = false;
+            }
+        }
+
+    }
+
+    // // // // // // // //// // // // // // // //
+    //stat changes
+    public void upAttack(float value)
+    {
+        currentAttack += value;
+    }
+
+    public void upDefense(float value)
+    {
+        currentDefense += value;
+    }
+
+    public void upSpeed(float value)
+    {
+        currentSpeed += value;
+    }
+
+    public void upHealth(float value)
+    {
+        currentHP += value;
+    }
+    // // // // // // // // // // // // // // // //
+
     void Start()
     {
         switching.Raise(0);
@@ -166,5 +245,6 @@ public class DogController : MonoBehaviour
     void Update()
     {
         updateHealthBar();
+        endChewableChanges();
     }
 }
