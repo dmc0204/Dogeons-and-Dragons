@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 95cbaef66f986964891008ecd08d7cef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4044745416656210691
+    second: dog_head
+  - first:
+      213: 8485280153662958386
+    second: shoe
+  - first:
+      213: -3154925521077137629
+    second: Olivias_dog_2
+  - first:
+      213: 3376538603583931841
+    second: person_head
+  - first:
+      213: 3667273227213251294
+    second: person_body
+  - first:
+      213: -7532461938388853355
+    second: dog_body
+  - first:
+      213: -6137674446586339590
+    second: dog_FR_Leg
+  - first:
+      213: -5109838887916396445
+    second: person_legs
+  - first:
+      213: -7374247372274687410
+    second: person_R_Arm
+  - first:
+      213: 7404626967988800871
+    second: person_L_Arm
+  - first:
+      213: -2703814132521932266
+    second: dog_BR_Leg
+  - first:
+      213: 8698753457982315828
+    second: dog_BL_Leg
+  - first:
+      213: -1220356851103410055
+    second: dog_FL_Leg
+  - first:
+      213: 8441205700056273422
+    second: head_vein
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dog_head
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 165
+        width: 58
+        height: 53
+      alignment: 9
+      pivot: {x: 0.25699598, y: 0.053239353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e396895d4440f834bba58168bcab0cd7
+      internalID: -4044745416656210691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoe
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 165
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a663a21d27561428d81eba2b924ffc
+      internalID: 8485280153662958386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Olivias_dog_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 204
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27db45763e0b6944397e44103d773150
+      internalID: -3154925521077137629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_head
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 163
+        width: 48
+        height: 43
+      alignment: 9
+      pivot: {x: 0.45889124, y: 0.060784273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3e4fc76a5006443a5a5749f5b39c61
+      internalID: 3376538603583931841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_body
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 159
+        width: 30
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.036142204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c610f8f525efed64ea68e54a53ad4359
+      internalID: 3667273227213251294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 123
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e7b4ba073a44a49ba75f83371c4961
+      internalID: -7532461938388853355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_FR_Leg
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 32
+        height: 69
+      alignment: 9
+      pivot: {x: 0.39429283, y: 0.94121057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a889e3cb07f99f3458a080572cd0b745
+      internalID: -6137674446586339590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_legs
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 2
+        width: 37
+        height: 114
+      alignment: 9
+      pivot: {x: 0.4695253, y: 0.97969836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba0f6d64a3c6fd4aa392f4f0891fc9b
+      internalID: -5109838887916396445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_R_Arm
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 33
+        width: 20
+        height: 75
+      alignment: 9
+      pivot: {x: 0.9087311, y: 0.97732455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2e81c4b837b5a42b90dc9ce5568803
+      internalID: -7374247372274687410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_L_Arm
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 35
+        width: 20
+        height: 75
+      alignment: 9
+      pivot: {x: 0.09126587, y: 0.9660492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a68992a06d048458398c9310aa74aa
+      internalID: 7404626967988800871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_BR_Leg
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.58613133, y: 0.94689}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca5f9f50b4682c44a6b45b9b091b943
+      internalID: -2703814132521932266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_BL_Leg
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 12
+        width: 26
+        height: 29
+      alignment: 9
+      pivot: {x: 0.63010037, y: 0.91796637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a9299103addd6428df71545b804024
+      internalID: 8698753457982315828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_FL_Leg
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 13
+        width: 24
+        height: 41
+      alignment: 9
+      pivot: {x: 0.20636971, y: 0.974391}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18f6737298578d468834b04e26e0e90
+      internalID: -1220356851103410055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head_vein
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 184
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb50cea317b20f49898979964ae7a43
+      internalID: 8441205700056273422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
