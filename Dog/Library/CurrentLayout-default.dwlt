@@ -71,7 +71,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 821
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -137,8 +137,8 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 771
-  m_MinSize: {x: 885, y: 494}
-  m_MaxSize: {x: 16010, y: 14044}
+  m_MinSize: {x: 887, y: 494}
+  m_MaxSize: {x: 16012, y: 14044}
   vertical: 0
   controlID: 56
 --- !u!114 &7
@@ -294,8 +294,8 @@ MonoBehaviour:
     y: 0
     width: 478
     height: 771
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -361,7 +361,7 @@ MonoBehaviour:
       y: 17
       width: 351
       height: 452
-    m_Scale: {x: 1.0631641, y: 1.0631641}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 175.5, y: 226}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -369,10 +369,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -165.07329
-      y: -212.57301
-      width: 330.14658
-      height: 425.14603
+      x: -175.5
+      y: -226
+      width: 351
+      height: 452
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2c57ffff
-      m_LastClickedID: -43220
-      m_ExpandedIDs: 7afaffff74fbffff743b0000463e0000043f00005c3f0000723f0000863f00008c3f0000a03f0000a63f0000ac3f0000b23f0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 74fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -473,13 +473,13 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 475.16013, y: 780.8879, z: 43.23537}
+    m_Target: {x: 473.18802, y: 794.99304, z: -178.96875}
     speed: 2
-    m_Value: {x: 475.30664, y: 781.0562, z: 44.21654}
+    m_Value: {x: 473.18802, y: 794.99304, z: -178.96875}
   m_RenderMode: 2
   m_CameraMode:
-    drawMode: 0
-    name: Shaded
+    drawMode: 2
+    name: Shaded Wireframe
     section: Shading Mode
   m_ValidateTrueMetals: 0
   m_DoValidateTrueMetals: 0
@@ -508,9 +508,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.211268
+    m_Target: 56.05493
     speed: 2
-    m_Value: 11.739548
+    m_Value: 56.05493
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -643,10 +643,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150,
+  m_AnimatorController: {fileID: 9100000, guid: b58fb12628d8ccc4a874a3b887ae86d6,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -2189319340279755464, guid: 35c30d07400e36a49a468c2ef3818150,
+  - m_Target: {fileID: 4531759450378959128, guid: b58fb12628d8ccc4a874a3b887ae86d6,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -699,34 +699,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Enemies
+    - Assets/Scripts/Player/Players
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scripts/Enemies
+  - Assets/Scripts/Player/Players
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\Austin\Documents\GitHub\Dogeons-and-Dragons\Dog
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 495}
-    m_SelectedIDs: 46380000
-    m_LastClickedID: 14406
-    m_ExpandedIDs: 00000000c8310000d23100003e3200007a320000983300002034000074350000f43500002037000098370000fa3700000a3900002c39000044390000743c0000166b000000ca9a3b
+    m_SelectedIDs: c6330000
+    m_LastClickedID: 13254
+    m_ExpandedIDs: 00000000d4310000de3100004e3200009a330000b033000040340000963500001636000044370000be3700002038000032390000543900006c3900003a3d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Dogs
-      m_OriginalName: Dogs
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13278
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -740,7 +740,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c8310000d23100003e3200007a320000983300002034000074350000f43500002037000098370000fa3700000a3900002c39000044390000743c0000
+    m_ExpandedIDs: 00000000d4310000de3100004e3200009a330000b033000040340000963500001636000044370000be3700002038000032390000543900006c3900003a3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000740d0000922e0000ae2e0000ba2f0000882f0000ac0a0000c22e00007e2a0000223400000a38000078380000943a00008a0b0000504700008e0b0000e60a000028340000207ffeff2c340000c83600003c2d0000c22d000092330000ca3300002a3500002e2c0000262b0000e82c0000282b0000222d0000f4290000583000002c2b0000842b0000523400009c320000a02d0000f22b00009e2d0000303b0000183300006a350000f8320000ac330000d83400009c330000bc34000050360000ae32000026310000d234000060550000ec3700003e3500000837000030350000000000008438000044350000103700004a40000016370000464000001c370000fa37000090320000323700000c3800009232000064350000a2350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -849,8 +849,8 @@ MonoBehaviour:
     height: 264
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
-    m_IsLocked: 1
-  m_LastSelectedObjectID: 12998
+    m_IsLocked: 0
+  m_LastSelectedObjectID: 19644
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
