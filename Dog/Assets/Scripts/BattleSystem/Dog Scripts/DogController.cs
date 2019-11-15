@@ -34,6 +34,8 @@ public class DogController : MonoBehaviour
     [SerializeField] private IntEvent switching;
     [SerializeField] private VoidEvent dying;
 
+    public Object deathExplodeRef;
+
     float calcHealth()
     {
         return currentHP / activeDog.MaxHealth;
@@ -128,11 +130,13 @@ public class DogController : MonoBehaviour
     public void takeDamage(float damage)
     {
         currentHP -= damage;
+        //dogAnimator.SetTrigger("damaged");
+
         if (currentHP < 0)
         {
             currentHP = 0;
             doggyDied();
-        }
+        } 
         //updateHealthBar ();
     }
 
@@ -153,6 +157,13 @@ public class DogController : MonoBehaviour
     //handling dog death
     public void doggyDied()
     {
+        // create smoke effect at body position on death
+        if(deathExplodeRef != null)
+        {
+            GameObject deathExplosion = (GameObject)Instantiate(deathExplodeRef);
+            deathExplosion.transform.position = new Vector3(dogBodyTransform.position.x, dogBodyTransform.position.y, dogBodyTransform.position.z);
+        }
+
         dogBodySpriteRenderer.sprite = null;
         dogHeadSpriteRenderer.sprite = null;
         dogFLeftSpriteRenderer.sprite = null;
