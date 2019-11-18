@@ -71,7 +71,7 @@ public class LevelController : MonoBehaviour
         for (int i = 0; i < chews.Length; i++)
         {
             chewBtn[i].sprite = chews[i].chewySprite;
-            //chewBtn[i].color = chews[i].chewyColor;
+            chewBtn[i].color = new Color(chews[i].chewyColor.r, chews[i].chewyColor.g, chews[i].chewyColor.b, chews[i].chewyColor.a);
         }
     }
 
@@ -178,6 +178,9 @@ public class LevelController : MonoBehaviour
     //using chewable
     public void chewableTime(int i)
     {
+        chewBtn[i].color = new Color(0, 0, 0, 1);
+        //playa.usedItem(chews[i].chewName);
+        //TODO:link this shit up with player
         chewing.Raise(chews[i]);
     }
     // Start is called before the first frame update

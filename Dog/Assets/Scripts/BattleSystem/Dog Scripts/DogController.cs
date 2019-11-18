@@ -18,9 +18,9 @@ public class DogController : MonoBehaviour
 
     public bool chewableActive;
 
-    public Slider healthbar;
+    //public Slider healthbar;
 
-    public Text name;
+    //public Text name;
 
     public Animator dogAnimator;
 
@@ -30,7 +30,7 @@ public class DogController : MonoBehaviour
     public float timeAbleToBasicAttack, timeWhenChewableWearsOff;
 
     public ChewableConfig activeChewable;
-    [SerializeField] private FloatEvent attacking, hpSaving;
+    [SerializeField] private FloatEvent attacking, hpSaving, dogHPUpdating, dogAttackTiming;
     [SerializeField] private IntEvent switching;
     [SerializeField] private VoidEvent dying;
 
@@ -43,7 +43,7 @@ public class DogController : MonoBehaviour
 
     void updateHealthBar()
     {
-        healthbar.value = calcHealth();
+        dogHPUpdating.Raise(calcHealth());
     }
 
     void spawnDog()
@@ -79,9 +79,9 @@ public class DogController : MonoBehaviour
 
 
 
-        healthbar.value = calcHealth();
-        name.text = activeDog.dogName;
-        timeAbleToBasicAttack = Time.time + timeAbleToBasicAttack;
+        //healthbar.value = calcHealth();
+        //name.text = activeDog.dogName;
+        timeAbleToBasicAttack = Time.time + basicAttackCooldown();
         chewableActive = false;
     }
 
@@ -97,6 +97,7 @@ public class DogController : MonoBehaviour
     {
         if (Time.time > timeAbleToBasicAttack)
         {
+
             timeAbleToBasicAttack = Time.time + basicAttackCooldown();
             attacking.Raise(currentAttack);
             dogAnimator.SetTrigger("attack");
@@ -104,13 +105,23 @@ public class DogController : MonoBehaviour
         }
         else
         {
-            Debug.Log("ITS ON COOLDOWN");
+            Debug.Log("ITS ON COOLDOWN  Time is " + Time.time + ", able to attack at " + timeAbleToBasicAttack);
         }
     }
 
     public float basicAttackCooldown()
     {
         return 10 / currentSpeed;
+    }
+
+    public float calcTime()
+    {
+        float percentTime = ((timeAbleToBasicAttack - Time.time) / basicAttackCooldown());
+        if (percentTime < 0)
+        {
+            percentTime = 0;
+        }
+        return 1 - percentTime;
     }
 
     public void calculateDamage(float attack)
@@ -130,13 +141,13 @@ public class DogController : MonoBehaviour
     public void takeDamage(float damage)
     {
         currentHP -= damage;
-        //dogAnimator.SetTrigger("damaged");
+        dogAnimator.SetTrigger("damaged");
 
         if (currentHP < 0)
         {
             currentHP = 0;
             doggyDied();
-        } 
+        }
         //updateHealthBar ();
     }
 
@@ -158,7 +169,7 @@ public class DogController : MonoBehaviour
     public void doggyDied()
     {
         // create smoke effect at body position on death
-        if(deathExplodeRef != null)
+        if (deathExplodeRef != null)
         {
             GameObject deathExplosion = (GameObject)Instantiate(deathExplodeRef);
             deathExplosion.transform.position = new Vector3(dogBodyTransform.position.x, dogBodyTransform.position.y, dogBodyTransform.position.z);
@@ -178,19 +189,25 @@ public class DogController : MonoBehaviour
 
     public void useChewable(ChewableConfig chewable)
     {
-        chewableActive = true;
-        activeChewable = chewable;
-        timeWhenChewableWearsOff = Time.time + chewable.time;
         if (chewable.increaseAttack)
         {
+            chewableActive = true;
+            activeChewable = chewable;
+            timeWhenChewableWearsOff = Time.time + chewable.time;
             upAttack(chewable.value);
         }
         if (chewable.increaseDefense)
         {
+            chewableActive = true;
+            activeChewable = chewable;
+            timeWhenChewableWearsOff = Time.time + chewable.time;
             upDefense(chewable.value);
         }
         if (chewable.increaseSpeed)
         {
+            chewableActive = true;
+            activeChewable = chewable;
+            timeWhenChewableWearsOff = Time.time + chewable.time;
             upSpeed(chewable.value);
         }
         if (chewable.increaseHealth)
@@ -244,6 +261,10 @@ public class DogController : MonoBehaviour
     public void upHealth(float value)
     {
         currentHP += value;
+        if (currentHP > activeDog.MaxHealth)
+        {
+            currentHP = activeDog.MaxHealth;
+        }
     }
     // // // // // // // // // // // // // // // //
 
@@ -256,6 +277,7 @@ public class DogController : MonoBehaviour
     void Update()
     {
         updateHealthBar();
+        dogAttackTiming.Raise(calcTime());
         endChewableChanges();
     }
 }

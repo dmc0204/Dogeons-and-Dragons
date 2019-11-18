@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe8e7a6e6024714ca003f63f5319088, type: 3}
   m_Name: smallDefenseChewable
   m_EditorClassIdentifier: 
+  chewName: Small Defense Chewable
   value: 3
   time: 5
   increaseAttack: 0
@@ -19,4 +20,4 @@ MonoBehaviour:
   increaseHealth: 0
   increaseSpeed: 0
   chewySprite: {fileID: 21300000, guid: 6d4b6888d0980c24ea231ece42e5c7fe, type: 3}
-  chewyColor: {r: 0.3443396, g: 0.6036934, b: 1, a: 0}
+  chewyColor: {r: 0.4, g: 0.75, b: 1, a: 1}

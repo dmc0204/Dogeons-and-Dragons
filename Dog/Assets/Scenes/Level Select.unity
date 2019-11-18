@@ -307,7 +307,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1ec87f4f39ecf6741be3680640a39254,
+      objectReference: {fileID: 21300000, guid: 21d3429179495f547a1eb8e8b6666cb1,
         type: 3}
     - target: {fileID: 7726872837650033416, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
@@ -675,7 +675,7 @@ SpriteRenderer:
   m_Size: {x: 0.65, y: 0.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &353489288
@@ -1166,7 +1166,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 31c3b1b3a475c4540948f210d5bc175b,
+      objectReference: {fileID: 21300000, guid: 21d3429179495f547a1eb8e8b6666cb1,
         type: 3}
     - target: {fileID: 7726872837650033416, guid: b01d41912415da340b91bea40ee43d7a,
         type: 3}
@@ -1304,7 +1304,7 @@ SpriteRenderer:
   m_Size: {x: 0.65, y: 0.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &877091057
@@ -2520,7 +2520,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 59f90537972393e47941875247980765, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a69af44746198324988d29cadd106b98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

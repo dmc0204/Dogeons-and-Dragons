@@ -3,7 +3,29 @@ guid: beded047c0b858344872920df9934585
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - activeDog: {instanceID: 0}
+  - healthbar: {instanceID: 0}
+  - name: {instanceID: 0}
+  - dogAnimator: {instanceID: 0}
+  - dogBodySpriteRenderer: {instanceID: 0}
+  - dogHeadSpriteRenderer: {instanceID: 0}
+  - dogFLeftSpriteRenderer: {instanceID: 0}
+  - dogFRightSpriteRenderer: {instanceID: 0}
+  - dogBLeftSpriteRenderer: {instanceID: 0}
+  - dogBRightSpriteRenderer: {instanceID: 0}
+  - dogBodyTransform: {instanceID: 0}
+  - dogHeadTransform: {instanceID: 0}
+  - dogFLeftTransform: {instanceID: 0}
+  - dogFRightTransform: {instanceID: 0}
+  - dogBLeftTransform: {instanceID: 0}
+  - dogBRightTransform: {instanceID: 0}
+  - activeChewable: {instanceID: 0}
+  - attacking: {instanceID: 0}
+  - hpSaving: {instanceID: 0}
+  - switching: {instanceID: 0}
+  - dying: {instanceID: 0}
+  - deathExplodeRef: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

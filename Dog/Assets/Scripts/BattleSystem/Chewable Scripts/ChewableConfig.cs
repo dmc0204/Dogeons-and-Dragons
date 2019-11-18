@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ChewableConfig : ScriptableObject
 {
+    public string chewName;
     public float value, time;
     public bool increaseAttack,
     increaseDefense,
