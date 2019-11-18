@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     //[System.NonSerialized]
     public float currentHP, currentAttack, currentDefense, currentSpeed, timeAbleToBasicAttack;
 
-    public Slider healthbar;
+    //public Slider healthbar;
 
     public SpriteRenderer enemyBodySpriteRenderer;
 
@@ -18,11 +18,11 @@ public class EnemyController : MonoBehaviour
 
     public Animator enemyAnimator;
 
-    public Text name;
+    //public Text name;
 
     [SerializeField] private VoidEvent enemyDied;
     [SerializeField] private VoidEvent giveMeEnemy;
-    [SerializeField] private FloatEvent enemyAttacking;
+    [SerializeField] private FloatEvent enemyAttacking, enemyHPUpdating, enemyBasicAttackTiming;
 
     //functions to handle enemy death
 
@@ -55,7 +55,7 @@ public class EnemyController : MonoBehaviour
         currentDefense = 0;
         currentSpeed = 0;
         currentHP = -1;
-        name.text = "";
+        //name.text = "";
     }
 
     //asks if there are enemies left
@@ -83,11 +83,11 @@ public class EnemyController : MonoBehaviour
         currentAttack = myCoolVariable.BaseAttack;
         currentDefense = myCoolVariable.BaseDefense;
         currentSpeed = myCoolVariable.BaseSpeed;
-        enemyArmSpriteRenderer.sprite = myCoolVariable.arm;
+        enemyArmSpriteRenderer.sprite = myCoolVariable.leftArm;
         enemyBodySpriteRenderer.sprite = myCoolVariable.body;
         enemyAnimator = GetComponent<Animator>();
         enemyAnimator.runtimeAnimatorController = myCoolVariable.animator;
-        name.text = myCoolVariable.enemyName;
+        //name.text = myCoolVariable.enemyName;
         timeAbleToBasicAttack = Time.time + basicAttackCooldown();
     }
 
@@ -96,12 +96,22 @@ public class EnemyController : MonoBehaviour
     //healthbar controller functions
     public void updateHealthBar()
     {
-        healthbar.value = calcHealth();
+        enemyHPUpdating.Raise(calcHealth());
     }
 
     public float calcHealth()
     {
         return currentHP / myCoolVariable.MaxHealth;
+    }
+
+    public float calcTime()
+    {
+        float percentTime = ((timeAbleToBasicAttack - Time.time) / basicAttackCooldown());
+        if (percentTime < 0)
+        {
+            percentTime = 0;
+        }
+        return 1 - percentTime;
     }
     // // // // // // // // // // // //
 
@@ -155,6 +165,7 @@ public class EnemyController : MonoBehaviour
     {
         enemyAttack();
         updateHealthBar();
+        enemyBasicAttackTiming.Raise(calcTime());
         if (isEnemyDead())
         {
             died();

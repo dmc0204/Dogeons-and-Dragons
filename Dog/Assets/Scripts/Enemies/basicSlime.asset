@@ -17,6 +17,10 @@ MonoBehaviour:
   BaseDefense: 15.5
   BaseSpeed: 5
   enemyName: Basic Slime
+  head: {fileID: -458641133534639524, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
   body: {fileID: -458641133534639524, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
-  arm: {fileID: 368543389579951487, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
+  leftArm: {fileID: 368543389579951487, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
+  rightArm: {fileID: 0}
+  leftLeg: {fileID: 0}
+  rightLeg: {fileID: 0}
   animator: {fileID: 9100000, guid: 845c33255feaef341a222eddee1c299b, type: 2}

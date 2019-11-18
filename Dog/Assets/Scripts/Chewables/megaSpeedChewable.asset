@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe8e7a6e6024714ca003f63f5319088, type: 3}
   m_Name: megaSpeedChewable
   m_EditorClassIdentifier: 
+  chewName: Mega Speed Chewable
   value: 20
   time: 200
   increaseAttack: 0
@@ -19,4 +20,4 @@ MonoBehaviour:
   increaseHealth: 0
   increaseSpeed: 1
   chewySprite: {fileID: 21300000, guid: a9eccda3f2b69ec4494d7749a62b9d85, type: 3}
-  chewyColor: {r: 1, g: 0.706472, b: 0, a: 0}
+  chewyColor: {r: 1, g: 0.706472, b: 0, a: 1}
