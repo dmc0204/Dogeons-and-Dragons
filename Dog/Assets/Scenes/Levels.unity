@@ -6623,6 +6623,8 @@ MonoBehaviour:
   dying: {fileID: 11400000, guid: 609c2f34f38610a43a281665f3d8e71a, type: 2}
   deathExplodeRef: {fileID: 2316677459080785269, guid: 2fc0869a65962954caf4581edaddfabc,
     type: 3}
+  chewableEffectRef: {fileID: 2298275424872305544, guid: 4078883ec6e10614fb01bcfc5d29c673,
+    type: 3}
 --- !u!114 &232058773364913544
 MonoBehaviour:
   m_ObjectHideFlags: 0
