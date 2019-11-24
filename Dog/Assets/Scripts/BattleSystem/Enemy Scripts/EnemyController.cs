@@ -12,17 +12,31 @@ public class EnemyController : MonoBehaviour
 
     //public Slider healthbar;
 
-    public SpriteRenderer enemyBodySpriteRenderer;
+    public SpriteRenderer enemyBodySpriteRenderer,
+    enemyHeadSpriteRenderer,
+    enemyLeftArmSpriteRenderer,
+    enemyRightArmSpriteRenderer,
+    enemyLeftLegSpriteRenderer,
+    enemyRightLegSpriteRenderer;
 
-    public SpriteRenderer enemyArmSpriteRenderer;
+    public Transform enemyBodyTransform,
+    enemyHeadTransform,
+    enemyLeftArmTransform,
+    enemyRightArmTransform,
+    enemyLeftLegTransform,
+    enemyRightLegTransform;
 
     public Animator enemyAnimator;
 
     //public Text name;
 
-    [SerializeField] private VoidEvent enemyDied;
-    [SerializeField] private VoidEvent giveMeEnemy;
-    [SerializeField] private FloatEvent enemyAttacking, enemyHPUpdating, enemyBasicAttackTiming;
+    private SortedDictionary<float, effects> activeEffects;
+    public int chargeCount;
+
+    [SerializeField] private VoidEvent dying;
+    [SerializeField] private VoidEvent enemyFetching, specialUsing;
+    [SerializeField] private FloatEvent attacking, healthUpdating, basicAttackTiming;
+    [SerializeField] private statChangeEvent statChanging;
 
     //functions to handle enemy death
 
@@ -40,7 +54,7 @@ public class EnemyController : MonoBehaviour
     //calls enemy death animation
     public void died()
     {
-        enemyDied.Raise();
+        dying.Raise();
         //TODO:write something in animator that links this call to the
         //wantNewEnemy call.  that way the new enemy only spawns when the 
         //old one's death animation finishes
@@ -49,8 +63,12 @@ public class EnemyController : MonoBehaviour
     //clears enemy sprites
     void nullEnemy()
     {
-        enemyArmSpriteRenderer.sprite = null;
         enemyBodySpriteRenderer.sprite = null;
+        enemyHeadSpriteRenderer.sprite = null;
+        enemyLeftArmSpriteRenderer.sprite = null;
+        enemyRightArmSpriteRenderer.sprite = null;
+        enemyLeftLegSpriteRenderer.sprite = null;
+        enemyRightLegSpriteRenderer.sprite = null;
         currentAttack = 0;
         currentDefense = 0;
         currentSpeed = 0;
@@ -61,7 +79,7 @@ public class EnemyController : MonoBehaviour
     //asks if there are enemies left
     public void wantNewEnemy()
     {
-        giveMeEnemy.Raise();
+        enemyFetching.Raise();
         Debug.Log("want new enemy event triggered");
     }
 
@@ -79,16 +97,33 @@ public class EnemyController : MonoBehaviour
     //initialize values based off of currently loaded enemy
     public void initializeEnemy()
     {
+        //inits stats
         currentHP = myCoolVariable.MaxHealth;
         currentAttack = myCoolVariable.BaseAttack;
         currentDefense = myCoolVariable.BaseDefense;
         currentSpeed = myCoolVariable.BaseSpeed;
-        enemyArmSpriteRenderer.sprite = myCoolVariable.leftArm;
+        //inits sprites
         enemyBodySpriteRenderer.sprite = myCoolVariable.body;
+        enemyHeadSpriteRenderer.sprite = myCoolVariable.head;
+        enemyLeftArmSpriteRenderer.sprite = myCoolVariable.leftArm;
+        enemyRightArmSpriteRenderer.sprite = myCoolVariable.rightArm;
+        enemyLeftLegSpriteRenderer.sprite = myCoolVariable.leftLeg;
+        enemyRightLegSpriteRenderer.sprite = myCoolVariable.rightLeg;
+
+        //inits transforms
+        enemyBodyTransform.localPosition = new Vector3(myCoolVariable.bodyPosition.x, myCoolVariable.bodyPosition.y, myCoolVariable.bodyPosition.z);
+        enemyHeadTransform.localPosition = new Vector3(myCoolVariable.headPosition.x, myCoolVariable.headPosition.y, myCoolVariable.headPosition.z);
+        enemyLeftArmTransform.localPosition = new Vector3(myCoolVariable.leftArmPosition.x, myCoolVariable.leftArmPosition.y, myCoolVariable.leftArmPosition.z);
+        enemyRightArmTransform.localPosition = new Vector3(myCoolVariable.rightArmPosition.x, myCoolVariable.rightArmPosition.y, myCoolVariable.rightArmPosition.z);
+        enemyLeftLegTransform.localPosition = new Vector3(myCoolVariable.leftLegPosition.x, myCoolVariable.leftLegPosition.y, myCoolVariable.leftLegPosition.z);
+        enemyRightLegTransform.localPosition = new Vector3(myCoolVariable.rightLegPosition.x, myCoolVariable.rightLegPosition.y, myCoolVariable.rightLegPosition.z);
+
         enemyAnimator = GetComponent<Animator>();
         enemyAnimator.runtimeAnimatorController = myCoolVariable.animator;
         //name.text = myCoolVariable.enemyName;
         timeAbleToBasicAttack = Time.time + basicAttackCooldown();
+        activeEffects = new SortedDictionary<float, effects>();
+
     }
 
     // // // // // // // // // // // //
@@ -96,7 +131,7 @@ public class EnemyController : MonoBehaviour
     //healthbar controller functions
     public void updateHealthBar()
     {
-        enemyHPUpdating.Raise(calcHealth());
+        healthUpdating.Raise(calcHealth());
     }
 
     public float calcHealth()
@@ -149,7 +184,177 @@ public class EnemyController : MonoBehaviour
         {
             enemyAnimator.SetTrigger("attack");
             timeAbleToBasicAttack = Time.time + basicAttackCooldown();
-            enemyAttacking.Raise(currentAttack);
+            attacking.Raise(currentAttack);
+        }
+    }
+
+    //TODO: implement all that special shit for enemies
+
+    //special attack stuff
+    public void specialAttack()
+    {
+        //checks if you can use youur special
+        if (chargeCount >= 3)
+        {
+            //instantiates the effects
+            effects selfEffects = new effects(), enemyEffects = new effects();
+            //these are fucking flags so we don't do random shit we dont need
+            bool don = false, john = false;
+
+            //these basically check if the special does the thing, who it does it to and sets the flag
+
+            if (myCoolVariable.specialDealsDamage.onDog)
+            {
+                enemyEffects.damageValue = myCoolVariable.specialDealsDamage.value;
+                don = true;
+            }
+            if (myCoolVariable.specialDealsDamage.onSelf)
+            {
+                selfEffects.damageValue = myCoolVariable.specialDealsDamage.value;
+                john = true;
+            }
+            if (myCoolVariable.specialIncreasesHealth.onDog)
+            {
+                enemyEffects.healthValue = myCoolVariable.specialIncreasesHealth.value;
+                don = true;
+            }
+            if (myCoolVariable.specialIncreasesHealth.onSelf)
+            {
+                selfEffects.healthValue = myCoolVariable.specialIncreasesHealth.value;
+                john = true;
+            }
+
+            if (myCoolVariable.specialIncreasesAttack.onDog)
+            {
+                enemyEffects.attackValue = myCoolVariable.specialIncreasesAttack.value;
+                don = true;
+            }
+            if (myCoolVariable.specialIncreasesAttack.onSelf)
+            {
+                selfEffects.attackValue = myCoolVariable.specialIncreasesAttack.value;
+                john = true;
+            }
+            if (myCoolVariable.specialIncreasesDefense.onDog)
+            {
+                enemyEffects.defenseValue = myCoolVariable.specialIncreasesDefense.value;
+                don = true;
+            }
+            if (myCoolVariable.specialIncreasesDefense.onSelf)
+            {
+                selfEffects.defenseValue = myCoolVariable.specialIncreasesDefense.value;
+                john = true;
+            }
+            if (myCoolVariable.specialIncreasesSpeed.onDog)
+            {
+                enemyEffects.speedValue = myCoolVariable.specialIncreasesSpeed.value;
+                don = true;
+            }
+            if (myCoolVariable.specialIncreasesSpeed.onSelf)
+            {
+                selfEffects.speedValue = myCoolVariable.specialIncreasesSpeed.value;
+                john = true;
+            }
+            //does special effects on self
+            if (john)
+            {
+                applyEffect(myCoolVariable.specialDuration, selfEffects);
+            }
+            //does special effects on enemy
+            if (don)
+            {
+                statChange marcel = new statChange();
+                marcel.duration = myCoolVariable.specialDuration;
+                marcel.effects = enemyEffects;
+                statChanging.Raise(marcel);
+            }
+        }
+        chargeCount = 0;
+        specialUsing.Raise();
+    }
+
+    //unpacks incoming stat changes and applies them
+    public void unpackStatChange(statChange loi)
+    {
+        applyEffect(loi.duration, loi.effects);
+    }
+
+    //adding active effects to sorted dictionary and apply them
+    public void applyEffect(float duration, effects newEffect)
+    {
+        float timeSpecial = Time.time + duration;
+        bool joe = false;
+        //need to do this shit because i'm using time as a key.  probably bad coding practice, but im on a time crunch
+        while (activeEffects.ContainsKey(timeSpecial))
+        {
+            timeSpecial += 0.1f;
+        }
+        if (newEffect.healthValue != 0)
+        {
+            upHealth(newEffect.healthValue);
+        }
+        if (newEffect.attackValue != 0)
+        {
+            upAttack(newEffect.attackValue);
+            joe = true;
+        }
+        if (newEffect.defenseValue != 0)
+        {
+            upDefense(newEffect.defenseValue);
+            joe = true;
+        }
+        if (newEffect.speedValue != 0)
+        {
+            upSpeed(newEffect.defenseValue);
+            joe = true;
+        }
+        if (joe)
+        {
+            activeEffects.Add(timeSpecial, newEffect);
+        }
+    }
+
+
+    //reverses stat changes
+    public void endStatChanges(effects bradley)
+    {
+        upAttack(-bradley.attackValue);
+        upDefense(-bradley.defenseValue);
+        upSpeed(-bradley.speedValue);
+    }
+
+    //checks dictionary for expired effects and removes them
+    public void removeEffects()
+    {
+        float olive = Time.time;
+        if (activeEffects.ContainsKey(olive))
+        {
+            endStatChanges(activeEffects[olive]);
+            activeEffects.Remove(olive);
+        }
+    }
+
+    //stat changes
+    public void upAttack(float value)
+    {
+        currentAttack += value;
+    }
+
+    public void upDefense(float value)
+    {
+        currentDefense += value;
+    }
+
+    public void upSpeed(float value)
+    {
+        currentSpeed += value;
+    }
+
+    public void upHealth(float value)
+    {
+        currentHP += value;
+        if (currentHP > myCoolVariable.MaxHealth)
+        {
+            currentHP = myCoolVariable.MaxHealth;
         }
     }
 
@@ -165,7 +370,8 @@ public class EnemyController : MonoBehaviour
     {
         enemyAttack();
         updateHealthBar();
-        enemyBasicAttackTiming.Raise(calcTime());
+        removeEffects();
+        basicAttackTiming.Raise(calcTime());
         if (isEnemyDead())
         {
             died();

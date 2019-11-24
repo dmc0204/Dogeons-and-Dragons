@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddbd52623426a646a6d3362b4aa1358, type: 3}
+  m_Name: wastlandCat
+  m_EditorClassIdentifier: 
+  enemyName: Wasteland Cat
+  MaxHealth: 4.9
+  BaseAttack: 1.6
+  BaseDefense: 2.5
+  BaseSpeed: 13.5
+  head: {fileID: 9201371859079466863, guid: 2e82914595d1f5d48bd73f4cfc00808e, type: 3}
+  body: {fileID: 4733089312736289044, guid: 2e82914595d1f5d48bd73f4cfc00808e, type: 3}
+  leftArm: {fileID: 2663204707127511601, guid: 2e82914595d1f5d48bd73f4cfc00808e, type: 3}
+  rightArm: {fileID: -5940108424476550616, guid: 2e82914595d1f5d48bd73f4cfc00808e,
+    type: 3}
+  leftLeg: {fileID: 2754864612199763786, guid: 2e82914595d1f5d48bd73f4cfc00808e, type: 3}
+  rightLeg: {fileID: 2991517161808130629, guid: 2e82914595d1f5d48bd73f4cfc00808e,
+    type: 3}
+  bodyPosition: {x: 0.5189999, y: 0.1920118, z: 0}
+  headPosition: {x: 0.48, y: 0.4870118, z: 0}
+  leftArmPosition: {x: 0.601, y: 0.442, z: 0}
+  rightArmPosition: {x: 0.388, y: 0.4170118, z: 0}
+  leftLegPosition: {x: 0.563, y: 0.2060118, z: 0}
+  rightLegPosition: {x: 0.4489999, y: 0.2530118, z: 0}
+  animator: {fileID: 9100000, guid: 615e9ab059bc0a94c8a668c5838da100, type: 2}
+  specialDealsDamage:
+    yes: 0
+    value: 0
+    duration: 0
+  specialIncreasesAttack:
+    yes: 0
+    value: 0
+    duration: 0
+  specialIncreasesDefense:
+    yes: 0
+    value: 0
+    duration: 0
+  specialIncreasesSpeed:
+    yes: 0
+    value: 0
+    duration: 0
+  specialIncreasesHealth:
+    yes: 1
+    value: 5
+    duration: 0

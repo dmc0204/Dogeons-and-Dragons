@@ -6,19 +6,29 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Content/Dog Stats Config")]
 public class DogStatsConfig : ScriptableObject
 {
+    public string dogName;
+
     [Range(1, 50)]
     public float MaxHealth, BaseAttack, BaseDefense, BaseSpeed;
 
-    public string dogName;
+    //public bool 
 
     public Sprite head, body, FLleg, FRleg, BLleg, BRleg;
 
-    public float headPositionX, headPositionY, headPositionZ,
-        bodyPositionX, bodyPositionY, bodyPositionZ,
-        FLlegPositionX, FLlegPositionY, FLlegPositionZ,
-        FRlegPositionX, FRlegPositionY, FRlegPositionZ,
-        BLlegPositionX, BLlegPositionY, BLlegPositionZ,
-        BRlegPositionX, BRlegPositionY, BRlegPositionZ;
-
+    public Vector3 headPosition, bodyPosition, FLlegPosition, FRlegPosition, BLlegPosition, BRlegPosition;
     public RuntimeAnimatorController animator;
+
+    [Range(1, 10)]
+    public float specialDuration;
+
+    [System.Serializable]
+    public struct myCoolStruct
+    {
+        public bool onSelf, onEnemy;
+        [Range(-20, 20)]
+        public float value;
+    }
+
+    public myCoolStruct specialDealsDamage, specialIncreasesAttack, specialIncreasesDefense, specialIncreasesSpeed, specialIncreasesHealth;
+
 }
