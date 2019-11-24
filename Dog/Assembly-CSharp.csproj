@@ -240,6 +240,7 @@
      <Compile Include="Assets\Scripts\BattleSystem\TriggerEvent.cs" />
      <Compile Include="Assets\Scripts\bgInitialize.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
+     <Compile Include="Assets\Scripts\effects.cs" />
      <Compile Include="Assets\Scripts\eventtester.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\BaseGameEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\ChewableEvent.cs" />
@@ -247,6 +248,7 @@
      <Compile Include="Assets\Scripts\GameEvents\Events\EnemyStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\FloatEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\IntEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Events\statChangeEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\VoidEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\BaseGameEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\ChewableEventListener.cs" />
@@ -255,12 +257,14 @@
      <Compile Include="Assets\Scripts\GameEvents\Listeners\FloatListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\IGameEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\IntListener.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Listeners\statChangeEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\VoidListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityChewableEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityDogStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityEnemyStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityFloatEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityIntEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityStatChangeEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityVoidEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Void.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
@@ -274,6 +278,7 @@
      <Compile Include="Assets\Scripts\PlayGamesScript.cs" />
      <Compile Include="Assets\Scripts\Progress.cs" />
      <Compile Include="Assets\Scripts\RuntimeSet.cs" />
+     <Compile Include="Assets\Scripts\statChange.cs" />
      <Compile Include="Assets\Scripts\test_anim_attack.cs" />
      <Compile Include="Assets\Scripts\UiScript.cs" />
      <None Include="Assets\Scripts\Levels\README.txt" />

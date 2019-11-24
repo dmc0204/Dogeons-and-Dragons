@@ -14,13 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 24
   BaseAttack: 5
-  BaseDefense: 15.5
+  BaseDefense: 5
   BaseSpeed: 5
   enemyName: Basic Slime
   head: {fileID: -458641133534639524, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
-  body: {fileID: -458641133534639524, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
+  body: {fileID: 0}
   leftArm: {fileID: 368543389579951487, guid: 5f4931c70e897e74ba1decd3729c53f6, type: 3}
   rightArm: {fileID: 0}
   leftLeg: {fileID: 0}
   rightLeg: {fileID: 0}
+  bodyPositionX: 0
+  bodyPositionY: 0
+  bodyPositionZ: 0
+  headPositionX: 0
+  headPositionY: 0
+  headPositionZ: 0
+  leftArmPositionX: 0
+  leftArmPositionY: 0
+  leftArmPositionZ: 0
+  rightArmPositionX: 0
+  rightArmPositionY: 0
+  rightArmPositionZ: 0
+  leftLegPositionX: 0
+  leftLegPositionY: 0
+  leftLegPositionZ: 0
+  rightLegPositionX: 0
+  rightLegPositionY: 0
+  rightLegPositionZ: 0
   animator: {fileID: 9100000, guid: 845c33255feaef341a222eddee1c299b, type: 2}

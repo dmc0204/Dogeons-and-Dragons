@@ -16,7 +16,9 @@ public class DogController : MonoBehaviour
 
     public float currentSpeed;
 
-    public bool chewableActive;
+    //public bool chewableActive;
+
+    private int chargeCount;
 
     //public Slider healthbar;
 
@@ -27,24 +29,21 @@ public class DogController : MonoBehaviour
     public SpriteRenderer dogBodySpriteRenderer, dogHeadSpriteRenderer, dogFLeftSpriteRenderer, dogFRightSpriteRenderer, dogBLeftSpriteRenderer, dogBRightSpriteRenderer;
 
     public Transform dogBodyTransform, dogHeadTransform, dogFLeftTransform, dogFRightTransform, dogBLeftTransform, dogBRightTransform;
-    public float timeAbleToBasicAttack, timeWhenChewableWearsOff;
+    private float timeAbleToBasicAttack, timeWhenChewableWearsOff;
 
-    public ChewableConfig activeChewable;
-    [SerializeField] private FloatEvent attacking, hpSaving, dogHPUpdating, dogAttackTiming;
-    [SerializeField] private IntEvent switching;
-    [SerializeField] private VoidEvent dying;
+    //private ChewableConfig activeChewable;
+
+
+    private SortedDictionary<float, effects> activeEffects;
 
     public Object deathExplodeRef;
+    [SerializeField] private FloatEvent attacking, hpSaving, dogHPUpdating, dogAttackTiming;
+    [SerializeField] private IntEvent switching;
+    [SerializeField] private VoidEvent dying, specialUsing;
 
-    float calcHealth()
-    {
-        return currentHP / activeDog.MaxHealth;
-    }
+    [SerializeField] private statChangeEvent statChanging;
 
-    void updateHealthBar()
-    {
-        dogHPUpdating.Raise(calcHealth());
-    }
+
 
     void spawnDog()
     {
@@ -60,6 +59,7 @@ public class DogController : MonoBehaviour
         currentAttack = activeDog.BaseAttack;
         currentDefense = activeDog.BaseDefense;
         currentSpeed = activeDog.BaseSpeed;
+        activeEffects = new SortedDictionary<float, effects>();
 
         //initializes sprites
         dogBodySpriteRenderer.sprite = activeDog.body;
@@ -68,12 +68,13 @@ public class DogController : MonoBehaviour
         dogFRightSpriteRenderer.sprite = activeDog.FRleg;
         dogBLeftSpriteRenderer.sprite = activeDog.BLleg;
         dogBRightSpriteRenderer.sprite = activeDog.BRleg;
-        dogBodyTransform.localPosition = new Vector3(activeDog.bodyPositionX, activeDog.bodyPositionY, activeDog.bodyPositionZ);
-        dogHeadTransform.localPosition = new Vector3(activeDog.headPositionX, activeDog.headPositionY, activeDog.headPositionZ);
-        dogFLeftTransform.localPosition = new Vector3(activeDog.FLlegPositionX, activeDog.FLlegPositionY, activeDog.FLlegPositionZ);
-        dogFRightTransform.localPosition = new Vector3(activeDog.FRlegPositionX, activeDog.FRlegPositionY, activeDog.FRlegPositionZ);
-        dogBLeftTransform.localPosition = new Vector3(activeDog.BLlegPositionX, activeDog.BLlegPositionY, activeDog.BLlegPositionZ);
-        dogBRightTransform.localPosition = new Vector3(activeDog.BRlegPositionX, activeDog.BRlegPositionY, activeDog.BRlegPositionZ);
+        //inits transforms
+        dogBodyTransform.localPosition = new Vector3(activeDog.bodyPosition.x, activeDog.bodyPosition.y, activeDog.bodyPosition.z);
+        dogHeadTransform.localPosition = new Vector3(activeDog.headPosition.x, activeDog.headPosition.y, activeDog.headPosition.z);
+        dogFLeftTransform.localPosition = new Vector3(activeDog.FLlegPosition.x, activeDog.FLlegPosition.y, activeDog.FLlegPosition.z);
+        dogFRightTransform.localPosition = new Vector3(activeDog.FRlegPosition.x, activeDog.FRlegPosition.y, activeDog.FRlegPosition.z);
+        dogBLeftTransform.localPosition = new Vector3(activeDog.BLlegPosition.x, activeDog.BLlegPosition.y, activeDog.BLlegPosition.z);
+        dogBRightTransform.localPosition = new Vector3(activeDog.BRlegPosition.x, activeDog.BRlegPosition.y, activeDog.BRlegPosition.z);
         dogAnimator = GetComponent<Animator>();
         dogAnimator.runtimeAnimatorController = activeDog.animator;
 
@@ -81,10 +82,12 @@ public class DogController : MonoBehaviour
 
         //healthbar.value = calcHealth();
         //name.text = activeDog.dogName;
+        chargeCount = 0;
         timeAbleToBasicAttack = Time.time + basicAttackCooldown();
-        chewableActive = false;
+        //chewableActive = false;
     }
 
+    //this function sets your current dog as active and calls the previous spawndog function
     public void loadDog(DogStatsConfig newdoggo)
     {
         activeDog = newdoggo;
@@ -95,13 +98,17 @@ public class DogController : MonoBehaviour
     //battle functions
     void dogAttack()
     {
+        //checks if you can attack
         if (Time.time > timeAbleToBasicAttack)
         {
-
+            //sets next time you can attack
             timeAbleToBasicAttack = Time.time + basicAttackCooldown();
+            //tells everyone you are attacking
             attacking.Raise(currentAttack);
             dogAnimator.SetTrigger("attack");
             Debug.Log("attack good");
+            //each attack adds one to charge
+            chargeCount++;
         }
         else
         {
@@ -109,11 +116,13 @@ public class DogController : MonoBehaviour
         }
     }
 
+    //small func to calculate how often you can basic attack.  this excellent equation was thought of by olivia, what would we do without her?
     public float basicAttackCooldown()
     {
         return 10 / currentSpeed;
     }
 
+    //func for getting percent time for the basic attack meter.  this is for the display up top
     public float calcTime()
     {
         float percentTime = ((timeAbleToBasicAttack - Time.time) / basicAttackCooldown());
@@ -160,6 +169,100 @@ public class DogController : MonoBehaviour
         Debug.Log("dog switch events called");
     }
 
+    //special attack
+    public void specialAttack()
+    {
+        //checks if you can use youur special
+        if (chargeCount >= 3)
+        {
+            //instantiates the effects
+            effects selfEffects = new effects(), enemyEffects = new effects();
+            //these are fucking flags so we don't do random shit we dont need
+            bool don = false, john = false;
+
+            //these basically check if the special does the thing, who it does it to and sets the flag
+
+            if (activeDog.specialDealsDamage.onEnemy)
+            {
+                enemyEffects.damageValue = activeDog.specialDealsDamage.value;
+                don = true;
+            }
+            if (activeDog.specialDealsDamage.onSelf)
+            {
+                selfEffects.damageValue = activeDog.specialDealsDamage.value;
+                john = true;
+            }
+            if (activeDog.specialIncreasesHealth.onEnemy)
+            {
+                enemyEffects.healthValue = activeDog.specialIncreasesHealth.value;
+                don = true;
+            }
+            if (activeDog.specialIncreasesHealth.onSelf)
+            {
+                selfEffects.healthValue = activeDog.specialIncreasesHealth.value;
+                john = true;
+            }
+
+            if (activeDog.specialIncreasesAttack.onEnemy)
+            {
+                enemyEffects.attackValue = activeDog.specialIncreasesAttack.value;
+                don = true;
+            }
+            if (activeDog.specialIncreasesAttack.onSelf)
+            {
+                selfEffects.attackValue = activeDog.specialIncreasesAttack.value;
+                john = true;
+            }
+            if (activeDog.specialIncreasesDefense.onEnemy)
+            {
+                enemyEffects.defenseValue = activeDog.specialIncreasesDefense.value;
+                don = true;
+            }
+            if (activeDog.specialIncreasesDefense.onSelf)
+            {
+                selfEffects.defenseValue = activeDog.specialIncreasesDefense.value;
+                john = true;
+            }
+            if (activeDog.specialIncreasesSpeed.onEnemy)
+            {
+                enemyEffects.speedValue = activeDog.specialIncreasesSpeed.value;
+                don = true;
+            }
+            if (activeDog.specialIncreasesSpeed.onSelf)
+            {
+                selfEffects.speedValue = activeDog.specialIncreasesSpeed.value;
+                john = true;
+            }
+            //does special effects on self
+            if (john)
+            {
+                applyEffect(activeDog.specialDuration, selfEffects);
+            }
+            //does special effects on enemy
+            if (don)
+            {
+                statChange marcel = new statChange();
+                marcel.duration = activeDog.specialDuration;
+                marcel.effects = enemyEffects;
+                statChanging.Raise(marcel);
+            }
+        }
+        chargeCount = 0;
+        specialUsing.Raise();
+    }
+
+    // funcs for calculating health
+    float calcHealth()
+    {
+        return currentHP / activeDog.MaxHealth;
+    }
+
+    void updateHealthBar()
+    {
+        dogHPUpdating.Raise(calcHealth());
+    }
+
+    //needs this to remember what the other dogs hp are
     public void hpReceiving(float num)
     {
         loadedHP = num;
@@ -182,63 +285,96 @@ public class DogController : MonoBehaviour
         dogFLeftSpriteRenderer.sprite = null;
         dogBRightSpriteRenderer.sprite = null;
         dogBLeftSpriteRenderer.sprite = null;
+        activeEffects.Clear();
         dying.Raise();
     }
 
     //chewables
-
+    //converts chewable to an "effects" and calls the apply effect
     public void useChewable(ChewableConfig chewable)
     {
-        if (chewable.increaseAttack)
+        effects newEffect = new effects();
+        if (chewable.increaseAttack.yes)
         {
-            chewableActive = true;
-            activeChewable = chewable;
-            timeWhenChewableWearsOff = Time.time + chewable.time;
-            upAttack(chewable.value);
+            newEffect.attackValue = chewable.increaseAttack.value;
+            //upAttack(chewable.value);
         }
-        if (chewable.increaseDefense)
+        if (chewable.increaseDefense.yes)
         {
-            chewableActive = true;
-            activeChewable = chewable;
-            timeWhenChewableWearsOff = Time.time + chewable.time;
-            upDefense(chewable.value);
+            newEffect.defenseValue = chewable.increaseDefense.value;
+            //upDefense(chewable.value);
         }
-        if (chewable.increaseSpeed)
+        if (chewable.increaseSpeed.yes)
         {
-            chewableActive = true;
-            activeChewable = chewable;
-            timeWhenChewableWearsOff = Time.time + chewable.time;
-            upSpeed(chewable.value);
+            newEffect.speedValue = chewable.increaseSpeed.value;
+            //upSpeed(chewable.value);
         }
-        if (chewable.increaseHealth)
+        if (chewable.increasesHealth.yes)
         {
-            upHealth(chewable.value);
+            newEffect.healthValue = chewable.increasesHealth.value;
         }
-
+        applyEffect(chewable.chewableDuration, newEffect);
     }
 
-    public void endChewableChanges()
+    //unpacks incoming stat changes and applies them
+    public void unpackStatChange(statChange loi)
     {
-        if (chewableActive)
-        {
-            if (Time.time > timeWhenChewableWearsOff)
-            {
-                if (activeChewable.increaseAttack)
-                {
-                    upAttack(activeChewable.value * -1);
-                }
-                if (activeChewable.increaseDefense)
-                {
-                    upDefense(activeChewable.value * -1);
-                }
-                if (activeChewable.increaseSpeed)
-                {
-                    upSpeed(activeChewable.value * -1);
-                }
-                chewableActive = false;
-            }
-        }
+        applyEffect(loi.duration, loi.effects);
+    }
 
+    //adding active effects to sorted dictionary and apply them
+    public void applyEffect(float duration, effects newEffect)
+    {
+        float timeSpecial = Time.time + duration;
+        bool joe = false;
+        //need to do this shit because i'm using time as a key.  probably bad coding practice, but im on a time crunch
+        while (activeEffects.ContainsKey(timeSpecial))
+        {
+            timeSpecial += 0.1f;
+        }
+        if (newEffect.healthValue != 0)
+        {
+            upHealth(newEffect.healthValue);
+        }
+        if (newEffect.attackValue != 0)
+        {
+            upAttack(newEffect.attackValue);
+            joe = true;
+        }
+        if (newEffect.defenseValue != 0)
+        {
+            upDefense(newEffect.defenseValue);
+            joe = true;
+        }
+        if (newEffect.speedValue != 0)
+        {
+            upSpeed(newEffect.defenseValue);
+            joe = true;
+        }
+        if (joe)
+        {
+            activeEffects.Add(timeSpecial, newEffect);
+        }
+    }
+
+
+    //reverses stat changes
+    public void endStatChanges(effects bradley)
+    {
+        upAttack(-bradley.attackValue);
+        upDefense(-bradley.defenseValue);
+        upSpeed(-bradley.speedValue);
+    }
+
+    //checks dictionary for expired effects and removes them
+    public void removeEffects()
+    {
+        float olive = Time.time;
+        if (activeEffects.ContainsKey(olive))
+        {
+            endStatChanges(activeEffects[olive]);
+            activeEffects.Remove(olive);
+        }
     }
 
     // // // // // // // //// // // // // // // //
@@ -278,6 +414,6 @@ public class DogController : MonoBehaviour
     {
         updateHealthBar();
         dogAttackTiming.Raise(calcTime());
-        endChewableChanges();
+        removeEffects();
     }
 }

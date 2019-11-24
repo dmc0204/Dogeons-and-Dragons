@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Progress : MonoBehaviour
 {
-    
+
     public GameObject progressScreen, progressBtn;
 
 
     void Start()
     {
         progressScreen.SetActive(false);
-        
+
     }
 
     public void showProgress()
@@ -21,13 +21,13 @@ public class Progress : MonoBehaviour
     }
 
 
-    
+
 
 
     public void Resume()
     {
         progressScreen.SetActive(false);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
     }
 
 
@@ -36,6 +36,6 @@ public class Progress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
