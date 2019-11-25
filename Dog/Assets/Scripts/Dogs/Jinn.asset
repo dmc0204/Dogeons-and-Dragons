@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: Jinn
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+  BaseAttack: 10
+  BaseDefense: 10
+  BaseSpeed: 10
+  dogName: Jinn
+  head: {fileID: 1490077136936449059, guid: 21018ebed5a668248adf099b493703c5, type: 3}
+  body: {fileID: -885388933478137356, guid: 21018ebed5a668248adf099b493703c5, type: 3}
+  FLleg: {fileID: -7348336194399565750, guid: 21018ebed5a668248adf099b493703c5, type: 3}
+  FRleg: {fileID: 969176393461491310, guid: 21018ebed5a668248adf099b493703c5, type: 3}
+  BLleg: {fileID: 276164533919645529, guid: 21018ebed5a668248adf099b493703c5, type: 3}
+  BRleg: {fileID: 8231736333727069431, guid: 21018ebed5a668248adf099b493703c5, type: 3}
+  headPositionX: 0.327
+  headPositionY: 0.395
+  headPositionZ: 0
+  bodyPositionX: 0
+  bodyPositionY: 0
+  bodyPositionZ: 0
+  FLlegPositionX: 0.191
+  FLlegPositionY: -0.068
+  FLlegPositionZ: 0
+  FRlegPositionX: 0.058
+  FRlegPositionY: -0.091
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.124
+  BLlegPositionY: -0.075
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.047
+  BRlegPositionY: -0.09
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

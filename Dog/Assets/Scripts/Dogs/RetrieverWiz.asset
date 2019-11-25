@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: RetrieverWiz
+  m_EditorClassIdentifier: 
+  MaxHealth: 0
+  BaseAttack: 0
+  BaseDefense: 0
+  BaseSpeed: 0
+  dogName: Greg
+  head: {fileID: 143440832155975360, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
+  body: {fileID: -1614145139609406645, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
+  FLleg: {fileID: 332464660455000381, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
+  FRleg: {fileID: -3142444069240002929, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
+  BLleg: {fileID: 9001470169438212118, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
+  BRleg: {fileID: -7850126118160836412, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
+  headPositionX: 0.41
+  headPositionY: 0.324
+  headPositionZ: 0
+  bodyPositionX: 0
+  bodyPositionY: 0
+  bodyPositionZ: 0
+  FLlegPositionX: 0.224
+  FLlegPositionY: -0.173
+  FLlegPositionZ: 0
+  FRlegPositionX: 0.108
+  FRlegPositionY: -0.185
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.207
+  BLlegPositionY: -0.163
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.13
+  BRlegPositionY: -0.184
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
