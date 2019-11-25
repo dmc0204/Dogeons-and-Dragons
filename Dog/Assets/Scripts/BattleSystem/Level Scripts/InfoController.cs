@@ -28,6 +28,7 @@ public class InfoController : MonoBehaviour
     {
         dogName.text = newDog.dogName;
         dogPortrait.sprite = newDog.head;
+        dogPortrait.color = new Color(1, 1, 1, 1);
         dogChargeCount = 0;
         for (int i = 0; i < 3; i++)
         {
@@ -38,7 +39,8 @@ public class InfoController : MonoBehaviour
     public void initializeEnemy(EnemyStatsConfig newEnemy)
     {
         enemyName.text = newEnemy.enemyName;
-        enemyPortrait.sprite = newEnemy.body;
+        enemyPortrait.sprite = newEnemy.head;
+        enemyPortrait.color = new Color(1, 1, 1, 1);
         enemyChargeCount = 0;
         for (int i = 0; i < 3; i++)
         {
@@ -88,6 +90,20 @@ public class InfoController : MonoBehaviour
                 enemySpecialCharge[i].color = new Color(0.172f, 0.454f, 0.827f, 1);
             }
         }
+    }
+
+    public void dogSpecialUsed()
+    {
+        dogChargeCount = 0;
+        foreach (Image x in dogSpecialCharge)
+        {
+            x.color = new Color(0, 0, 0, 0);
+        }
+    }
+
+    public void enemySpecialUsed()
+    {
+        enemyChargeCount = 0;
     }
 
     void Start()

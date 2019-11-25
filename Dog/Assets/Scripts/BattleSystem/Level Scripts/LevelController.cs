@@ -66,12 +66,20 @@ public class LevelController : MonoBehaviour
     {
         for (int i = 0; i < dogs.Length; i++)
         {
-            dogbtn[i].sprite = dogs[i].head;
+            if (dogs[i] != null)
+            {
+                dogbtn[i].sprite = dogs[i].head;
+                dogbtn[i].color = new Color(1, 1, 1, 1);
+            }
         }
         for (int i = 0; i < chews.Length; i++)
         {
-            chewBtn[i].sprite = chews[i].chewySprite;
-            chewBtn[i].color = new Color(chews[i].chewyColor.r, chews[i].chewyColor.g, chews[i].chewyColor.b, chews[i].chewyColor.a);
+            if (chews[i] != null)
+            {
+                chewBtn[i].sprite = chews[i].chewySprite;
+                chewBtn[i].color = new Color(chews[i].chewyColor.r, chews[i].chewyColor.g, chews[i].chewyColor.b, chews[i].chewyColor.a);
+            }
+
         }
     }
 
