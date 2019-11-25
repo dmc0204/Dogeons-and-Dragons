@@ -7170,8 +7170,15 @@ MonoBehaviour:
   dogAttackTiming: {fileID: 11400000, guid: 74c775d72331fe74c8d448be264568f1, type: 2}
   switching: {fileID: 11400000, guid: 4af7a83fa333ae645a87643838dbdbc7, type: 2}
   dying: {fileID: 11400000, guid: 609c2f34f38610a43a281665f3d8e71a, type: 2}
+
+  deathExplodeRef: {fileID: 2316677459080785269, guid: 2fc0869a65962954caf4581edaddfabc,
+    type: 3}
+  chewableEffectRef: {fileID: 2298275424872305544, guid: 4078883ec6e10614fb01bcfc5d29c673,
+    type: 3}
+
   specialUsing: {fileID: 11400000, guid: b47a67f6d95ffda49aeece7c8374b831, type: 2}
   statChanging: {fileID: 11400000, guid: ba2e6dc2ca790a14eaa21c9178c11c47, type: 2}
+
 --- !u!114 &232058773364913544
 MonoBehaviour:
   m_ObjectHideFlags: 0

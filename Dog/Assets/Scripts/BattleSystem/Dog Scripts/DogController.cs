@@ -37,11 +37,12 @@ public class DogController : MonoBehaviour
     private SortedDictionary<float, effects> activeEffects;
 
     public Object deathExplodeRef;
+    public Object chewableEffectRef;
     [SerializeField] private FloatEvent attacking, hpSaving, dogHPUpdating, dogAttackTiming;
     [SerializeField] private IntEvent switching;
     [SerializeField] private VoidEvent dying, specialUsing;
-
     [SerializeField] private statChangeEvent statChanging;
+
 
 
 
@@ -289,6 +290,20 @@ public class DogController : MonoBehaviour
         dying.Raise();
     }
 
+    public void spawnChewableParticle(Color particleColor)
+    {
+        if (chewableEffectRef != null)
+        {
+            GameObject particleEffect = (GameObject)Instantiate(chewableEffectRef);
+            // spawns at units feet
+            particleEffect.transform.position = new Vector3(dogBodyTransform.position.x,
+                                                        dogBodyTransform.position.y - (2 * dogBRightSpriteRenderer.bounds.extents.y),
+                                                        dogBodyTransform.position.z);
+            ParticleSystem.MainModule settings = particleEffect.GetComponent<ParticleSystem>().main;
+            settings.startColor = new ParticleSystem.MinMaxGradient(particleColor);
+        }
+    }
+
     //chewables
     //converts chewable to an "effects" and calls the apply effect
     public void useChewable(ChewableConfig chewable)
@@ -296,21 +311,26 @@ public class DogController : MonoBehaviour
         effects newEffect = new effects();
         if (chewable.increaseAttack.yes)
         {
+            spawnChewableParticle(new Color32(245, 89, 244, 255)); // purple
             newEffect.attackValue = chewable.increaseAttack.value;
             //upAttack(chewable.value);
         }
         if (chewable.increaseDefense.yes)
         {
+            spawnChewableParticle(new Color32(89, 230, 245, 255)); // blue
             newEffect.defenseValue = chewable.increaseDefense.value;
             //upDefense(chewable.value);
         }
         if (chewable.increaseSpeed.yes)
         {
+            spawnChewableParticle(new Color32(245, 204, 89, 255)); // orange
             newEffect.speedValue = chewable.increaseSpeed.value;
             //upSpeed(chewable.value);
         }
         if (chewable.increasesHealth.yes)
         {
+            spawnChewableParticle(new Color32(103, 245, 89, 255)); // green
+        }
             newEffect.healthValue = chewable.increasesHealth.value;
         }
         applyEffect(chewable.chewableDuration, newEffect);
