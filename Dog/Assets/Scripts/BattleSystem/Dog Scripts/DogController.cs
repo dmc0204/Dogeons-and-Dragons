@@ -249,6 +249,7 @@ public class DogController : MonoBehaviour {
     }
 
     public void spawnChewableParticle (Color particleColor) {
+        Debug.Log ("spawning stat change particles");
         if (chewableEffectRef != null) {
             GameObject particleEffect = (GameObject) Instantiate (chewableEffectRef);
             // spawns at units feet
@@ -263,24 +264,24 @@ public class DogController : MonoBehaviour {
     //chewables
     //converts chewable to an "effects" and calls the apply effect
     public void useChewable (ChewableConfig chewable) {
+        Debug.Log ("chewable used");
         effects newEffect = new effects ();
         if (chewable.increaseAttack.yes) {
-            spawnChewableParticle (new Color32 (245, 89, 244, 255)); // purple
             newEffect.attackValue = chewable.increaseAttack.value;
             //upAttack(chewable.value);
         }
         if (chewable.increaseDefense.yes) {
-            spawnChewableParticle (new Color32 (89, 230, 245, 255)); // blue
+
             newEffect.defenseValue = chewable.increaseDefense.value;
             //upDefense(chewable.value);
         }
         if (chewable.increaseSpeed.yes) {
-            spawnChewableParticle (new Color32 (245, 204, 89, 255)); // orange
+
             newEffect.speedValue = chewable.increaseSpeed.value;
             //upSpeed(chewable.value);
         }
         if (chewable.increasesHealth.yes) {
-            spawnChewableParticle (new Color32 (103, 245, 89, 255)); // green
+
             newEffect.healthValue = chewable.increasesHealth.value;
         }
 
@@ -301,20 +302,25 @@ public class DogController : MonoBehaviour {
             timeSpecial += 0.1f;
         }
         if (newEffect.healthValue != 0) {
+            spawnChewableParticle (new Color32 (103, 245, 89, 255)); // green
             upHealth (newEffect.healthValue);
         }
         if (newEffect.damageValue != 0) {
             upHealth ((-1) * (newEffect.damageValue));
         }
         if (newEffect.attackValue != 0) {
+            spawnChewableParticle (new Color32 (245, 89, 244, 255)); // purple
             upAttack (newEffect.attackValue);
             joe = true;
         }
         if (newEffect.defenseValue != 0) {
+            Debug.Log ("applying defense effect");
+            spawnChewableParticle (new Color32 (89, 230, 245, 255)); // blue
             upDefense (newEffect.defenseValue);
             joe = true;
         }
         if (newEffect.speedValue != 0) {
+            spawnChewableParticle (new Color32 (245, 204, 89, 255)); // orange
             upSpeed (newEffect.defenseValue);
             joe = true;
         }
