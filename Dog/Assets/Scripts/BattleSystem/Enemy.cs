@@ -4,12 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
-    
+
     private float health = 100;
+<<<<<<< HEAD
     public Animator hitsquirrel;
     //below is for enemy to move towards position
     public Transform target;
     public float speed;
+=======
+
+
+>>>>>>> parent of 876b8c2... Battle system is getting a good start
     void TakeDamage(int damageAmount)
     {
         health = health - damageAmount;
@@ -26,14 +31,18 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
        
         //EnemyBody = this.GetComponent<Rigidbody2D>();
+=======
+>>>>>>> parent of 876b8c2... Battle system is getting a good start
         
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         //below is for enenmy to move and how fast too
         float step = speed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, target.position, step);
@@ -47,6 +56,8 @@ public class Enemy : MonoBehaviour
             hitsquirrel.SetTrigger("SquirrelDeath");
 
         }
+=======
+        
+>>>>>>> parent of 876b8c2... Battle system is getting a good start
     }
-
 }
