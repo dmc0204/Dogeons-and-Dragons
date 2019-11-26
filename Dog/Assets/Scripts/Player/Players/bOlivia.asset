@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf62892b60e6b04498ef5306aaf8331, type: 3}
+  m_Name: bOlivia
+  m_EditorClassIdentifier: 
+  yourTeam:
+  - {fileID: 11400000, guid: 757632bab04682244b930788c3cbf79d, type: 2}
+  - {fileID: 11400000, guid: 4c87ecbfb407552468b65aa144dbfedd, type: 2}
+  - {fileID: 0}
+  yourChewies:
+  - {fileID: 11400000, guid: b6d412c30c71cb1408e4d8132e1b2116, type: 2}
+  - {fileID: 11400000, guid: a36c0816e951fa842b16743549a56816, type: 2}
+  - {fileID: 11400000, guid: ac4b4f151d68aeb459ba867416b6554b, type: 2}
+  - {fileID: 11400000, guid: ed06ced946408fc44bd4344ae552855d, type: 2}
+  - {fileID: 11400000, guid: ac4b4f151d68aeb459ba867416b6554b, type: 2}

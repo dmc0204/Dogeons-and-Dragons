@@ -1,0 +1,1 @@
+in this folder go the scripts and scriptable objects.

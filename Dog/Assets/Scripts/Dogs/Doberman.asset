@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: Doberman
+  m_EditorClassIdentifier: 
+  dogName: Doberman
+  MaxHealth: 25
+  BaseAttack: 7
+  BaseDefense: 7
+  BaseSpeed: 3
+  head: {fileID: 6568938268599289625, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
+  body: {fileID: -7659071832633316141, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
+  FLleg: {fileID: 1495922093807549790, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
+  FRleg: {fileID: -8801215611091659026, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
+  BLleg: {fileID: -8172107936686960157, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
+  BRleg: {fileID: -1383416684114468519, guid: 58ca309a684a6dd45bd2e2eee4caa6f4, type: 3}
+  headPosition: {x: 0, y: 0, z: 0}
+  bodyPosition: {x: 0, y: 0, z: 0}
+  FLlegPosition: {x: 0, y: 0, z: 0}
+  FRlegPosition: {x: 0, y: 0, z: 0}
+  BLlegPosition: {x: 0, y: 0, z: 0}
+  BRlegPosition: {x: 0, y: 0, z: 0}
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
+  specialDuration: 3.67
+  specialDealsDamage:
+    onSelf: 0
+    onEnemy: 1
+    value: 5
+  specialIncreasesAttack:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesDefense:
+    onSelf: 1
+    onEnemy: 0
+    value: 20
+  specialIncreasesSpeed:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesHealth:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
