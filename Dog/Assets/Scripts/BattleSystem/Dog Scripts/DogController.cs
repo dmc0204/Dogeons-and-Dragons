@@ -284,7 +284,6 @@ public class DogController : MonoBehaviour {
 
             newEffect.healthValue = chewable.increasesHealth.value;
         }
-
         applyEffect (chewable.chewableDuration, newEffect);
     }
 

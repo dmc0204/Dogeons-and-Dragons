@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Content/Player Config")]
+[CreateAssetMenu (menuName = "Content/Player Config")]
 
-public class PlayerConfig : ScriptableObject
-{
+public class PlayerConfig : ScriptableObject {
     public DogStatsConfig[] yourTeam;
 
     public ChewableConfig[] yourChewies;
@@ -14,34 +13,24 @@ public class PlayerConfig : ScriptableObject
 
     public Dictionary<string, bool> dogs;
 
-    public void addItems(string key, int value)
-    {
-        if (inventory.ContainsKey(key))
-        {
+    public void addItems (string key, int value) {
+        if (inventory.ContainsKey (key)) {
             inventory[key] += value;
-        }
-        else
-        {
-            inventory.Add(key, value);
+        } else {
+            inventory.Add (key, value);
         }
     }
 
-    public void initializeInventory()
-    {
-
+    public void initializeInventory () {
+        //TODO: init inventory
     }
 
-    public void usedItem(string key)
-    {
-        if (inventory.ContainsKey(key))
-        {
+    public void usedItem (string key) {
+        if (inventory.ContainsKey (key)) {
             inventory[key] -= 1;
-        }
-        else
-        {
-            Debug.Log("error used an item you didnt have");
+        } else {
+            Debug.Log ("error used an item you didnt have");
         }
     }
-
 
 }
