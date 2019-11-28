@@ -1,0 +1,1 @@
+public class statChangeEventListener : BaseGameEventListener<statChange, statChangeEvent, UnityStatChangeEvent> { }
