@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: ZombieDog
+  m_EditorClassIdentifier: 
+  MaxHealth: 6.1
+  BaseAttack: 3
+  BaseDefense: 2.2
+  BaseSpeed: 3.9
+  dogName: Karpinski
+  head: {fileID: 4818161020974682963, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}
+  body: {fileID: 1976933797225851707, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}
+  FLleg: {fileID: 2084268700893172107, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}
+  FRleg: {fileID: 2600704228673891964, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}
+  BLleg: {fileID: -3513612828134732630, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}
+  BRleg: {fileID: 7601510603143627480, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}
+  headPositionX: 0
+  headPositionY: 0.02
+  headPositionZ: 0
+  bodyPositionX: -0.123
+  bodyPositionY: -0.102
+  bodyPositionZ: 0
+  FLlegPositionX: -0.079
+  FLlegPositionY: -0.152
+  FLlegPositionZ: 0
+  FRlegPositionX: -0.126
+  FRlegPositionY: -0.208
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.011
+  BLlegPositionY: -0.118
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.011
+  BRlegPositionY: -0.227
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

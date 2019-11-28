@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: GhostDog
+  m_EditorClassIdentifier: 
+  MaxHealth: 6.2
+  BaseAttack: 3.3
+  BaseDefense: 2.6
+  BaseSpeed: 3.3
+  dogName: Picard
+  head: {fileID: -2295004955324574203, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}
+  body: {fileID: -4548939970636913833, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}
+  FLleg: {fileID: -4817068832962256753, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}
+  FRleg: {fileID: 8431738974864690558, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}
+  BLleg: {fileID: -455887176125227598, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}
+  BRleg: {fileID: -3815489812145657296, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}
+  headPositionX: 0.215
+  headPositionY: -0.103
+  headPositionZ: 0
+  bodyPositionX: -0.07
+  bodyPositionY: -0.111
+  bodyPositionZ: 0
+  FLlegPositionX: 0.151
+  FLlegPositionY: -0.224
+  FLlegPositionZ: 0
+  FRlegPositionX: 0.091
+  FRlegPositionY: -0.28
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.17
+  BLlegPositionY: -0.229
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.14
+  BRlegPositionY: -0.254
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: OnePunchDog
+  m_EditorClassIdentifier: 
+  MaxHealth: 8.2
+  BaseAttack: 3.3
+  BaseDefense: 3.2
+  BaseSpeed: 2.9
+  dogName: Karnaugh
+  head: {fileID: 1414774654686861097, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
+  body: {fileID: 2676065133068707075, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
+  FLleg: {fileID: -4330521753527964926, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
+  FRleg: {fileID: -6764535718077121237, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
+  BLleg: {fileID: -7135316382394222270, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
+  BRleg: {fileID: 6814882733746487365, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
+  headPositionX: -0.033
+  headPositionY: -0.305
+  headPositionZ: 0
+  bodyPositionX: -0.01
+  bodyPositionY: -0.241
+  bodyPositionZ: 0
+  FLlegPositionX: -0.066
+  FLlegPositionY: -0.373
+  FLlegPositionZ: 0
+  FRlegPositionX: -0.152
+  FRlegPositionY: -0.415
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.001
+  BLlegPositionY: -0.308
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.011
+  BRlegPositionY: -0.386
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

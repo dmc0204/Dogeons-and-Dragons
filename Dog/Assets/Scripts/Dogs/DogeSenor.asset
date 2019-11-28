@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: DogeSenor
+  m_EditorClassIdentifier: 
+  MaxHealth: 8.8
+  BaseAttack: 5
+  BaseDefense: 3.5
+  BaseSpeed: 4.6
+  dogName: Al-Khwarizmi
+  head: {fileID: -1982185535352465071, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
+  body: {fileID: 3563329651162636375, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
+  FLleg: {fileID: -5671275142901029386, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
+  FRleg: {fileID: 4705949101033013677, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
+  BLleg: {fileID: -8860454356234834387, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
+  BRleg: {fileID: 5657237444854825648, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
+  headPositionX: -0.302
+  headPositionY: -0.164
+  headPositionZ: 0
+  bodyPositionX: -0.145
+  bodyPositionY: -0.303
+  bodyPositionZ: 0
+  FLlegPositionX: -0.23
+  FLlegPositionY: -0.352
+  FLlegPositionZ: 0
+  FRlegPositionX: -0.255
+  FRlegPositionY: -0.371
+  FRlegPositionZ: 0
+  BLlegPositionX: -0.011
+  BLlegPositionY: -0.331
+  BLlegPositionZ: 0
+  BRlegPositionX: -0.03
+  BRlegPositionY: -0.376
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

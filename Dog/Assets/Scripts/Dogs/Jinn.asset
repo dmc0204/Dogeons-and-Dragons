@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
   m_Name: Jinn
   m_EditorClassIdentifier: 
-  MaxHealth: 10
-  BaseAttack: 10
-  BaseDefense: 10
-  BaseSpeed: 10
-  dogName: Jinn
+  MaxHealth: 5.8
+  BaseAttack: 3.9
+  BaseDefense: 2.2
+  BaseSpeed: 4
+  dogName: Thompson
   head: {fileID: 1490077136936449059, guid: 21018ebed5a668248adf099b493703c5, type: 3}
   body: {fileID: -885388933478137356, guid: 21018ebed5a668248adf099b493703c5, type: 3}
   FLleg: {fileID: -7348336194399565750, guid: 21018ebed5a668248adf099b493703c5, type: 3}

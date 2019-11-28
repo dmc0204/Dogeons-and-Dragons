@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: Nevs
+  m_EditorClassIdentifier: 
+  MaxHealth: 5.2
+  BaseAttack: 3.8
+  BaseDefense: 2
+  BaseSpeed: 3.5
+  dogName: McCarthy
+  head: {fileID: 1173484200314508044, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
+  body: {fileID: 2479595957750744021, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
+  FLleg: {fileID: 8568648132218832579, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
+  FRleg: {fileID: 256110888066898219, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
+  BLleg: {fileID: 6602797783782747575, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
+  BRleg: {fileID: -388477720410329782, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
+  headPositionX: 0.162
+  headPositionY: -0.264
+  headPositionZ: 0
+  bodyPositionX: -0.174
+  bodyPositionY: -0.167
+  bodyPositionZ: 0
+  FLlegPositionX: -0.132
+  FLlegPositionY: -0.294
+  FLlegPositionZ: 0
+  FRlegPositionX: -0.21
+  FRlegPositionY: -0.328
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.03
+  BLlegPositionY: -0.252
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.006
+  BRlegPositionY: -0.335
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

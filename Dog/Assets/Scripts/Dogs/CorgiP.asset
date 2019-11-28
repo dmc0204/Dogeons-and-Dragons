@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: CorgiP
+  m_EditorClassIdentifier: 
+  MaxHealth: 8.8
+  BaseAttack: 3.1
+  BaseDefense: 3.9
+  BaseSpeed: 2.7
+  dogName: Newell
+  head: {fileID: -3603232294609084120, guid: 297282336697f054bb3f873049f475f8, type: 3}
+  body: {fileID: 5971525185303396900, guid: 297282336697f054bb3f873049f475f8, type: 3}
+  FLleg: {fileID: 8145250074154417188, guid: 297282336697f054bb3f873049f475f8, type: 3}
+  FRleg: {fileID: 2848127929310106120, guid: 297282336697f054bb3f873049f475f8, type: 3}
+  BLleg: {fileID: 6438649798070543350, guid: 297282336697f054bb3f873049f475f8, type: 3}
+  BRleg: {fileID: 2097718740853183938, guid: 297282336697f054bb3f873049f475f8, type: 3}
+  headPositionX: 0.196
+  headPositionY: -0.216
+  headPositionZ: 0
+  bodyPositionX: -0.008
+  bodyPositionY: -0.429
+  bodyPositionZ: 0
+  FLlegPositionX: 0.021
+  FLlegPositionY: -0.411
+  FLlegPositionZ: 0
+  FRlegPositionX: -0.007
+  FRlegPositionY: -0.487
+  FRlegPositionZ: 0
+  BLlegPositionX: -0.028
+  BLlegPositionY: -0.387
+  BLlegPositionZ: 0
+  BRlegPositionX: -0.045
+  BRlegPositionY: -0.368
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

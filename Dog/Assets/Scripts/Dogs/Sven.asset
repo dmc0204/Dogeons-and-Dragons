@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: Sven
+  m_EditorClassIdentifier: 
+  MaxHealth: 0
+  BaseAttack: 0
+  BaseDefense: 0
+  BaseSpeed: 0
+  dogName: Sven
+  head: {fileID: -8873258779957618712, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
+  body: {fileID: 1408055918070198197, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
+  FLleg: {fileID: 2477645917287506438, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
+  FRleg: {fileID: -3819643073700884999, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
+  BLleg: {fileID: 7451944558286593922, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
+  BRleg: {fileID: -5445840450410547475, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
+  headPositionX: 0.162
+  headPositionY: -0.264
+  headPositionZ: 0
+  bodyPositionX: -0.174
+  bodyPositionY: -0.167
+  bodyPositionZ: 0
+  FLlegPositionX: -0.132
+  FLlegPositionY: -0.294
+  FLlegPositionZ: 0
+  FRlegPositionX: -0.21
+  FRlegPositionY: -0.328
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.03
+  BLlegPositionY: -0.252
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.006
+  BRlegPositionY: -0.335
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

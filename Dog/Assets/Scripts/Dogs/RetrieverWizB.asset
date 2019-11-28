@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
-  m_Name: RetrieverWiz
+  m_Name: RetrieverWizB
   m_EditorClassIdentifier: 
-  MaxHealth: 7.9
-  BaseAttack: 3.2
-  BaseDefense: 3.9
-  BaseSpeed: 4
-  dogName: Booth
-  head: {fileID: 143440832155975360, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
-  body: {fileID: -1614145139609406645, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
-  FLleg: {fileID: 332464660455000381, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
-  FRleg: {fileID: -3142444069240002929, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
-  BLleg: {fileID: 9001470169438212118, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
-  BRleg: {fileID: -7850126118160836412, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
+  MaxHealth: 0
+  BaseAttack: 0
+  BaseDefense: 0
+  BaseSpeed: 0
+  dogName: RetrieverB
+  head: {fileID: -1901443418406137585, guid: 5516f425149561645b43f568edc55ea3, type: 3}
+  body: {fileID: 553327994756004379, guid: 5516f425149561645b43f568edc55ea3, type: 3}
+  FLleg: {fileID: 9154449813803037838, guid: 5516f425149561645b43f568edc55ea3, type: 3}
+  FRleg: {fileID: -3481896520951845394, guid: 5516f425149561645b43f568edc55ea3, type: 3}
+  BLleg: {fileID: -1563152429920028325, guid: 5516f425149561645b43f568edc55ea3, type: 3}
+  BRleg: {fileID: 3060019123941097523, guid: 5516f425149561645b43f568edc55ea3, type: 3}
   headPositionX: 0.41
   headPositionY: 0.324
   headPositionZ: 0

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: Cerberu
+  m_EditorClassIdentifier: 
+  MaxHealth: 6.4
+  BaseAttack: 2.7
+  BaseDefense: 2.5
+  BaseSpeed: 3
+  dogName: Hurd
+  head: {fileID: 5050774830912783583, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
+  body: {fileID: 4600473902918976563, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
+  FLleg: {fileID: -3916353780073835212, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
+  FRleg: {fileID: -5679995366019450171, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
+  BLleg: {fileID: -2680819789693310250, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
+  BRleg: {fileID: 97788573413568180, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
+  headPositionX: 0.341
+  headPositionY: 0.909
+  headPositionZ: 0
+  bodyPositionX: -0.289
+  bodyPositionY: 0.491
+  bodyPositionZ: 0
+  FLlegPositionX: 0.539
+  FLlegPositionY: 0.187
+  FLlegPositionZ: 0
+  FRlegPositionX: 0.131
+  FRlegPositionY: 0.087
+  FRlegPositionZ: 0
+  BLlegPositionX: -0.048
+  BLlegPositionY: 0.107
+  BLlegPositionZ: 0
+  BRlegPositionX: -0.1940019
+  BRlegPositionY: -0.002000557
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}

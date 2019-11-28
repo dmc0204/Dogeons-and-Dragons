@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: DogeRobo
+  m_EditorClassIdentifier: 
+  MaxHealth: 9.5
+  BaseAttack: 3.7
+  BaseDefense: 4.4
+  BaseSpeed: 2.4
+  dogName: Cerf
+  head: {fileID: 0}
+  body: {fileID: 3786664858525391067, guid: cbdeb7f691ac1b44fb5680265f247b60, type: 3}
+  FLleg: {fileID: -8125670137410053249, guid: cbdeb7f691ac1b44fb5680265f247b60, type: 3}
+  FRleg: {fileID: -1976517780254256101, guid: cbdeb7f691ac1b44fb5680265f247b60, type: 3}
+  BLleg: {fileID: 8784788157626444116, guid: cbdeb7f691ac1b44fb5680265f247b60, type: 3}
+  BRleg: {fileID: -2458293029327795973, guid: cbdeb7f691ac1b44fb5680265f247b60, type: 3}
+  headPositionX: 0
+  headPositionY: 0
+  headPositionZ: 0
+  bodyPositionX: 0.031
+  bodyPositionY: 0.961
+  bodyPositionZ: 0
+  FLlegPositionX: 0.371
+  FLlegPositionY: 0.789
+  FLlegPositionZ: 0
+  FRlegPositionX: -0.665
+  FRlegPositionY: 0.491
+  FRlegPositionZ: 0
+  BLlegPositionX: 0.609
+  BLlegPositionY: 0.189
+  BLlegPositionZ: 0
+  BRlegPositionX: 0.2819996
+  BRlegPositionY: 0.057
+  BRlegPositionZ: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
