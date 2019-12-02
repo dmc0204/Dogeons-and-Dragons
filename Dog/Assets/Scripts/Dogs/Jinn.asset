@@ -23,12 +23,12 @@ MonoBehaviour:
   FRleg: {fileID: 969176393461491310, guid: 21018ebed5a668248adf099b493703c5, type: 3}
   BLleg: {fileID: 276164533919645529, guid: 21018ebed5a668248adf099b493703c5, type: 3}
   BRleg: {fileID: 8231736333727069431, guid: 21018ebed5a668248adf099b493703c5, type: 3}
-  headPosition: {x: 0, y: 0, z: 0}
-  bodyPosition: {x: 0, y: 0, z: 0}
-  FLlegPosition: {x: 0, y: 0, z: 0}
-  FRlegPosition: {x: 0, y: 0, z: 0}
-  BLlegPosition: {x: 0, y: 0, z: 0}
-  BRlegPosition: {x: 0, y: 0, z: 0}
+  headPosition: {x: 0.655, y: 0.337, z: 0}
+  bodyPosition: {x: 0.357, y: -0.074, z: 0}
+  FLlegPosition: {x: 0.5, y: -0.117, z: 0}
+  FRlegPosition: {x: 0.451, y: -0.175, z: 0}
+  BLlegPosition: {x: 0.459, y: -0.095, z: 0}
+  BRlegPosition: {x: 0.417, y: -0.132, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
   specialDuration: 0
   specialDealsDamage:

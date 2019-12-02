@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
-  m_Name: New Dog Stats Config 1
+  m_Name: practiceDog
   m_EditorClassIdentifier: 
-  dogName: 
-  MaxHealth: 0
-  BaseAttack: 0
-  BaseDefense: 0
-  BaseSpeed: 0
-  head: {fileID: 21300000, guid: 6161397989a9cf94196287511ec14129, type: 3}
-  body: {fileID: 0}
+  dogName: Bradley
+  MaxHealth: 3
+  BaseAttack: 3
+  BaseDefense: 3
+  BaseSpeed: 3
+  head: {fileID: 2260783108052273681, guid: 0b247fcb90e33a848b6d1ebe840ffc1c, type: 3}
+  body: {fileID: 21300000, guid: ef4d1cf328ab76c4e9e4a4ea739d049d, type: 3}
   FLleg: {fileID: 0}
   FRleg: {fileID: 0}
   BLleg: {fileID: 0}
@@ -29,20 +29,25 @@ MonoBehaviour:
   FRlegPosition: {x: 0, y: 0, z: 0}
   BLlegPosition: {x: 0, y: 0, z: 0}
   BRlegPosition: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  specialDuration: 0
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
+  specialDuration: 3
   specialDealsDamage:
-    yes: 0
+    onSelf: 0
+    onEnemy: 0
     value: 0
   specialIncreasesAttack:
-    yes: 0
-    value: 0
+    onSelf: 0
+    onEnemy: 0
+    value: 9.1
   specialIncreasesDefense:
-    yes: 0
-    value: 0
+    onSelf: 0
+    onEnemy: 0
+    value: -14.5
   specialIncreasesSpeed:
-    yes: 0
+    onSelf: 0
+    onEnemy: 0
     value: 0
   specialIncreasesHealth:
-    yes: 0
+    onSelf: 0
+    onEnemy: 0
     value: 0
