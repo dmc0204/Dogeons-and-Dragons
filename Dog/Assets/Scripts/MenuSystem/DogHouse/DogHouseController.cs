@@ -14,7 +14,7 @@ public class DogHouseController : MonoBehaviour
     public ArrayOfDogs dougs;
 
 
-    public void setActive()
+    public void setActive(DogStatsConfig currentDog)
     {
         //TODO: sets to active
         //TODO: checks dogs for active ones
@@ -47,7 +47,7 @@ public class DogHouseController : MonoBehaviour
         myPlayer.currency += i;
     }
 
-    
+
 
     void Start()
     {
