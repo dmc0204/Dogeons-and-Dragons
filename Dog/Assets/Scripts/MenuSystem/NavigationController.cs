@@ -5,13 +5,13 @@ using UnityEngine;
 public class NavigationController : MonoBehaviour
 {
     public GameObject[] panels;
-    public Stack previous;
+    public Stack<GameObject> previous;
 
-    public void activatePanel(GameObject which)
+    public void activatePanel(int which)
     {
         for (int i = 0; i < panels.Length; i++)
         {
-            if (panels[i] == which)
+            if (i == which)
             {
                 panels[i].SetActive(true);
             }
@@ -24,7 +24,7 @@ public class NavigationController : MonoBehaviour
 
     public void initPrev()
     {
-        previous = new Stack();
+        previous = new Stack<GameObject>();
         pushing(0);
     }
 
@@ -33,13 +33,7 @@ public class NavigationController : MonoBehaviour
         previous.Push(panels[i]);
     }
 
-    public void navPrev()
-    {
-        if (previous.Count > 0)
-        {
-            activatePanel(previous.Pop());
-        }
-    }
+
     void Start()
     {
 
