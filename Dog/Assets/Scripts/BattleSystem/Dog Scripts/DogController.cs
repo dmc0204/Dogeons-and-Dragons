@@ -26,13 +26,12 @@ public class DogController : MonoBehaviour
 
     public Animator dogAnimator;
 
-    public SpriteRenderer dogBodySpriteRenderer, dogHeadSpriteRenderer, dogFLeftSpriteRenderer, dogFRightSpriteRenderer, dogBLeftSpriteRenderer, dogBRightSpriteRenderer;
+    public SpriteRenderer dogBodySpriteRenderer, dogHeadSpriteRenderer, dogFLeftSpriteRenderer, dogFRightSpriteRenderer, dogBLeftSpriteRenderer, dogBRightSpriteRenderer, dogAccesorySpriteRenderer;
 
-    public Transform dogBodyTransform, dogHeadTransform, dogFLeftTransform, dogFRightTransform, dogBLeftTransform, dogBRightTransform;
+    public Transform dogBodyTransform, dogHeadTransform, dogFLeftTransform, dogFRightTransform, dogBLeftTransform, dogBRightTransform, dogAccesoryTransform;
     private float timeAbleToBasicAttack, timeWhenChewableWearsOff;
 
     //private ChewableConfig activeChewable;
-
 
     private SortedDictionary<float, effects> activeEffects;
 
@@ -43,11 +42,9 @@ public class DogController : MonoBehaviour
     [SerializeField] private VoidEvent dying, specialUsing;
     [SerializeField] private statChangeEvent statChanging;
 
-
-
-
-    void spawnDog()
+    public void spawnDog()
     {
+        dogAnimator.runtimeAnimatorController = activeDog.animator;
         //initializes stats
         if (loadedHP == -1)
         {
@@ -69,6 +66,7 @@ public class DogController : MonoBehaviour
         dogFRightSpriteRenderer.sprite = activeDog.FRleg;
         dogBLeftSpriteRenderer.sprite = activeDog.BLleg;
         dogBRightSpriteRenderer.sprite = activeDog.BRleg;
+        dogAccesorySpriteRenderer.sprite = activeDog.accesory;
         //inits transforms
         dogBodyTransform.localPosition = new Vector3(activeDog.bodyPosition.x, activeDog.bodyPosition.y, activeDog.bodyPosition.z);
         dogHeadTransform.localPosition = new Vector3(activeDog.headPosition.x, activeDog.headPosition.y, activeDog.headPosition.z);
@@ -76,9 +74,8 @@ public class DogController : MonoBehaviour
         dogFRightTransform.localPosition = new Vector3(activeDog.FRlegPosition.x, activeDog.FRlegPosition.y, activeDog.FRlegPosition.z);
         dogBLeftTransform.localPosition = new Vector3(activeDog.BLlegPosition.x, activeDog.BLlegPosition.y, activeDog.BLlegPosition.z);
         dogBRightTransform.localPosition = new Vector3(activeDog.BRlegPosition.x, activeDog.BRlegPosition.y, activeDog.BRlegPosition.z);
-        dogAnimator = GetComponent<Animator>();
-        dogAnimator.runtimeAnimatorController = activeDog.animator;
-
+        dogAccesoryTransform.localPosition = new Vector3(activeDog.accesoryPosition.x, activeDog.accesoryPosition.y, activeDog.accesoryPosition.z);
+        //dogAnimator = GetComponent<Animator>();
 
 
         //healthbar.value = calcHealth();
@@ -177,13 +174,30 @@ public class DogController : MonoBehaviour
         if (chargeCount >= 3)
         {
             //instantiates the effects
-            effects selfEffects = new effects(), enemyEffects = new effects();
+            // // // // // //effects selfEffects = new effects(), enemyEffects = new effects();
             //these are fucking flags so we don't do random shit we dont need
-            bool don = false, john = false;
+            //bool don = false, john = false;
 
             //these basically check if the special does the thing, who it does it to and sets the flag
+            foreach (special special in activeDog.specialEffects)
+            {
+                effects newEffect = new effects(special.type, special.value);
+                if (special.targets == target.enemy)
+                {
+                    statChange marcel = new statChange();
+                    marcel.duration = special.duration;
+                    marcel.effects = newEffect;
+                    statChanging.Raise(marcel);
+                }
+                else if (special.targets == target.self)
+                {
+                    applyEffect(special.duration, newEffect);
+                }
+            }
+            chargeCount = 0;
+            specialUsing.Raise();
 
-            if (activeDog.specialDealsDamage.onEnemy)
+            /* if (activeDog.specialDealsDamage.onEnemy)
             {
                 enemyEffects.damageValue = activeDog.specialDealsDamage.value;
                 don = true;
@@ -242,14 +256,11 @@ public class DogController : MonoBehaviour
             //does special effects on enemy
             if (don)
             {
-                statChange marcel = new statChange();
-                marcel.duration = activeDog.specialDuration;
-                marcel.effects = enemyEffects;
-                statChanging.Raise(marcel);
+
             }
+        } */
+
         }
-        chargeCount = 0;
-        specialUsing.Raise();
     }
 
     // funcs for calculating health
@@ -292,13 +303,14 @@ public class DogController : MonoBehaviour
 
     public void spawnChewableParticle(Color particleColor)
     {
+        Debug.Log("spawning stat change particles");
         if (chewableEffectRef != null)
         {
             GameObject particleEffect = (GameObject)Instantiate(chewableEffectRef);
             // spawns at units feet
             particleEffect.transform.position = new Vector3(dogBodyTransform.position.x,
-                                                        dogBodyTransform.position.y - (2 * dogBRightSpriteRenderer.bounds.extents.y),
-                                                        dogBodyTransform.position.z);
+                dogBodyTransform.position.y - (2 * dogBRightSpriteRenderer.bounds.extents.y),
+                dogBodyTransform.position.z);
             ParticleSystem.MainModule settings = particleEffect.GetComponent<ParticleSystem>().main;
             settings.startColor = new ParticleSystem.MinMaxGradient(particleColor);
         }
@@ -308,32 +320,36 @@ public class DogController : MonoBehaviour
     //converts chewable to an "effects" and calls the apply effect
     public void useChewable(ChewableConfig chewable)
     {
-        effects newEffect = new effects();
+        foreach (special chew in chewable.chewEffects)
+        {
+            effects newEffect = new effects(chew.type, chew.value);
+            applyEffect(chew.duration, newEffect);
+        }
+        Debug.Log("chewable used");
+        /* effects newEffect = new effects();
         if (chewable.increaseAttack.yes)
         {
-            spawnChewableParticle(new Color32(245, 89, 244, 255)); // purple
             newEffect.attackValue = chewable.increaseAttack.value;
             //upAttack(chewable.value);
         }
         if (chewable.increaseDefense.yes)
         {
-            spawnChewableParticle(new Color32(89, 230, 245, 255)); // blue
+
             newEffect.defenseValue = chewable.increaseDefense.value;
             //upDefense(chewable.value);
         }
         if (chewable.increaseSpeed.yes)
         {
-            spawnChewableParticle(new Color32(245, 204, 89, 255)); // orange
+
             newEffect.speedValue = chewable.increaseSpeed.value;
             //upSpeed(chewable.value);
         }
         if (chewable.increasesHealth.yes)
         {
-            spawnChewableParticle(new Color32(103, 245, 89, 255)); // green
-        }
+
             newEffect.healthValue = chewable.increasesHealth.value;
         }
-        applyEffect(chewable.chewableDuration, newEffect);
+        applyEffect(chewable.chewableDuration, newEffect); */
     }
 
     //unpacks incoming stat changes and applies them
@@ -352,23 +368,32 @@ public class DogController : MonoBehaviour
         {
             timeSpecial += 0.1f;
         }
-        if (newEffect.healthValue != 0)
+        if (newEffect.HealthValue != 0)
         {
-            upHealth(newEffect.healthValue);
+            spawnChewableParticle(new Color32(103, 245, 89, 255)); // green
+            upHealth(newEffect.HealthValue);
         }
-        if (newEffect.attackValue != 0)
+        if (newEffect.DamageValue != 0)
         {
-            upAttack(newEffect.attackValue);
+            upHealth((-1) * (newEffect.DamageValue));
+        }
+        if (newEffect.AttackValue != 0)
+        {
+            spawnChewableParticle(new Color32(245, 89, 244, 255)); // purple
+            upAttack(newEffect.AttackValue);
             joe = true;
         }
-        if (newEffect.defenseValue != 0)
+        if (newEffect.DefenseValue != 0)
         {
-            upDefense(newEffect.defenseValue);
+            Debug.Log("applying defense effect");
+            spawnChewableParticle(new Color32(89, 230, 245, 255)); // blue
+            upDefense(newEffect.DefenseValue);
             joe = true;
         }
-        if (newEffect.speedValue != 0)
+        if (newEffect.SpeedValue != 0)
         {
-            upSpeed(newEffect.defenseValue);
+            spawnChewableParticle(new Color32(245, 204, 89, 255)); // orange
+            upSpeed(newEffect.DefenseValue);
             joe = true;
         }
         if (joe)
@@ -377,13 +402,12 @@ public class DogController : MonoBehaviour
         }
     }
 
-
     //reverses stat changes
     public void endStatChanges(effects bradley)
     {
-        upAttack(-bradley.attackValue);
-        upDefense(-bradley.defenseValue);
-        upSpeed(-bradley.speedValue);
+        upAttack(-bradley.AttackValue);
+        upDefense(-bradley.DefenseValue);
+        upSpeed(-bradley.SpeedValue);
     }
 
     //checks dictionary for expired effects and removes them

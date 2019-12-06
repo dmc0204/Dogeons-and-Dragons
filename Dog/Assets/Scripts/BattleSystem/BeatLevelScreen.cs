@@ -6,7 +6,7 @@ public class BeatLevelScreen : MonoBehaviour
 {
     public LevelConfig myCoolLevel;
     public GameObject win, wincondition;
-    
+
     // Start is called before the first frame update
 
 
@@ -16,7 +16,7 @@ public class BeatLevelScreen : MonoBehaviour
 
     }
 
-    
+
 
     // Update is called once per frame
     void Update()

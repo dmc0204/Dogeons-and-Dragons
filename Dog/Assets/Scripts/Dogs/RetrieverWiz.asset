@@ -12,33 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
   m_Name: RetrieverWiz
   m_EditorClassIdentifier: 
-  MaxHealth: 0
-  BaseAttack: 0
-  BaseDefense: 0
-  BaseSpeed: 0
-  dogName: Greg
+  dogName: Booth
+  MaxHealth: 7.9
+  BaseAttack: 3.2
+  BaseDefense: 3.9
+  BaseSpeed: 4
   head: {fileID: 143440832155975360, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
   body: {fileID: -1614145139609406645, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
   FLleg: {fileID: 332464660455000381, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
   FRleg: {fileID: -3142444069240002929, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
   BLleg: {fileID: 9001470169438212118, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
   BRleg: {fileID: -7850126118160836412, guid: 184b4384a7dbadd4bae54f5af9237cc1, type: 3}
-  headPositionX: 0.41
-  headPositionY: 0.324
-  headPositionZ: 0
-  bodyPositionX: 0
-  bodyPositionY: 0
-  bodyPositionZ: 0
-  FLlegPositionX: 0.224
-  FLlegPositionY: -0.173
-  FLlegPositionZ: 0
-  FRlegPositionX: 0.108
-  FRlegPositionY: -0.185
-  FRlegPositionZ: 0
-  BLlegPositionX: 0.207
-  BLlegPositionY: -0.163
-  BLlegPositionZ: 0
-  BRlegPositionX: 0.13
-  BRlegPositionY: -0.184
-  BRlegPositionZ: 0
+  headPosition: {x: 0.41, y: 0.324, z: 0}
+  bodyPosition: {x: 0, y: 0, z: 0}
+  FLlegPosition: {x: 0.224, y: -0.173, z: 0}
+  FRlegPosition: {x: 0.108, y: -0.185, z: 0}
+  BLlegPosition: {x: 0.207, y: -0.163, z: 0}
+  BRlegPosition: {x: 0.13, y: -0.184, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
+  specialDuration: 0
+  specialDealsDamage:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesAttack:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesDefense:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesSpeed:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesHealth:
+    onSelf: 0
+    onEnemy: 0
+    value: 0

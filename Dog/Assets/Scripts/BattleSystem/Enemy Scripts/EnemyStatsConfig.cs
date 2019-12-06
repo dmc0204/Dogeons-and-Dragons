@@ -17,7 +17,8 @@ public class EnemyStatsConfig : ScriptableObject
     //public Transform myCoolTransform;
 
     public RuntimeAnimatorController animator;
-    public float specialDuration;
+    public special[] specialEffects;
+    /* public float specialDuration;
 
 
     [System.Serializable]
@@ -28,6 +29,6 @@ public class EnemyStatsConfig : ScriptableObject
         public float value;
     }
 
-    public myCoolStruct specialDealsDamage, specialIncreasesAttack, specialIncreasesDefense, specialIncreasesSpeed, specialIncreasesHealth;
+    public myCoolStruct specialDealsDamage, specialIncreasesAttack, specialIncreasesDefense, specialIncreasesSpeed, specialIncreasesHealth; */
 
 }

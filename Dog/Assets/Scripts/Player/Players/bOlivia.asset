@@ -13,12 +13,22 @@ MonoBehaviour:
   m_Name: bOlivia
   m_EditorClassIdentifier: 
   yourTeam:
-  - {fileID: 11400000, guid: 757632bab04682244b930788c3cbf79d, type: 2}
-  - {fileID: 11400000, guid: 4c87ecbfb407552468b65aa144dbfedd, type: 2}
-  - {fileID: 0}
-  yourChewies:
+  - {fileID: 11400000, guid: 1783a1be38ee85347aeef00bbb72d540, type: 2}
+  - {fileID: 11400000, guid: 813ac5d42b4e58b48998bd4b4422073d, type: 2}
+  - {fileID: 11400000, guid: e6341c772a6150246b63dc1be4172b5c, type: 2}
+  yourPack:
   - {fileID: 11400000, guid: b6d412c30c71cb1408e4d8132e1b2116, type: 2}
   - {fileID: 11400000, guid: a36c0816e951fa842b16743549a56816, type: 2}
   - {fileID: 11400000, guid: ac4b4f151d68aeb459ba867416b6554b, type: 2}
   - {fileID: 11400000, guid: ed06ced946408fc44bd4344ae552855d, type: 2}
   - {fileID: 11400000, guid: ac4b4f151d68aeb459ba867416b6554b, type: 2}
+  yourDogs:
+  - {fileID: 11400000, guid: 1783a1be38ee85347aeef00bbb72d540, type: 2}
+  - {fileID: 11400000, guid: 813ac5d42b4e58b48998bd4b4422073d, type: 2}
+  - {fileID: 11400000, guid: b20f70e484cd1bc49a6b61bfbe128847, type: 2}
+  - {fileID: 11400000, guid: 757632bab04682244b930788c3cbf79d, type: 2}
+  - {fileID: 11400000, guid: 0cf23435adae4f54ca096f71fa32952d, type: 2}
+  - {fileID: 11400000, guid: 3484ed72308437949a188ddcb5f3662f, type: 2}
+  currency: 0
+  displaying: {fileID: 0}
+  currencyDisplaying: {fileID: 0}

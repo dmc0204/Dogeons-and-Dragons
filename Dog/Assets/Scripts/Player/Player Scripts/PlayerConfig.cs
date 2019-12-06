@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Content/Player Config")]
@@ -8,13 +9,32 @@ public class PlayerConfig : ScriptableObject
 {
     public DogStatsConfig[] yourTeam;
 
-    public ChewableConfig[] yourChewies;
+    public ChewableConfig[] yourPack;
 
-    public Dictionary<string, int> inventory;
+    public Dictionary<ChewableConfig, int> inventory;
 
-    public Dictionary<string, bool> dogs;
+    public List<DogStatsConfig> yourDogs;
 
-    public void addItems(string key, int value)
+    public int currency;
+    //public DogStatsConfig[] ownedDogs;
+
+    [SerializeField] public DogStatsEvent displaying;
+    [SerializeField] public IntEvent currencyDisplaying;
+
+    //initall
+
+
+    ///Inventory functions
+    /// inventory intializer
+
+
+    //pack initializer
+
+
+
+
+    //adds items to your inventory
+    public void addItems(ChewableConfig key, int value)
     {
         if (inventory.ContainsKey(key))
         {
@@ -25,13 +45,80 @@ public class PlayerConfig : ScriptableObject
             inventory.Add(key, value);
         }
     }
-
-    public void initializeInventory()
+    //
+    //can add items to your pack to take into battle
+    public void addToPack(int spot, ChewableConfig chewable)
     {
+        //if you have the chewable do this
+        if (inventory[chewable] > 0)
+        {
+            //if there's another  chewable in that spot in your pack already, save it
+            if (yourPack[spot] != null)
+            {
+                addItems(yourPack[spot], 1);
+            }
+            //add the new chewable to the pack
+            yourPack[spot] = chewable;
+            //update your inventoey
+            inventory[chewable] -= 1;
+        }
+    }
+
+    //uses up your chewable
+    public void chewableGotUsed(int spot)
+    {
+        yourPack[spot] = null;
+    }
+
+    //dog functions
+
+
+    /*  public void dogsInit()
+     {
+         yourDogs = new List<DogStatsConfig>(ownedDogs);
+     } */
+
+    public bool hasDog(DogStatsConfig toCheck)
+    {
+        if (yourDogs.Contains(toCheck))
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public void addDogs(DogStatsConfig newDog)
+    {
+        if (yourDogs.Contains(newDog))
+        {
+            duplicateDog(newDog);
+        }
+        else
+        {
+            displayNewDog(newDog);
+        }
+    }
+
+    public void displayNewDog(DogStatsConfig newDog)
+    {
+        displaying.Raise(newDog);
+        yourDogs.Add(newDog);
+    }
+
+    public void duplicateDog(DogStatsConfig dupeDog)
+    {
+        //enum rarity = dupeDog.rarity;
+        //currencyDisplaying.Raise(rarity);
+        //TODO:parse rarity to int
 
     }
 
-    public void usedItem(string key)
+
+
+
+
+    /* public void usedItem(string key)
     {
         if (inventory.ContainsKey(key))
         {
@@ -41,7 +128,6 @@ public class PlayerConfig : ScriptableObject
         {
             Debug.Log("error used an item you didnt have");
         }
-    }
-
+    } */
 
 }

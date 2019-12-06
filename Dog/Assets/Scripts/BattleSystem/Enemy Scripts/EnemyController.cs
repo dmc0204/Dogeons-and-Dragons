@@ -196,80 +196,86 @@ public class EnemyController : MonoBehaviour
         //checks if you can use youur special
         if (chargeCount >= 3)
         {
+            foreach (special special in myCoolVariable.specialEffects)
+            {
+                effects newEffect = new effects(special.type, special.value);
+                if (special.targets == target.enemy)
+                {
+                    statChange marcel = new statChange();
+                    marcel.duration = special.duration;
+                    marcel.effects = newEffect;
+                    statChanging.Raise(marcel);
+                }
+                else if (special.targets == target.self)
+                {
+                    applyEffect(special.duration, newEffect);
+                }
+            }
+            chargeCount = 0;
+            specialUsing.Raise();
             //instantiates the effects
-            effects selfEffects = new effects(), enemyEffects = new effects();
+            /* effects selfEffects = new effects (), enemyEffects = new effects ();
             //these are fucking flags so we don't do random shit we dont need
             bool don = false, john = false;
 
             //these basically check if the special does the thing, who it does it to and sets the flag
 
-            if (myCoolVariable.specialDealsDamage.onDog)
-            {
-                enemyEffects.damageValue = myCoolVariable.specialDealsDamage.value;
+            if (myCoolVariable.specialDealsDamage.onDog) {
+                enemyEffects.DamageValue = myCoolVariable.specialDealsDamage.value;
                 don = true;
             }
-            if (myCoolVariable.specialDealsDamage.onSelf)
-            {
-                selfEffects.damageValue = myCoolVariable.specialDealsDamage.value;
+            if (myCoolVariable.specialDealsDamage.onSelf) {
+                selfEffects.DamageValue = myCoolVariable.specialDealsDamage.value;
                 john = true;
             }
-            if (myCoolVariable.specialIncreasesHealth.onDog)
-            {
-                enemyEffects.healthValue = myCoolVariable.specialIncreasesHealth.value;
+            if (myCoolVariable.specialIncreasesHealth.onDog) {
+                enemyEffects.HealthValue = myCoolVariable.specialIncreasesHealth.value;
                 don = true;
             }
-            if (myCoolVariable.specialIncreasesHealth.onSelf)
-            {
-                selfEffects.healthValue = myCoolVariable.specialIncreasesHealth.value;
+            if (myCoolVariable.specialIncreasesHealth.onSelf) {
+                selfEffects.HealthValue = myCoolVariable.specialIncreasesHealth.value;
                 john = true;
             }
 
-            if (myCoolVariable.specialIncreasesAttack.onDog)
-            {
-                enemyEffects.attackValue = myCoolVariable.specialIncreasesAttack.value;
+            if (myCoolVariable.specialIncreasesAttack.onDog) {
+                enemyEffects.AttackValue = myCoolVariable.specialIncreasesAttack.value;
                 don = true;
             }
-            if (myCoolVariable.specialIncreasesAttack.onSelf)
-            {
-                selfEffects.attackValue = myCoolVariable.specialIncreasesAttack.value;
+            if (myCoolVariable.specialIncreasesAttack.onSelf) {
+                selfEffects.AttackValue = myCoolVariable.specialIncreasesAttack.value;
                 john = true;
             }
-            if (myCoolVariable.specialIncreasesDefense.onDog)
-            {
-                enemyEffects.defenseValue = myCoolVariable.specialIncreasesDefense.value;
+            if (myCoolVariable.specialIncreasesDefense.onDog) {
+                enemyEffects.DefenseValue = myCoolVariable.specialIncreasesDefense.value;
                 don = true;
             }
-            if (myCoolVariable.specialIncreasesDefense.onSelf)
-            {
-                selfEffects.defenseValue = myCoolVariable.specialIncreasesDefense.value;
+            if (myCoolVariable.specialIncreasesDefense.onSelf) {
+                selfEffects.DefenseValue = myCoolVariable.specialIncreasesDefense.value;
                 john = true;
             }
-            if (myCoolVariable.specialIncreasesSpeed.onDog)
-            {
-                enemyEffects.speedValue = myCoolVariable.specialIncreasesSpeed.value;
+            if (myCoolVariable.specialIncreasesSpeed.onDog) {
+                enemyEffects.SpeedValue = myCoolVariable.specialIncreasesSpeed.value;
                 don = true;
             }
-            if (myCoolVariable.specialIncreasesSpeed.onSelf)
-            {
-                selfEffects.speedValue = myCoolVariable.specialIncreasesSpeed.value;
+            if (myCoolVariable.specialIncreasesSpeed.onSelf) {
+                selfEffects.SpeedValue = myCoolVariable.specialIncreasesSpeed.value;
                 john = true;
             }
             //does special effects on self
-            if (john)
-            {
-                applyEffect(myCoolVariable.specialDuration, selfEffects);
+            if (john) {
+                applyEffect (myCoolVariable.specialDuration, selfEffects);
             }
             //does special effects on enemy
-            if (don)
-            {
-                statChange marcel = new statChange();
+            if (don) {
+                statChange marcel = new statChange ();
                 marcel.duration = myCoolVariable.specialDuration;
                 marcel.effects = enemyEffects;
-                statChanging.Raise(marcel);
+                statChanging.Raise (marcel);
             }
         }
         chargeCount = 0;
-        specialUsing.Raise();
+        specialUsing.Raise (); */
+        }
     }
 
     //unpacks incoming stat changes and applies them
@@ -288,23 +294,27 @@ public class EnemyController : MonoBehaviour
         {
             timeSpecial += 0.1f;
         }
-        if (newEffect.healthValue != 0)
+        if (newEffect.HealthValue != 0)
         {
-            upHealth(newEffect.healthValue);
+            upHealth(newEffect.HealthValue);
         }
-        if (newEffect.attackValue != 0)
+        if (newEffect.DamageValue != 0)
         {
-            upAttack(newEffect.attackValue);
+            upHealth((-1) * (newEffect.DamageValue));
+        }
+        if (newEffect.AttackValue != 0)
+        {
+            upAttack(newEffect.AttackValue);
             joe = true;
         }
-        if (newEffect.defenseValue != 0)
+        if (newEffect.DefenseValue != 0)
         {
-            upDefense(newEffect.defenseValue);
+            upDefense(newEffect.DefenseValue);
             joe = true;
         }
-        if (newEffect.speedValue != 0)
+        if (newEffect.SpeedValue != 0)
         {
-            upSpeed(newEffect.defenseValue);
+            upSpeed(newEffect.DefenseValue);
             joe = true;
         }
         if (joe)
@@ -313,13 +323,12 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-
     //reverses stat changes
     public void endStatChanges(effects bradley)
     {
-        upAttack(-bradley.attackValue);
-        upDefense(-bradley.defenseValue);
-        upSpeed(-bradley.speedValue);
+        upAttack(-bradley.AttackValue);
+        upDefense(-bradley.DefenseValue);
+        upSpeed(-bradley.SpeedValue);
     }
 
     //checks dictionary for expired effects and removes them
