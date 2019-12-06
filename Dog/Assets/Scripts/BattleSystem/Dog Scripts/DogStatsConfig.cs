@@ -7,18 +7,22 @@ using UnityEngine.UI;
 public class DogStatsConfig : ScriptableObject
 {
     public string dogName;
+    /* [Range(1, 4)]
+    public int rarity; */
+
+    public Rarity dogRarity;
 
     [Range(1, 50)]
     public float MaxHealth, BaseAttack, BaseDefense, BaseSpeed;
 
     //public bool 
 
-    public Sprite head, body, FLleg, FRleg, BLleg, BRleg;
+    public Sprite head, body, FLleg, FRleg, BLleg, BRleg, accesory;
 
-    public Vector3 headPosition, bodyPosition, FLlegPosition, FRlegPosition, BLlegPosition, BRlegPosition;
+    public Vector3 headPosition, bodyPosition, FLlegPosition, FRlegPosition, BLlegPosition, BRlegPosition, accesoryPosition;
     public RuntimeAnimatorController animator;
 
-    [Range(1, 10)]
+    /* [Range(1, 10)]
     public float specialDuration;
 
     [System.Serializable]
@@ -30,5 +34,7 @@ public class DogStatsConfig : ScriptableObject
     }
 
     public myCoolStruct specialDealsDamage, specialIncreasesAttack, specialIncreasesDefense, specialIncreasesSpeed, specialIncreasesHealth;
+ */
 
+    public special[] specialEffects;
 }

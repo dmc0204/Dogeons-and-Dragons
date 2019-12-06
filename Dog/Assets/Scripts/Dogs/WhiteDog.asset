@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
+  m_Name: WhiteDog
+  m_EditorClassIdentifier: 
+  dogName: 
+  MaxHealth: 0
+  BaseAttack: 0
+  BaseDefense: 0
+  BaseSpeed: 0
+  head: {fileID: 2695901232098684945, guid: 869e1c1d519226a4d88c72614f1ea2c4, type: 3}
+  body: {fileID: 1514513085019826558, guid: 869e1c1d519226a4d88c72614f1ea2c4, type: 3}
+  FLleg: {fileID: -4633686926737034552, guid: 869e1c1d519226a4d88c72614f1ea2c4, type: 3}
+  FRleg: {fileID: 6052517084260232116, guid: 869e1c1d519226a4d88c72614f1ea2c4, type: 3}
+  BLleg: {fileID: 580896793384010062, guid: 869e1c1d519226a4d88c72614f1ea2c4, type: 3}
+  BRleg: {fileID: 5241987085355117582, guid: 869e1c1d519226a4d88c72614f1ea2c4, type: 3}
+  headPosition: {x: 0.313, y: 0.019, z: 0}
+  bodyPosition: {x: -0.071, y: -0.16, z: 0}
+  FLlegPosition: {x: 0.121, y: -0.274, z: 0}
+  FRlegPosition: {x: -0.021, y: -0.265, z: 0}
+  BLlegPosition: {x: 0.03813693, y: -0.2344001, z: 0}
+  BRlegPosition: {x: -0.02286306, y: -0.2694001, z: 0}
+  animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
+  specialDuration: 0
+  specialDealsDamage:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesAttack:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesDefense:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesSpeed:
+    onSelf: 0
+    onEnemy: 0
+    value: 0
+  specialIncreasesHealth:
+    onSelf: 0
+    onEnemy: 0
+    value: 0

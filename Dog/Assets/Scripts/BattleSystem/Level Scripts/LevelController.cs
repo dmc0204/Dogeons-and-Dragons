@@ -46,7 +46,7 @@ public class LevelController : MonoBehaviour
         playa = brrrr.myCoolPlayer;
         NMEs = new Queue<EnemyStatsConfig>(newLevel.enemies);
         dogs = playa.yourTeam;
-        chews = playa.yourChewies;
+        chews = playa.yourPack;
         background = newLevel.background;
         backgroundSpriteRenderer = GetComponent<SpriteRenderer>();
         backgroundSpriteRenderer.sprite = background;

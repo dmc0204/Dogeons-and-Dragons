@@ -7,16 +7,8 @@ using UnityEngine;
 public class ChewableConfig : ScriptableObject
 {
     public string chewName;
-    [Range(1, 10)]
-    public float chewableDuration;
-    [System.Serializable]
-    public struct myCoolStruct
-    {
-        public bool yes;
-        public int value;
-    }
+    public special[] chewEffects;
 
-    public myCoolStruct increaseAttack, increaseDefense, increaseSpeed, increasesHealth;
     public Sprite chewySprite;
 
     public Color chewyColor;
