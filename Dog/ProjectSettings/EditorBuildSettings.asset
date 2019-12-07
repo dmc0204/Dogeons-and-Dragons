@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TitleScreen.unity
     guid: 81c80ff307fbd984cae826be08ef83ff
   - enabled: 1
@@ -20,10 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditsScreen.unity
     guid: 83fcf72bead8beb4087d21c5faf2faa7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DogHouse.unity
     guid: 21120944c7d9ddd45b01b64c48ec5444
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Inventory.unity
     guid: 48bd82a295c664646935ed4694e4c868
   - enabled: 1
