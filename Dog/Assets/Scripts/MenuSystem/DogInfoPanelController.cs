@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class DogInfoPanelController : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    private DogStatsConfig displayDog;
+    public Slider[] sliders;
+
+    private Image portrait;
+
+    private string dogName, specialDescription;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
