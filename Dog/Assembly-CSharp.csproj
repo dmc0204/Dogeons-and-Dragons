@@ -239,8 +239,6 @@
      <Compile Include="Assets\Scripts\BattleSystem\Level Scripts\LevelConfig.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Level Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\SpBtnTouch.cs" />
-     <Compile Include="Assets\Scripts\BattleSystem\Special.cs" />
-     <Compile Include="Assets\Scripts\BattleSystem\Target.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\TriggerEvent.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Types.cs" />
      <Compile Include="Assets\Scripts\bgInitialize.cs" />
@@ -287,7 +285,9 @@
      <Compile Include="Assets\Scripts\PlayGamesScript.cs" />
      <Compile Include="Assets\Scripts\Progress.cs" />
      <Compile Include="Assets\Scripts\RuntimeSet.cs" />
+     <Compile Include="Assets\Scripts\Special.cs" />
      <Compile Include="Assets\Scripts\statChange.cs" />
+     <Compile Include="Assets\Scripts\Target.cs" />
      <Compile Include="Assets\Scripts\test_anim_attack.cs" />
      <Compile Include="Assets\Scripts\UiScript.cs" />
      <Compile Include="Assets\victoryController.cs" />

@@ -1135,6 +1135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fecc21d18bc37e4ca2fc0575af2f760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliders:
+  - {fileID: 2100335021}
+  - {fileID: 1855402360}
+  - {fileID: 1768414442}
+  - {fileID: 1882051241}
+  specialTextMeshPro: {fileID: 0}
 --- !u!1 &232125698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1153,7 @@ GameObject:
   - component: {fileID: 232125701}
   - component: {fileID: 232125700}
   m_Layer: 5
-  m_Name: StatImage
+  m_Name: ATKStatImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3176,7 +3182,7 @@ GameObject:
   - component: {fileID: 593802877}
   - component: {fileID: 593802876}
   m_Layer: 5
-  m_Name: StatImage
+  m_Name: SPDStatImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4141,7 +4147,7 @@ GameObject:
   - component: {fileID: 893437514}
   - component: {fileID: 893437513}
   m_Layer: 5
-  m_Name: StatImage
+  m_Name: HPStatImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4216,7 +4222,7 @@ GameObject:
   - component: {fileID: 894914463}
   - component: {fileID: 894914462}
   m_Layer: 5
-  m_Name: StatImage
+  m_Name: DEFStatImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8880,7 +8886,7 @@ GameObject:
   - component: {fileID: 1768414441}
   - component: {fileID: 1768414442}
   m_Layer: 5
-  m_Name: StatSlider
+  m_Name: DEFStatSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9448,7 +9454,7 @@ GameObject:
   - component: {fileID: 1855402359}
   - component: {fileID: 1855402360}
   m_Layer: 5
-  m_Name: StatSlider
+  m_Name: ATKStatSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9673,7 +9679,7 @@ GameObject:
   - component: {fileID: 1882051240}
   - component: {fileID: 1882051241}
   m_Layer: 5
-  m_Name: StatSlider
+  m_Name: SPDStatSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10945,7 +10951,7 @@ GameObject:
   - component: {fileID: 2100335020}
   - component: {fileID: 2100335021}
   m_Layer: 5
-  m_Name: StatSlider
+  m_Name: HPStatSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
