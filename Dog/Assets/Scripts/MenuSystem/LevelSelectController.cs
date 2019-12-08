@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class LevelSelectController : MonoBehaviour
 {
     public PlayerLevelContainer hackyWorkaround;
+    public GameObject levelContainer;
+
+    public Sprite unknown;
     public LevelConfig[] levels;
     public Image[] yourDogs;
 
@@ -22,8 +25,29 @@ public class LevelSelectController : MonoBehaviour
     {
         for (int i = 0; i < hackyWorkaround.myCoolPlayer.yourTeam.Length; i++)
         {
-            yourDogs[i].sprite = hackyWorkaround.myCoolPlayer.yourTeam[i].head;
-            yourDogs[i].color = new Color(1, 1, 1, 1);
+            if (hackyWorkaround.myCoolPlayer.yourTeam[i] == null)
+            {
+                yourDogs[i].sprite = null;
+                yourDogs[i].color = new Color(0, 0, 0, 0);
+            }
+            else
+            {
+                yourDogs[i].sprite = hackyWorkaround.myCoolPlayer.yourTeam[i].head;
+                yourDogs[i].color = new Color(1, 1, 1, 1);
+            }
+        }
+
+    }
+
+    public void initAvailableLevels()
+    {
+        Image[] bgs = levelContainer.GetComponentsInChildren<Image>();
+        for (int i = 0; i < bgs.Length; i++)
+        {
+            if (bgs.Length - i > hackyWorkaround.myCoolPlayer.currentLevel)
+            {
+                bgs[i].sprite = unknown;
+            }
         }
     }
 
@@ -39,6 +63,7 @@ public class LevelSelectController : MonoBehaviour
     {
         //hackyWorkaround.myCoolPlayer.playerInit();
         initActiveTeamPics();
+        initAvailableLevels();
     }
 
     // Update is called once per frame
