@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Array Of Dogs
+  m_Script: {fileID: 11500000, guid: a4b971aebec1ad54aac8347be9f0eac5, type: 3}
+  m_Name: pikachu
   m_EditorClassIdentifier: 
   dogsInTheGame:
   - {fileID: 11400000, guid: e3391e017e6c1514a8d6fa3399e49c88, type: 2}
@@ -32,8 +32,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a11c0309a091f8042b07a2755725a5f6, type: 2}
   - {fileID: 11400000, guid: e08536023f995ea4e93c2af2ccaf0779, type: 2}
   - {fileID: 11400000, guid: 2268edbd0f224cf4aad5272f798939d8, type: 2}
-  - {fileID: 0}
-  rareDogs: []
-  superRareDogs: []
-  superDuperRareDogs: []
-  ultraRareDogs: []

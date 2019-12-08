@@ -13,7 +13,6 @@ public class DogHouseController : MonoBehaviour
     public Image[] dogImages;
     public ArrayOfDogs dougs;
 
-
     public void setActive(DogStatsConfig currentDog)
     {
         //TODO: sets to active
@@ -35,10 +34,23 @@ public class DogHouseController : MonoBehaviour
                 dogButtons[i].color = new Color(0, 0, 0, 1);
             }
         }
+    }
+
+    public void initTeamPortraits()
+    {
         for (int i = 0; i < myPlayer.yourTeam.Length; i++)
         {
-            dogImages[i].sprite = myPlayer.yourTeam[i].head;
-            dogImages[i].color = new Color(1, 1, 1, 1);
+            if (myPlayer.yourTeam[i] == null)
+            {
+                dogImages[i].sprite = null;
+                dogImages[i].color = new Color(0, 0, 0, 0);
+            }
+            else
+            {
+                dogImages[i].sprite = myPlayer.yourTeam[i].head;
+                dogImages[i].color = new Color(1, 1, 1, 1);
+            }
+
         }
     }
 
@@ -47,12 +59,11 @@ public class DogHouseController : MonoBehaviour
         myPlayer.currency += i;
     }
 
-
-
     void Start()
     {
 
         initDogButtons();
+        initTeamPortraits();
     }
 
     // Update is called once per frame

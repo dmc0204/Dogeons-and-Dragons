@@ -15,23 +15,18 @@ public class PlayerConfig : ScriptableObject
 
     public List<DogStatsConfig> yourDogs;
 
-    public int currency;
+    public int currency, currentLevel;
     //public DogStatsConfig[] ownedDogs;
 
-    [SerializeField] public DogStatsEvent displaying;
     [SerializeField] public IntEvent currencyDisplaying;
+    //[SerializeField] public FloatEvent dupeChecking;
 
     //initall
-
 
     ///Inventory functions
     /// inventory intializer
 
-
     //pack initializer
-
-
-
 
     //adds items to your inventory
     public void addItems(ChewableConfig key, int value)
@@ -72,7 +67,6 @@ public class PlayerConfig : ScriptableObject
 
     //dog functions
 
-
     /*  public void dogsInit()
      {
          yourDogs = new List<DogStatsConfig>(ownedDogs);
@@ -88,35 +82,46 @@ public class PlayerConfig : ScriptableObject
             return false;
     }
 
-    public void addDogs(DogStatsConfig newDog)
+    public void changeBones(int bones)
     {
-        if (yourDogs.Contains(newDog))
+        currency += bones;
+    }
+
+    public bool isOnTeam(DogStatsConfig check)
+    {
+        bool toReturn = false;
+        for (int i = 0; i < yourTeam.Length; i++)
         {
-            duplicateDog(newDog);
+            if (yourTeam[i] == check)
+            {
+                toReturn = true;
+            }
         }
-        else
+        return toReturn;
+    }
+
+    public void removeFromTeam(DogStatsConfig toRemove)
+    {
+        for (int i = 0; i < yourTeam.Length; i++)
         {
-            displayNewDog(newDog);
+            if (yourTeam[i] == toRemove)
+            {
+                yourTeam[i] = null;
+            }
         }
     }
 
-    public void displayNewDog(DogStatsConfig newDog)
+    public void addToTeam(DogStatsConfig toAdd)
     {
-        displaying.Raise(newDog);
-        yourDogs.Add(newDog);
+        for (int i = 0; i < yourTeam.Length; i++)
+        {
+            if (yourTeam[i] == null)
+            {
+                yourTeam[i] = toAdd;
+                i = 4;
+            }
+        }
     }
-
-    public void duplicateDog(DogStatsConfig dupeDog)
-    {
-        //enum rarity = dupeDog.rarity;
-        //currencyDisplaying.Raise(rarity);
-        //TODO:parse rarity to int
-
-    }
-
-
-
-
 
     /* public void usedItem(string key)
     {
