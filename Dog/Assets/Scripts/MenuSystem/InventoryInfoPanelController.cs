@@ -21,14 +21,18 @@ public class InventoryInfoPanelController : MonoBehaviour
     public void activatePanel(ChewableConfig newChew)
     {
         activeChewable = newChew;
-        loadInfo();
+        loadInfo(false);
         panel.SetActive(true);
-
-
-
     }
 
-    public void loadInfo()
+    public void activatePanel(int i)
+    {
+        activeChewable = myCoolPlayer.yourPack[i];
+        loadInfo(true);
+        panel.SetActive(true);
+    }
+
+    public void loadInfo(bool inBag)
     {
         chewableImage.sprite = activeChewable.chewySprite;
         activeChewableType.text = activeChewable.chewableType;
