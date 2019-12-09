@@ -13,41 +13,36 @@ MonoBehaviour:
   m_Name: PugReaper
   m_EditorClassIdentifier: 
   dogName: Floyd
-  MaxHealth: 7.5
-  BaseAttack: 4.2
-  BaseDefense: 2.8
-  BaseSpeed: 4.3
+  dogRarity: 2
+  MaxHealth: 78
+  BaseAttack: 44
+  BaseDefense: 27
+  BaseSpeed: 42
   head: {fileID: 790762708131642277, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}
   body: {fileID: -6523331646920600897, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}
   FLleg: {fileID: 6276558328816259983, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}
   FRleg: {fileID: -8891297435616710716, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}
   BLleg: {fileID: 3146846648566951563, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}
   BRleg: {fileID: 5561097860065351304, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}
+  accesory: {fileID: 0}
   headPosition: {x: 0.195, y: -0.051, z: 0}
   bodyPosition: {x: 0.357, y: -0.074, z: 0}
   FLlegPosition: {x: 0.185, y: -0.081, z: 0}
   FRlegPosition: {x: 0.168, y: -0.101, z: 0}
   BLlegPosition: {x: 0.514428, y: -0.06239723, z: 0}
   BRlegPosition: {x: 0.545428, y: -0.07739723, z: 0}
+  accesoryPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
-  specialDuration: 0
-  specialDealsDamage:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesAttack:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesDefense:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesSpeed:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesHealth:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
+  specialEffects:
+  - targets: 1
+    type: 0
+    duration: 0
+    value: -50
+  - targets: 0
+    type: 3
+    duration: 5
+    value: -10
+  - targets: 0
+    type: 0
+    duration: 0
+    value: 15

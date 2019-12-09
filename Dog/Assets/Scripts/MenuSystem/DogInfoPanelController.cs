@@ -28,8 +28,10 @@ public class DogInfoPanelController : MonoBehaviour
 
     public void summonedDog(DogStatsConfig newDog)
     {
+        Debug.Log("summoned dog recieved");
         if (myPlayer.hasDog(newDog))
         {
+            Debug.Log("recognized as duplicate");
             duplicateDog(newDog);
         }
         else
@@ -94,7 +96,7 @@ public class DogInfoPanelController : MonoBehaviour
                     }
                     else if (effect.value < 0)
                     {
-                        sb.Append("Lowers");
+                        sb.Append("Lowers ");
                     }
                     sb.Append("attack of ");
                     break;
@@ -105,7 +107,7 @@ public class DogInfoPanelController : MonoBehaviour
                     }
                     else if (effect.value < 0)
                     {
-                        sb.Append("Lowers");
+                        sb.Append("Lowers ");
                     }
                     sb.Append("defense of ");
                     break;
@@ -116,7 +118,7 @@ public class DogInfoPanelController : MonoBehaviour
                     }
                     else if (effect.value < 0)
                     {
-                        sb.Append("Lowers");
+                        sb.Append("Lowers ");
                     }
                     sb.Append("speed of ");
                     break;
@@ -130,15 +132,15 @@ public class DogInfoPanelController : MonoBehaviour
             {
                 sb.Append("enemy ");
             }
-            if (absValueEffect < 6)
+            if (absValueEffect < 15)
             {
                 sb.Append("a little bit\n");
             }
-            else if (absValueEffect < 14)
+            else if (absValueEffect < 35)
             {
                 sb.Append("moderately\n");
             }
-            else if (absValueEffect <= 20)
+            else if (absValueEffect <= 50)
             {
                 sb.Append("massively\n");
             }
@@ -159,7 +161,8 @@ public class DogInfoPanelController : MonoBehaviour
     public void setStatBars(DogStatsConfig dogToShow)
     {
         float[] myNewArray = { dogToShow.MaxHealth, dogToShow.BaseAttack, dogToShow.BaseDefense, dogToShow.BaseSpeed };
-        for (int i = 0; i < sliders.Length; i++)
+        sliders[0].value = myNewArray[0] / 100;
+        for (int i = 1; i < sliders.Length; i++)
         {
             sliders[i].value = myNewArray[i] / 50;
         }
@@ -217,6 +220,7 @@ public class DogInfoPanelController : MonoBehaviour
 
     public void dupePanel(DogStatsConfig dogToShow)
     {
+        Debug.Log("dupliate panel being built");
         setDupeMessage(dogToShow);
         removeGameObject.SetActive(false);
         addGameObject.SetActive(false);

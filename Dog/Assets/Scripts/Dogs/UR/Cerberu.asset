@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Hurd
   dogRarity: 3
-  MaxHealth: 6.4
-  BaseAttack: 2.7
-  BaseDefense: 2.5
-  BaseSpeed: 3
+  MaxHealth: 88
+  BaseAttack: 50
+  BaseDefense: 35
+  BaseSpeed: 46
   head: {fileID: 5050774830912783583, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
   body: {fileID: 4600473902918976563, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
   FLleg: {fileID: -3916353780073835212, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
@@ -35,14 +35,14 @@ MonoBehaviour:
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
   specialEffects:
   - targets: 1
-    type: 0
-    duration: 0
-    value: -10
-  - targets: 0
-    type: 2
+    type: 1
     duration: 10
-    value: 4.5
+    value: -30
   - targets: 0
     type: 1
-    duration: 0
-    value: 5.9
+    duration: 10
+    value: 40
+  - targets: 0
+    type: 3
+    duration: 5
+    value: -10

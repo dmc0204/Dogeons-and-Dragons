@@ -12,8 +12,11 @@ public class DogStatsConfig : ScriptableObject
 
     public Rarity dogRarity;
 
+    [Range(1, 100)]
+    public float MaxHealth;
+
     [Range(1, 50)]
-    public float MaxHealth, BaseAttack, BaseDefense, BaseSpeed;
+    public float BaseAttack, BaseDefense, BaseSpeed;
 
     //public bool 
 

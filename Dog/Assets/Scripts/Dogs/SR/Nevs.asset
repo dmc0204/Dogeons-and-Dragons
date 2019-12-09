@@ -13,41 +13,32 @@ MonoBehaviour:
   m_Name: Nevs
   m_EditorClassIdentifier: 
   dogName: McCarthy
-  MaxHealth: 5.2
-  BaseAttack: 3.8
-  BaseDefense: 2
-  BaseSpeed: 3.5
+  dogRarity: 1
+  MaxHealth: 90
+  BaseAttack: 30
+  BaseDefense: 44
+  BaseSpeed: 20
   head: {fileID: 1173484200314508044, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
   body: {fileID: 2479595957750744021, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
   FLleg: {fileID: 8568648132218832579, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
   FRleg: {fileID: 256110888066898219, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
   BLleg: {fileID: 6602797783782747575, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
   BRleg: {fileID: -388477720410329782, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
+  accesory: {fileID: 0}
   headPosition: {x: 0.162, y: -0.264, z: 0}
   bodyPosition: {x: -0.174, y: -0.167, z: 0}
   FLlegPosition: {x: -0.132, y: -0.294, z: 0}
   FRlegPosition: {x: -0.21, y: -0.328, z: 0}
   BLlegPosition: {x: 0.03, y: -0.252, z: 0}
   BRlegPosition: {x: 0.006, y: -0.335, z: 0}
+  accesoryPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
-  specialDuration: 0
-  specialDealsDamage:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesAttack:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesDefense:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesSpeed:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesHealth:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
+  specialEffects:
+  - targets: 0
+    type: 2
+    duration: 5
+    value: 20
+  - targets: 1
+    type: 0
+    duration: 0
+    value: -10
