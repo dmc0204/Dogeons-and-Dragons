@@ -60,7 +60,7 @@ public class PlayerConfig : ScriptableObject
     {
         if (inventory.ContainsKey(chewable))
         {
-            return inventory[key];
+            return inventory[chewable];
         }
         else
         {
