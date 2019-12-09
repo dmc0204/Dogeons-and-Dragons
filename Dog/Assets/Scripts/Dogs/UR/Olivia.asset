@@ -10,44 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4972d64167df211478cc16fc8543273f, type: 3}
-  m_Name: practiceDog
+  m_Name: Olivia
   m_EditorClassIdentifier: 
-  dogName: Bradley
-  MaxHealth: 3
-  BaseAttack: 3
-  BaseDefense: 3
-  BaseSpeed: 3
-  head: {fileID: 2260783108052273681, guid: 0b247fcb90e33a848b6d1ebe840ffc1c, type: 3}
-  body: {fileID: 21300000, guid: ef4d1cf328ab76c4e9e4a4ea739d049d, type: 3}
-  FLleg: {fileID: 0}
-  FRleg: {fileID: 0}
+  dogName: Olivia
+  dogRarity: 3
+  MaxHealth: 1
+  BaseAttack: 1
+  BaseDefense: 1
+  BaseSpeed: 2
+  head: {fileID: 3376538603583931841, guid: 95cbaef66f986964891008ecd08d7cef, type: 3}
+  body: {fileID: 3667273227213251294, guid: 95cbaef66f986964891008ecd08d7cef, type: 3}
+  FLleg: {fileID: 21300000, guid: 1ee668dad7e8fac4d835ac403279a2d6, type: 3}
+  FRleg: {fileID: 21300000, guid: ef4d1cf328ab76c4e9e4a4ea739d049d, type: 3}
   BLleg: {fileID: 0}
   BRleg: {fileID: 0}
+  accesory: {fileID: 0}
   headPosition: {x: 0, y: 0, z: 0}
   bodyPosition: {x: 0, y: 0, z: 0}
   FLlegPosition: {x: 0, y: 0, z: 0}
   FRlegPosition: {x: 0, y: 0, z: 0}
   BLlegPosition: {x: 0, y: 0, z: 0}
   BRlegPosition: {x: 0, y: 0, z: 0}
+  accesoryPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
-  specialDuration: 3
-  specialDealsDamage:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesAttack:
-    onSelf: 0
-    onEnemy: 0
-    value: 9.1
-  specialIncreasesDefense:
-    onSelf: 0
-    onEnemy: 0
-    value: -14.5
-  specialIncreasesSpeed:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesHealth:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
+  specialEffects: []

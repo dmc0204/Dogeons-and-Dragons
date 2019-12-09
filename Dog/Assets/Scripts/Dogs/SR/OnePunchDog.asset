@@ -13,41 +13,28 @@ MonoBehaviour:
   m_Name: OnePunchDog
   m_EditorClassIdentifier: 
   dogName: Karnaugh
-  MaxHealth: 8.2
-  BaseAttack: 3.3
-  BaseDefense: 3.2
-  BaseSpeed: 2.9
+  dogRarity: 1
+  MaxHealth: 88
+  BaseAttack: 31
+  BaseDefense: 39
+  BaseSpeed: 20
   head: {fileID: 1414774654686861097, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
   body: {fileID: 2676065133068707075, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
   FLleg: {fileID: -4330521753527964926, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
   FRleg: {fileID: -6764535718077121237, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
   BLleg: {fileID: -7135316382394222270, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
   BRleg: {fileID: 6814882733746487365, guid: cdfb069bd10e447408e8e1e805b197e6, type: 3}
+  accesory: {fileID: 0}
   headPosition: {x: -0.033, y: -0.305, z: 0}
   bodyPosition: {x: -0.01, y: -0.241, z: 0}
   FLlegPosition: {x: -0.066, y: -0.373, z: 0}
   FRlegPosition: {x: -0.152, y: -0.415, z: 0}
   BLlegPosition: {x: 0.001, y: -0.308, z: 0}
   BRlegPosition: {x: 0.011, y: -0.386, z: 0}
+  accesoryPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
-  specialDuration: 0
-  specialDealsDamage:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesAttack:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesDefense:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesSpeed:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesHealth:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
+  specialEffects:
+  - targets: 1
+    type: 0
+    duration: 0
+    value: -50

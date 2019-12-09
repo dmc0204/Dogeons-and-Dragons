@@ -13,41 +13,28 @@ MonoBehaviour:
   m_Name: WeinerDog
   m_EditorClassIdentifier: 
   dogName: Turing
-  MaxHealth: 9.4
-  BaseAttack: 4.2
-  BaseDefense: 3.8
-  BaseSpeed: 3.9
+  dogRarity: 0
+  MaxHealth: 58
+  BaseAttack: 39
+  BaseDefense: 22
+  BaseSpeed: 40
   head: {fileID: 2528932317488277994, guid: 1dc1fee7192f8094a9ab2d43e70c5000, type: 3}
   body: {fileID: 4079133395699445312, guid: 1dc1fee7192f8094a9ab2d43e70c5000, type: 3}
   FLleg: {fileID: -7374837875408792469, guid: 1dc1fee7192f8094a9ab2d43e70c5000, type: 3}
   FRleg: {fileID: 2718523212186126538, guid: 1dc1fee7192f8094a9ab2d43e70c5000, type: 3}
   BLleg: {fileID: 4670137694626494780, guid: 1dc1fee7192f8094a9ab2d43e70c5000, type: 3}
   BRleg: {fileID: 598213294278954554, guid: 1dc1fee7192f8094a9ab2d43e70c5000, type: 3}
+  accesory: {fileID: 0}
   headPosition: {x: 0.183, y: -0.343, z: 0}
   bodyPosition: {x: 0.204, y: -0.36, z: 0}
   FLlegPosition: {x: 0.094, y: -0.397, z: 0}
   FRlegPosition: {x: 0.076, y: -0.414, z: 0}
   BLlegPosition: {x: 0.27, y: -0.352, z: 0}
   BRlegPosition: {x: 0.2819996, y: -0.434, z: 0}
+  accesoryPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
-  specialDuration: 0
-  specialDealsDamage:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesAttack:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesDefense:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesSpeed:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesHealth:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
+  specialEffects:
+  - targets: 1
+    type: 0
+    duration: 0
+    value: -15

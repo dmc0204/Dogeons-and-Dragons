@@ -13,41 +13,36 @@ MonoBehaviour:
   m_Name: DogeSenor
   m_EditorClassIdentifier: 
   dogName: Al-Khwarizmi
-  MaxHealth: 8.8
-  BaseAttack: 5
-  BaseDefense: 3.5
-  BaseSpeed: 4.6
+  dogRarity: 2
+  MaxHealth: 92
+  BaseAttack: 36
+  BaseDefense: 43
+  BaseSpeed: 25
   head: {fileID: -1982185535352465071, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
   body: {fileID: 3563329651162636375, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
   FLleg: {fileID: -5671275142901029386, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
   FRleg: {fileID: 4705949101033013677, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
   BLleg: {fileID: -8860454356234834387, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
   BRleg: {fileID: 5657237444854825648, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
+  accesory: {fileID: 0}
   headPosition: {x: -0.302, y: -0.164, z: 0}
   bodyPosition: {x: -0.145, y: -0.303, z: 0}
   FLlegPosition: {x: -0.23, y: -0.352, z: 0}
   FRlegPosition: {x: -0.255, y: -0.371, z: 0}
   BLlegPosition: {x: -0.011, y: -0.331, z: 0}
   BRlegPosition: {x: -0.03, y: -0.376, z: 0}
+  accesoryPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
-  specialDuration: 0
-  specialDealsDamage:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesAttack:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesDefense:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesSpeed:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesHealth:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
+  specialEffects:
+  - targets: 0
+    type: 3
+    duration: 10
+    value: 40
+  - targets: 0
+    type: 0
+    duration: 0
+    value: -15
+  - targets: 0
+    type: 2
+    duration: 10
+    value: -15

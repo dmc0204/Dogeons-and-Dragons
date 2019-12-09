@@ -9,7 +9,7 @@ public class special
 
     [Range(0, 10)]
     public float duration;
-    [Range(-20, 20)]
+    [Range(-50, 50)]
     public float value;
 
 

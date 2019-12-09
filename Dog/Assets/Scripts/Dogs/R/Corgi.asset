@@ -13,20 +13,28 @@ MonoBehaviour:
   m_Name: Corgi
   m_EditorClassIdentifier: 
   dogName: Corgi
-  MaxHealth: 15
-  BaseAttack: 5
-  BaseDefense: 5
-  BaseSpeed: 5
+  dogRarity: 0
+  MaxHealth: 64
+  BaseAttack: 27
+  BaseDefense: 25
+  BaseSpeed: 30
   head: {fileID: 2260783108052273681, guid: 0b247fcb90e33a848b6d1ebe840ffc1c, type: 3}
   body: {fileID: -7753029533598610928, guid: 0b247fcb90e33a848b6d1ebe840ffc1c, type: 3}
   FLleg: {fileID: -6195933030930518650, guid: 0b247fcb90e33a848b6d1ebe840ffc1c, type: 3}
   FRleg: {fileID: -6370596766697877235, guid: 0b247fcb90e33a848b6d1ebe840ffc1c, type: 3}
   BLleg: {fileID: -5287641165931729528, guid: 0b247fcb90e33a848b6d1ebe840ffc1c, type: 3}
   BRleg: {fileID: -3093650885245543572, guid: 0b247fcb90e33a848b6d1ebe840ffc1c, type: 3}
+  accesory: {fileID: 0}
   headPosition: {x: 0.26, y: 0.102, z: 0}
   bodyPosition: {x: 0, y: 0, z: 0}
   FLlegPosition: {x: 0.073, y: -0.085, z: 0}
   FRlegPosition: {x: 0.027, y: -0.053, z: 0}
   BLlegPosition: {x: 0.043, y: -0.04, z: 0}
   BRlegPosition: {x: 0.073, y: -0.043, z: 0}
+  accesoryPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
+  specialEffects:
+  - targets: 0
+    type: 2
+    duration: 5
+    value: 10

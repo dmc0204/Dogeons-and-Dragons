@@ -13,41 +13,32 @@ MonoBehaviour:
   m_Name: CorgiP
   m_EditorClassIdentifier: 
   dogName: Newell
-  MaxHealth: 8.8
-  BaseAttack: 3.1
-  BaseDefense: 3.9
-  BaseSpeed: 2.7
+  dogRarity: 1
+  MaxHealth: 72
+  BaseAttack: 39
+  BaseDefense: 32
+  BaseSpeed: 43
   head: {fileID: -3603232294609084120, guid: 297282336697f054bb3f873049f475f8, type: 3}
   body: {fileID: 5971525185303396900, guid: 297282336697f054bb3f873049f475f8, type: 3}
   FLleg: {fileID: 8145250074154417188, guid: 297282336697f054bb3f873049f475f8, type: 3}
   FRleg: {fileID: 2848127929310106120, guid: 297282336697f054bb3f873049f475f8, type: 3}
   BLleg: {fileID: 6438649798070543350, guid: 297282336697f054bb3f873049f475f8, type: 3}
   BRleg: {fileID: 2097718740853183938, guid: 297282336697f054bb3f873049f475f8, type: 3}
+  accesory: {fileID: 0}
   headPosition: {x: 0.196, y: -0.216, z: 0}
   bodyPosition: {x: -0.008, y: -0.429, z: 0}
   FLlegPosition: {x: 0.021, y: -0.411, z: 0}
   FRlegPosition: {x: -0.007, y: -0.487, z: 0}
   BLlegPosition: {x: -0.028, y: -0.387, z: 0}
   BRlegPosition: {x: -0.045, y: -0.368, z: 0}
+  accesoryPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
-  specialDuration: 0
-  specialDealsDamage:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesAttack:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesDefense:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesSpeed:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
-  specialIncreasesHealth:
-    onSelf: 0
-    onEnemy: 0
-    value: 0
+  specialEffects:
+  - targets: 1
+    type: 1
+    duration: 7
+    value: -15
+  - targets: 0
+    type: 2
+    duration: 7
+    value: 15
