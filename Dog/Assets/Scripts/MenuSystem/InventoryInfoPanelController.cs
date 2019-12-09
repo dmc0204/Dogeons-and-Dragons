@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryInfoPanelController : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class InventoryInfoPanelController : MonoBehaviour
     //button shit
     public void addToBag()
     {
-        myCoolPlayer.addToPack(activeChewable);
+        myCoolPlayer.addToBag(activeChewable);
         checkBag();
         checkInventory();
         updateInventory();
@@ -91,7 +92,7 @@ public class InventoryInfoPanelController : MonoBehaviour
     {
         if (inventoryAmount <= 0)
         {
-            addButton.setActive(false);
+            addButton.SetActive(false);
         }
     }
 
