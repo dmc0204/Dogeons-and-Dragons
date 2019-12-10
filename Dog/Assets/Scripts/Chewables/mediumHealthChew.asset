@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe8e7a6e6024714ca003f63f5319088, type: 3}
+  m_Name: mediumHealthChew
+  m_EditorClassIdentifier: 
+  chewName: Medium Health Chew
+  chewEffects:
+  - targets: 0
+    type: 0
+    duration: 0
+    value: 12
+  chewySprite: {fileID: 9077249981556598354, guid: de948cb93b22e5741a342dfa824cc8fb,
+    type: 3}
+  chewableCost: 30
+  chewableStrength: 1
+  chewableType: HP
+  chewyColor: {r: 1, g: 1, b: 1, a: 1}

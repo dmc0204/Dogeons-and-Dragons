@@ -5,6 +5,7 @@ using UnityEngine;
 public class NavigationController : MonoBehaviour
 {
     public GameObject[] panels;
+    public GameObject doginfopanel;
     public Stack<GameObject> previous;
 
     public void activatePanel(int which)
@@ -20,6 +21,7 @@ public class NavigationController : MonoBehaviour
                 panels[i].SetActive(false);
             }
         }
+        doginfopanel.SetActive(false);
     }
 
     public void initPrev()

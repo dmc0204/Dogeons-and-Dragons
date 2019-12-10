@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf62892b60e6b04498ef5306aaf8331, type: 3}
+  m_Name: bJoe
+  m_EditorClassIdentifier: 
+  yourTeam:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  yourPack:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  yourDogs: []
+  currency: 0
+  currentLevel: 0
+  currencyDisplaying: {fileID: 11400000, guid: 37a6ad2aa306e9541abd5f86183b7e76, type: 2}

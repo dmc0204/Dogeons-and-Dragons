@@ -11,20 +11,30 @@ public class PlayerConfig : ScriptableObject
 
     public ChewableConfig[] yourPack;
 
-    public Dictionary<ChewableConfig, int> inventory;
+    public DictionaryOfChewAndInt inventory;
+    public bool inventoryInitialized;
 
     public List<DogStatsConfig> yourDogs;
 
     public int currency, currentLevel;
     //public DogStatsConfig[] ownedDogs;
 
-    [SerializeField] public IntEvent currencyDisplaying;
+    [SerializeField] public VoidEvent currencyDisplaying;
     //[SerializeField] public FloatEvent dupeChecking;
 
     //initall
 
     ///Inventory functions
     /// inventory intializer
+    public void initDick()
+    {
+        if (inventoryInitialized == false)
+        {
+            inventory = new DictionaryOfChewAndInt();
+            inventoryInitialized = true;
+        }
+        currencyDisplaying.Raise();
+    }
 
     //pack initializer
 
@@ -54,6 +64,13 @@ public class PlayerConfig : ScriptableObject
             }
         }
     }
+
+    public void removeChewable(int i)
+    {
+        addItems(yourPack[i], 1);
+        yourPack[i] = null;
+    }
+
 
     //check how many you have
     public int amount(ChewableConfig chewable)
@@ -94,6 +111,8 @@ public class PlayerConfig : ScriptableObject
     public void changeBones(int bones)
     {
         currency += bones;
+        currencyDisplaying.Raise();
+
     }
 
     public bool isOnTeam(DogStatsConfig check)

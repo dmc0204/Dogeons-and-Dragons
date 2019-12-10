@@ -7,15 +7,24 @@ using UnityEngine.SceneManagement;
 public class LevelSelectController : MonoBehaviour
 {
     public PlayerLevelContainer hackyWorkaround;
+    public PlayerConfig myPlayer;
     public GameObject levelContainer;
 
     public Sprite unknown;
     public LevelConfig[] levels;
     public Image[] yourDogs;
 
+    [SerializeField] PlayerEvent playerSetting;
+
+    //inits and sends player
+    public void initPlayer()
+    {
+        playerSetting.Raise(myPlayer);
+    }
     //loads the level into the plc
     public void loadLevel(int i)
     {
+        hackyWorkaround.myCoolPlayer = myPlayer;
         hackyWorkaround.myCoolLevel = levels[i];
         openTheGame();
     }
@@ -61,7 +70,7 @@ public class LevelSelectController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //hackyWorkaround.myCoolPlayer.playerInit();
+        initPlayer();
         initActiveTeamPics();
         initAvailableLevels();
     }

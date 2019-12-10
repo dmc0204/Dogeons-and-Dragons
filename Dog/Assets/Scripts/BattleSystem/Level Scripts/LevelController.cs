@@ -15,6 +15,7 @@ public class LevelController : MonoBehaviour
     private int currentDog;
 
     private int numDogsDied;
+    private bool[] dead;
 
     //public int count;
     public PlayerLevelContainer brrrr;
@@ -30,6 +31,8 @@ public class LevelController : MonoBehaviour
     public Sprite background;
     public SpriteRenderer backgroundSpriteRenderer;
 
+    public GameObject endpanel;
+
     public Image[] dogbtn, chewBtn;
     [SerializeField] private EnemyStatsEvent gettingEnemyStats;
     [SerializeField] private DogStatsEvent gettingDogStats;
@@ -42,6 +45,7 @@ public class LevelController : MonoBehaviour
         damageTaken = 0;
         damageDealt = 0;
         numDogsDied = 0;
+        dead = new bool[3] { false, false, false };
         newLevel = brrrr.myCoolLevel;
         playa = brrrr.myCoolPlayer;
         NMEs = new Queue<EnemyStatsConfig>(newLevel.enemies);
@@ -123,14 +127,10 @@ public class LevelController : MonoBehaviour
 
     public void endLevel(int code)
     {
-        //TODO:end the level with this function
-        //stop time
-        //call up level end panel
-        //display stats
-        //calculate rewards
-        //write to player object
+        endpanel.SetActive(true);
         switch (code)
         {
+
             case 0:
                 //ends in game over, called when party dies
                 break;
@@ -146,15 +146,19 @@ public class LevelController : MonoBehaviour
     //dog switching and such
     public void switchDogs(int whichDog)
     {
-        Debug.Log("switching to: " + dogs[whichDog]);
-        Debug.Log("hp sent is: " + currentHP[whichDog]);
+        if (!dead[whichDog])
+        {
+            Debug.Log("switching to: " + dogs[whichDog]);
+            Debug.Log("hp sent is: " + currentHP[whichDog]);
 
-        hpSending.Raise(currentHP[whichDog]);
+            hpSending.Raise(currentHP[whichDog]);
 
-        gettingDogStats.Raise(dogs[whichDog]);
-        Debug.Log("dog switch events received");
-        currentDog = whichDog;
-        Debug.Log("current dog is: " + currentDog);
+            gettingDogStats.Raise(dogs[whichDog]);
+            Debug.Log("dog switch events received");
+            currentDog = whichDog;
+            Debug.Log("current dog is: " + currentDog);
+        }
+
     }
 
     public void saveHP(float savedHP)
@@ -168,6 +172,7 @@ public class LevelController : MonoBehaviour
     {
         int num;
         saveHP(0);
+        dead[currentDog] = true;
         dogbtn[currentDog].color = new Color(0, 0, 0, 1);
         numDogsDied++;
         if (numDogsDied < dogs.Length)
@@ -187,9 +192,20 @@ public class LevelController : MonoBehaviour
     public void chewableTime(int i)
     {
         chewBtn[i].color = new Color(0, 0, 0, 1);
-        //playa.usedItem(chews[i].chewName);
-        //TODO:link this shit up with player
+        playa.chewableGotUsed(i);
         chewing.Raise(chews[i]);
+    }
+
+
+    //track damage
+    public void damaging(float damage)
+    {
+        damageTaken += damage;
+    }
+
+    public void enemyDamaging(float damage)
+    {
+        damageDealt += damage;
     }
     // Start is called before the first frame update
     void Start()

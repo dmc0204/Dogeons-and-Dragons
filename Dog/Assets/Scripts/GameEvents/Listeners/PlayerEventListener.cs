@@ -1,0 +1,1 @@
+public class PlayerEventListener : BaseGameEventListener<PlayerConfig, PlayerEvent, UnityPlayerEvent> { }

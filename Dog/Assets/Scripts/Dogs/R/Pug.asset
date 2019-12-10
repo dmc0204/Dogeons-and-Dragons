@@ -15,7 +15,7 @@ MonoBehaviour:
   dogName: Pug
   dogRarity: 0
   MaxHealth: 62
-  BaseAttack: 33
+  BaseAttack: 30
   BaseDefense: 26
   BaseSpeed: 33
   head: {fileID: -585471232467939877, guid: 120773d18d1fa5f43a00e9fe37d475fe, type: 3}

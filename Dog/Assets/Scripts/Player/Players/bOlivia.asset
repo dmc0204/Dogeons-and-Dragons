@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: bOlivia
   m_EditorClassIdentifier: 
   yourTeam:
-  - {fileID: 11400000, guid: 3484ed72308437949a188ddcb5f3662f, type: 2}
-  - {fileID: 11400000, guid: e6341c772a6150246b63dc1be4172b5c, type: 2}
-  - {fileID: 11400000, guid: 7fa8cc1957101fa488d8a57f0be48dc3, type: 2}
+  - {fileID: 11400000, guid: 4c87ecbfb407552468b65aa144dbfedd, type: 2}
+  - {fileID: 11400000, guid: e3391e017e6c1514a8d6fa3399e49c88, type: 2}
+  - {fileID: 0}
   yourPack:
-  - {fileID: 11400000, guid: b6d412c30c71cb1408e4d8132e1b2116, type: 2}
-  - {fileID: 11400000, guid: a36c0816e951fa842b16743549a56816, type: 2}
-  - {fileID: 11400000, guid: ac4b4f151d68aeb459ba867416b6554b, type: 2}
-  - {fileID: 11400000, guid: ed06ced946408fc44bd4344ae552855d, type: 2}
-  - {fileID: 11400000, guid: ac4b4f151d68aeb459ba867416b6554b, type: 2}
+  - {fileID: 11400000, guid: a671907b31107bf4b972d4f1641e40ea, type: 2}
+  - {fileID: 11400000, guid: f29f21a63e4e6244c88b7d37998c563f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  inventory:
+    keys: []
+    values: 
+  inventoryInitialized: 1
   yourDogs:
   - {fileID: 11400000, guid: 1783a1be38ee85347aeef00bbb72d540, type: 2}
   - {fileID: 11400000, guid: 813ac5d42b4e58b48998bd4b4422073d, type: 2}
@@ -43,6 +47,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4846755453f3adf4991fba1722b06b9b, type: 2}
   - {fileID: 11400000, guid: a11c0309a091f8042b07a2755725a5f6, type: 2}
   - {fileID: 11400000, guid: e08536023f995ea4e93c2af2ccaf0779, type: 2}
-  currency: 17
+  currency: 417550
   currentLevel: 1
-  currencyDisplaying: {fileID: 0}
+  currencyDisplaying: {fileID: 11400000, guid: 37a6ad2aa306e9541abd5f86183b7e76, type: 2}

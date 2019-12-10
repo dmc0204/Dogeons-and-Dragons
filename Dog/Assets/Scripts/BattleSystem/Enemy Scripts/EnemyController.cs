@@ -35,7 +35,7 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private VoidEvent dying;
     [SerializeField] private VoidEvent enemyFetching, specialUsing;
-    [SerializeField] private FloatEvent attacking, healthUpdating, basicAttackTiming;
+    [SerializeField] private FloatEvent attacking, healthUpdating, basicAttackTiming, enemydamaging;
     [SerializeField] private statChangeEvent statChanging;
 
     //functions to handle enemy death
@@ -168,6 +168,7 @@ public class EnemyController : MonoBehaviour
     public void takeDamage(float damage)
     {
         currentHP -= damage;
+        enemydamaging.Raise(damage);
         //updateHealthBar ();
     }
 

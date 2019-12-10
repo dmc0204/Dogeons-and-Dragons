@@ -15,7 +15,7 @@ MonoBehaviour:
   dogName: Turing
   dogRarity: 0
   MaxHealth: 58
-  BaseAttack: 39
+  BaseAttack: 30
   BaseDefense: 22
   BaseSpeed: 40
   head: {fileID: 2528932317488277994, guid: 1dc1fee7192f8094a9ab2d43e70c5000, type: 3}

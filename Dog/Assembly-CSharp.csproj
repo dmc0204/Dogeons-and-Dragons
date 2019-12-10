@@ -234,6 +234,7 @@
      <Compile Include="Assets\Scripts\BattleSystem\Dog Scripts\DogStatsConfig.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Enemy Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Enemy Scripts\EnemyStatsConfig.cs" />
+     <Compile Include="Assets\Scripts\BattleSystem\Level Scripts\EndPanelController.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Level Scripts\InfoController.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Level Scripts\LevelConfig.cs" />
      <Compile Include="Assets\Scripts\BattleSystem\Level Scripts\LevelController.cs" />
@@ -242,6 +243,7 @@
      <Compile Include="Assets\Scripts\BattleSystem\Types.cs" />
      <Compile Include="Assets\Scripts\bgInitialize.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
+     <Compile Include="Assets\Scripts\DictionaryOfChewAndInt.cs" />
      <Compile Include="Assets\Scripts\effects.cs" />
      <Compile Include="Assets\Scripts\eventtester.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\BaseGameEvent.cs" />
@@ -250,6 +252,7 @@
      <Compile Include="Assets\Scripts\GameEvents\Events\EnemyStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\FloatEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\IntEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Events\PlayerEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\statChangeEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Events\VoidEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\BaseGameEventListener.cs" />
@@ -259,6 +262,7 @@
      <Compile Include="Assets\Scripts\GameEvents\Listeners\FloatListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\IGameEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\IntListener.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\Listeners\PlayerEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\statChangeEventListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Listeners\VoidListener.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityChewableEvent.cs" />
@@ -266,12 +270,15 @@
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityEnemyStatsEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityFloatEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityIntEvent.cs" />
+     <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityPlayerEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityStatChangeEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\UnityEvents\UnityVoidEvent.cs" />
      <Compile Include="Assets\Scripts\GameEvents\Void.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ManagerScript.cs" />
+     <Compile Include="Assets\Scripts\MenuSystem\BonesController.cs" />
+     <Compile Include="Assets\Scripts\MenuSystem\chewyButtonController.cs" />
      <Compile Include="Assets\Scripts\MenuSystem\DogHouse\DogHouseController.cs" />
      <Compile Include="Assets\Scripts\MenuSystem\DogInfoPanelController.cs" />
      <Compile Include="Assets\Scripts\MenuSystem\InventoryInfoPanelController.cs" />
@@ -287,6 +294,7 @@
      <Compile Include="Assets\Scripts\Progress.cs" />
      <Compile Include="Assets\Scripts\Rarity.cs" />
      <Compile Include="Assets\Scripts\RuntimeSet.cs" />
+     <Compile Include="Assets\Scripts\SerializableDictionary.cs" />
      <Compile Include="Assets\Scripts\Special.cs" />
      <Compile Include="Assets\Scripts\statChange.cs" />
      <Compile Include="Assets\Scripts\Target.cs" />
