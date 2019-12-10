@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddbd52623426a646a6d3362b4aa1358, type: 3}
+  m_Name: slimePuff
+  m_EditorClassIdentifier: 
+  enemyName: Slimer
+  MaxHealth: 25
+  BaseAttack: 5
+  BaseDefense: 20
+  BaseSpeed: 2
+  head: {fileID: 3168945843396826703, guid: bbbd85c07b3c8c747b6c52711da3dc7d, type: 3}
+  body: {fileID: -3461769113181118179, guid: bbbd85c07b3c8c747b6c52711da3dc7d, type: 3}
+  leftArm: {fileID: 0}
+  rightArm: {fileID: 0}
+  leftLeg: {fileID: 0}
+  rightLeg: {fileID: 0}
+  bodyPosition: {x: 0.5189999, y: 0.356, z: 0}
+  headPosition: {x: 0.606, y: 1.1, z: 0}
+  leftArmPosition: {x: 0, y: 0, z: 0}
+  rightArmPosition: {x: 0, y: 0, z: 0}
+  leftLegPosition: {x: 0, y: 0, z: 0}
+  rightLegPosition: {x: 0, y: 0, z: 0}
+  animator: {fileID: 9100000, guid: 487c56a2b9af7ea468af6a93f77cb89a, type: 2}
+  specialEffects: []
