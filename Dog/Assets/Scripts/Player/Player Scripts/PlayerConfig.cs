@@ -41,21 +41,30 @@ public class PlayerConfig : ScriptableObject
         }
     }
     //
-    //can add items to your pack to take into battle
-    public void addToPack(int spot, ChewableConfig chewable)
+    //can add items to your bag to take into battle
+    public void addToBag(ChewableConfig chewable)
     {
-        //if you have the chewable do this
-        if (inventory[chewable] > 0)
+        inventory[chewable] -= 1;
+        for (int i = 0; i < yourPack.Length; i++)
         {
-            //if there's another  chewable in that spot in your pack already, save it
-            if (yourPack[spot] != null)
+            if (yourPack[i] == null)
             {
-                addItems(yourPack[spot], 1);
+                yourPack[i] = chewable;
+                i = 10;
             }
-            //add the new chewable to the pack
-            yourPack[spot] = chewable;
-            //update your inventoey
-            inventory[chewable] -= 1;
+        }
+    }
+
+    //check how many you have
+    public int amount(ChewableConfig chewable)
+    {
+        if (inventory.ContainsKey(chewable))
+        {
+            return inventory[chewable];
+        }
+        else
+        {
+            return 0;
         }
     }
 

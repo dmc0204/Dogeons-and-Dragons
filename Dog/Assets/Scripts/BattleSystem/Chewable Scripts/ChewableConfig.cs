@@ -11,6 +11,9 @@ public class ChewableConfig : ScriptableObject
 
     public Sprite chewySprite;
 
+    public int chewableCost, chewableStrength;
+    public string chewableType;
+
     public Color chewyColor;
 
 }

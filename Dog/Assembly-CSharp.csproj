@@ -274,6 +274,7 @@
      <Compile Include="Assets\Scripts\ManagerScript.cs" />
      <Compile Include="Assets\Scripts\MenuSystem\DogHouse\DogHouseController.cs" />
      <Compile Include="Assets\Scripts\MenuSystem\DogInfoPanelController.cs" />
+     <Compile Include="Assets\Scripts\MenuSystem\InventoryInfoPanelController.cs" />
      <Compile Include="Assets\Scripts\MenuSystem\LevelSelectController.cs" />
      <Compile Include="Assets\Scripts\MenuSystem\NavigationController.cs" />
      <Compile Include="Assets\Scripts\MenuSystem\SummonController.cs" />
