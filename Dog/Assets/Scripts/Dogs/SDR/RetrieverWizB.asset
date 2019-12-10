@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: RetrieverB
   dogRarity: 2
-  MaxHealth: 95
+  MaxHealth: 161
   BaseAttack: 37
   BaseDefense: 44
-  BaseSpeed: 24
+  BaseSpeed: 28.4
   head: {fileID: -1901443418406137585, guid: 5516f425149561645b43f568edc55ea3, type: 3}
   body: {fileID: 553327994756004379, guid: 5516f425149561645b43f568edc55ea3, type: 3}
   FLleg: {fileID: 9154449813803037838, guid: 5516f425149561645b43f568edc55ea3, type: 3}

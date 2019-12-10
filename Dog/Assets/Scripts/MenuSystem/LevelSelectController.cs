@@ -26,7 +26,22 @@ public class LevelSelectController : MonoBehaviour
     {
         hackyWorkaround.myCoolPlayer = myPlayer;
         hackyWorkaround.myCoolLevel = levels[i];
-        openTheGame();
+        if (myPlayer.currentLevel >= levels[i].levelNumber)
+        {
+            bool hasDog = false;
+            for (int j = 0; j < myPlayer.yourTeam.Length; j++)
+            {
+                if (myPlayer.yourTeam[j] != null)
+                {
+                    hasDog = true;
+                }
+            }
+            if (hasDog)
+            {
+                openTheGame();
+            }
+
+        }
     }
 
     //loads your dogs pictures
@@ -53,7 +68,7 @@ public class LevelSelectController : MonoBehaviour
         Image[] bgs = levelContainer.GetComponentsInChildren<Image>();
         for (int i = 0; i < bgs.Length; i++)
         {
-            if (bgs.Length - i > hackyWorkaround.myCoolPlayer.currentLevel)
+            if (bgs.Length - i - 1 > hackyWorkaround.myCoolPlayer.currentLevel)
             {
                 bgs[i].sprite = unknown;
             }

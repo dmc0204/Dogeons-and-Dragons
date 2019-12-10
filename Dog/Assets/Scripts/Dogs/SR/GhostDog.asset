@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Picard
   dogRarity: 1
-  MaxHealth: 82
+  MaxHealth: 137
   BaseAttack: 33
   BaseDefense: 32
-  BaseSpeed: 29
+  BaseSpeed: 17.8
   head: {fileID: -2295004955324574203, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}
   body: {fileID: -4548939970636913833, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}
   FLleg: {fileID: -4817068832962256753, guid: a20b6151f6c993d4d8616b3d5387e9d6, type: 3}

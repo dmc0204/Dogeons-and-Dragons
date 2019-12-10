@@ -41,8 +41,9 @@ public class DogInfoPanelController : MonoBehaviour
         }
         else
         {
-            addDog(newDog);
+
             myPlayer.yourDogs.Add(newDog);
+            addDog(newDog);
         }
     }
 
@@ -166,11 +167,12 @@ public class DogInfoPanelController : MonoBehaviour
     public void setStatBars(DogStatsConfig dogToShow)
     {
         float[] myNewArray = { dogToShow.MaxHealth, dogToShow.BaseAttack, dogToShow.BaseDefense, dogToShow.BaseSpeed };
-        sliders[0].value = myNewArray[0] / 100;
-        for (int i = 1; i < sliders.Length; i++)
+        sliders[0].value = myNewArray[0] / 200;
+        for (int i = 1; i < sliders.Length - 1; i++)
         {
             sliders[i].value = myNewArray[i] / 50;
         }
+        sliders[3].value = myNewArray[3] / 35;
     }
 
     public void setPortrait(DogStatsConfig dogToShow)

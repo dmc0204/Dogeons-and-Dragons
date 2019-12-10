@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Al-Khwarizmi
   dogRarity: 2
-  MaxHealth: 92
+  MaxHealth: 142
   BaseAttack: 36
   BaseDefense: 43
-  BaseSpeed: 25
+  BaseSpeed: 30.7
   head: {fileID: -1982185535352465071, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
   body: {fileID: 3563329651162636375, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}
   FLleg: {fileID: -5671275142901029386, guid: e96f8f6a03791eb4eb6967cf6b067318, type: 3}

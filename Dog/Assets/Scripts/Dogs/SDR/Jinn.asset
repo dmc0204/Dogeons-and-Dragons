@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Thompson
   dogRarity: 2
-  MaxHealth: 90
+  MaxHealth: 131
   BaseAttack: 35
   BaseDefense: 42
-  BaseSpeed: 26
+  BaseSpeed: 30
   head: {fileID: 1490077136936449059, guid: 21018ebed5a668248adf099b493703c5, type: 3}
   body: {fileID: -885388933478137356, guid: 21018ebed5a668248adf099b493703c5, type: 3}
   FLleg: {fileID: -7348336194399565750, guid: 21018ebed5a668248adf099b493703c5, type: 3}

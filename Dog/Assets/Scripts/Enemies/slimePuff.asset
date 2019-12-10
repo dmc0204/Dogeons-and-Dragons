@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: slimePuff
   m_EditorClassIdentifier: 
   enemyName: Slimer
-  MaxHealth: 25
-  BaseAttack: 5
-  BaseDefense: 20
-  BaseSpeed: 2
+  MaxHealth: 1000
+  BaseAttack: 44.2
+  BaseDefense: 57.9
+  BaseSpeed: 5
   head: {fileID: 3168945843396826703, guid: bbbd85c07b3c8c747b6c52711da3dc7d, type: 3}
   body: {fileID: -3461769113181118179, guid: bbbd85c07b3c8c747b6c52711da3dc7d, type: 3}
   leftArm: {fileID: 0}

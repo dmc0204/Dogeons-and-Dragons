@@ -17,7 +17,7 @@ MonoBehaviour:
   MaxHealth: 68
   BaseAttack: 30
   BaseDefense: 24
-  BaseSpeed: 37
+  BaseSpeed: 9.8
   head: {fileID: -9129294053771938810, guid: 62dcc3c161181104891b741dd73bfa88, type: 3}
   body: {fileID: 3685420603745283131, guid: 62dcc3c161181104891b741dd73bfa88, type: 3}
   FLleg: {fileID: -1655292688149619438, guid: 62dcc3c161181104891b741dd73bfa88, type: 3}

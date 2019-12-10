@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: wastlandCat
   m_EditorClassIdentifier: 
   enemyName: Wasteland Cat
-  MaxHealth: 4.9
-  BaseAttack: 1.6
-  BaseDefense: 2.5
-  BaseSpeed: 2.4
+  MaxHealth: 299
+  BaseAttack: 21.2
+  BaseDefense: 21.2
+  BaseSpeed: 16.5
   head: {fileID: 9201371859079466863, guid: 2e82914595d1f5d48bd73f4cfc00808e, type: 3}
   body: {fileID: 4733089312736289044, guid: 2e82914595d1f5d48bd73f4cfc00808e, type: 3}
   leftArm: {fileID: 2663204707127511601, guid: 2e82914595d1f5d48bd73f4cfc00808e, type: 3}
