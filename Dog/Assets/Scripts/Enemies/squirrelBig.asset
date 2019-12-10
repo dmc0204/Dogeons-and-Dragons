@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddbd52623426a646a6d3362b4aa1358, type: 3}
+  m_Name: squirrelBig
+  m_EditorClassIdentifier: 
+  enemyName: Squirrel Big
+  MaxHealth: 0
+  BaseAttack: 0
+  BaseDefense: 0
+  BaseSpeed: 0
+  head: {fileID: 6880446469574687578, guid: 3104783704274b1499bc9b82f6a65534, type: 3}
+  body: {fileID: -7813047112243082472, guid: 3104783704274b1499bc9b82f6a65534, type: 3}
+  leftArm: {fileID: 0}
+  rightArm: {fileID: 0}
+  leftLeg: {fileID: 0}
+  rightLeg: {fileID: 0}
+  bodyPosition: {x: 0.5189999, y: 0.1920118, z: 0}
+  headPosition: {x: 0.196, y: 0.431, z: 0}
+  leftArmPosition: {x: 0, y: 0, z: 0}
+  rightArmPosition: {x: 0, y: 0, z: 0}
+  leftLegPosition: {x: 0, y: 0, z: 0}
+  rightLegPosition: {x: 0, y: 0, z: 0}
+  animator: {fileID: 9100000, guid: 794adb4a5e05221478a48db3fa302dff, type: 2}
+  specialEffects: []
