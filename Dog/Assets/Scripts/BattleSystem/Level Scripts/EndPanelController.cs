@@ -14,6 +14,10 @@ public class EndPanelController : MonoBehaviour
     public void levelEnd(int i)
     {
         playerLevelContainer.myCoolPlayer.changeBones(bones);
+        if (playerLevelContainer.myCoolLevel.levelNumber > playerLevelContainer.myCoolPlayer.currentLevel)
+        {
+            playerLevelContainer.myCoolPlayer.currentLevel = playerLevelContainer.myCoolLevel.levelNumber;
+        }
         boner.text = bones.ToString();
         if (i == 1)
         {
