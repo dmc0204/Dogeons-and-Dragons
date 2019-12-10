@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe8e7a6e6024714ca003f63f5319088, type: 3}
+  m_Name: smallDefenseChew
+  m_EditorClassIdentifier: 
+  chewName: Small Defense Chew
+  chewEffects:
+  - targets: 0
+    type: 2
+    duration: 5
+    value: 8
+  chewySprite: {fileID: 264822607095137, guid: de948cb93b22e5741a342dfa824cc8fb, type: 3}
+  chewableCost: 20
+  chewableStrength: 0
+  chewableType: DEF
+  chewyColor: {r: 1, g: 1, b: 1, a: 1}

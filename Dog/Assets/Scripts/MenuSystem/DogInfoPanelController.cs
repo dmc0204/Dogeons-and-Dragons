@@ -25,6 +25,11 @@ public class DogInfoPanelController : MonoBehaviour
     [SerializeField] public DogStatsEvent displaying, dupesplaying;
     [SerializeField] private VoidEvent teamUpdating;
 
+    public void playerSet(PlayerConfig newPlayer)
+    {
+        myPlayer = newPlayer;
+    }
+
 
     public void summonedDog(DogStatsConfig newDog)
     {
@@ -248,7 +253,7 @@ public class DogInfoPanelController : MonoBehaviour
                 break;
         }
         myPlayer.changeBones(refund);
-        dupeMessage.text = "Duplicate Dog Summoned (+ " + refund.ToString() + " bones)";
+        dupeMessage.text = "Duplicate Dog Summoned\n (+ " + refund.ToString() + " bones)";
     }
 
     public void toTeam()

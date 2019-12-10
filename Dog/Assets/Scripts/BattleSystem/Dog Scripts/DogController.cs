@@ -37,7 +37,7 @@ public class DogController : MonoBehaviour
 
     public Object deathExplodeRef;
     public Object chewableEffectRef;
-    [SerializeField] private FloatEvent attacking, hpSaving, dogHPUpdating, dogAttackTiming;
+    [SerializeField] private FloatEvent attacking, damageTaking, hpSaving, dogHPUpdating, dogAttackTiming;
     [SerializeField] private IntEvent switching;
     [SerializeField] private VoidEvent dying, specialUsing;
     [SerializeField] private statChangeEvent statChanging;
@@ -149,6 +149,7 @@ public class DogController : MonoBehaviour
     {
         currentHP -= damage;
         dogAnimator.SetTrigger("damaged");
+        damageTaking.Raise(damage);
 
         if (currentHP < 0)
         {
@@ -299,6 +300,11 @@ public class DogController : MonoBehaviour
         dogBLeftSpriteRenderer.sprite = null;
         activeEffects.Clear();
         dying.Raise();
+    }
+
+    public void stop()
+    {
+        deathExplodeRef = null;
     }
 
     public void spawnChewableParticle(Color particleColor)

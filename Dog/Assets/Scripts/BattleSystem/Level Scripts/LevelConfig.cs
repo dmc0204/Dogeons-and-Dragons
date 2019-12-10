@@ -10,6 +10,8 @@ public class LevelConfig : ScriptableObject
 
     public Sprite background;
 
+    public int levelNumber;
 
+    public LevelConfig nextLevel;
 
 }

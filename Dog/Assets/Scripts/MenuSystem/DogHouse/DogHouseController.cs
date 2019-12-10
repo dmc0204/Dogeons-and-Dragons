@@ -59,6 +59,11 @@ public class DogHouseController : MonoBehaviour
         myPlayer.currency += i;
     }
 
+    public void playerSet(PlayerConfig newPlayer)
+    {
+        myPlayer = newPlayer;
+    }
+
     void Start()
     {
 
