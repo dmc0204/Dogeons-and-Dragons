@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Cerf
   dogRarity: 3
-  MaxHealth: 94
+  MaxHealth: 150
   BaseAttack: 42
   BaseDefense: 42
-  BaseSpeed: 38
+  BaseSpeed: 18
   head: {fileID: 5845657512255027375, guid: cbdeb7f691ac1b44fb5680265f247b60, type: 3}
   body: {fileID: 3786664858525391067, guid: cbdeb7f691ac1b44fb5680265f247b60, type: 3}
   FLleg: {fileID: -8125670137410053249, guid: cbdeb7f691ac1b44fb5680265f247b60, type: 3}

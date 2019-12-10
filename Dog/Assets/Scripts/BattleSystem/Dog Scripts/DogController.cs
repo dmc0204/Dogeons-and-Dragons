@@ -381,7 +381,7 @@ public class DogController : MonoBehaviour
         }
         if (newEffect.DamageValue != 0)
         {
-            upHealth((-1) * (newEffect.DamageValue));
+            upHealth(newEffect.DamageValue);
         }
         if (newEffect.AttackValue != 0)
         {

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Newell
   dogRarity: 1
-  MaxHealth: 72
+  MaxHealth: 88
   BaseAttack: 39
   BaseDefense: 32
-  BaseSpeed: 43
+  BaseSpeed: 15
   head: {fileID: -3603232294609084120, guid: 297282336697f054bb3f873049f475f8, type: 3}
   body: {fileID: 5971525185303396900, guid: 297282336697f054bb3f873049f475f8, type: 3}
   FLleg: {fileID: 8145250074154417188, guid: 297282336697f054bb3f873049f475f8, type: 3}

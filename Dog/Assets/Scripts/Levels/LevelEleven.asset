@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5817d5466ce497541ae6f6b703a57e42, type: 3}
+  m_Name: LevelEleven
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 11400000, guid: 7ed5ec31e7bbb7d47910c4a0a07d3718, type: 2}
+  - {fileID: 11400000, guid: 4fddbdb891d20f940ada430eaa969494, type: 2}
+  - {fileID: 11400000, guid: 75c8ede58cebe4b429e98b6dc5db7e5b, type: 2}
+  - {fileID: 11400000, guid: 6373f8bba34c26e4e840f5de97d343e8, type: 2}
+  - {fileID: 11400000, guid: 50c11497f14c4664aa06d84950ae6f63, type: 2}
+  - {fileID: 11400000, guid: db4d31e8a58a94e4b8360adebbb66a1d, type: 2}
+  - {fileID: 11400000, guid: 7ed5ec31e7bbb7d47910c4a0a07d3718, type: 2}
+  - {fileID: 11400000, guid: 4fddbdb891d20f940ada430eaa969494, type: 2}
+  - {fileID: 11400000, guid: 75c8ede58cebe4b429e98b6dc5db7e5b, type: 2}
+  - {fileID: 11400000, guid: 6373f8bba34c26e4e840f5de97d343e8, type: 2}
+  - {fileID: 11400000, guid: 119b7e221e43123448aa983a257b8029, type: 2}
+  background: {fileID: 21300000, guid: 11a5cc7c076a6a7448b5170398a352b4, type: 3}
+  levelNumber: 11
+  nextLevel: {fileID: 11400000, guid: e12786b964edda14cb328a9903ee2ebd, type: 2}
