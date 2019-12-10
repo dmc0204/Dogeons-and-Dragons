@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Cerf
   dogRarity: 3
-  MaxHealth: 150
+  MaxHealth: 180
   BaseAttack: 42
   BaseDefense: 42
   BaseSpeed: 18
@@ -45,4 +45,4 @@ MonoBehaviour:
   - targets: 0
     type: 0
     duration: 0
-    value: -5
+    value: 15

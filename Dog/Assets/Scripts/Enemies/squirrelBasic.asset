@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Squirrel
   MaxHealth: 249
   BaseAttack: 11.4
-  BaseDefense: 28.1
+  BaseDefense: 16.3
   BaseSpeed: 8.69
   head: {fileID: 804885741175365867, guid: b02cef663561b534aa88d8031ac1a329, type: 3}
   body: {fileID: -1592889190894577070, guid: b02cef663561b534aa88d8031ac1a329, type: 3}

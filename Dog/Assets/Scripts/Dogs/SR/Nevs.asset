@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: McCarthy
   dogRarity: 1
-  MaxHealth: 90
+  MaxHealth: 119.3
   BaseAttack: 30
   BaseDefense: 44
-  BaseSpeed: 15
+  BaseSpeed: 21.2
   head: {fileID: 1173484200314508044, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
   body: {fileID: 2479595957750744021, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}
   FLleg: {fileID: 8568648132218832579, guid: 1d2f180568719444da1f3154a9231ee5, type: 3}

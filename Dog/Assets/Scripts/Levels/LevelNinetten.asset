@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5817d5466ce497541ae6f6b703a57e42, type: 3}
   m_Name: LevelNinetten
   m_EditorClassIdentifier: 
-  enemies: []
-  background: {fileID: 0}
-  levelNumber: 0
-  nextLevel: {fileID: 0}
+  enemies:
+  - {fileID: 11400000, guid: 7ed5ec31e7bbb7d47910c4a0a07d3718, type: 2}
+  - {fileID: 11400000, guid: 4fddbdb891d20f940ada430eaa969494, type: 2}
+  - {fileID: 11400000, guid: 119b7e221e43123448aa983a257b8029, type: 2}
+  - {fileID: 11400000, guid: a35723424c922c643960d86ee2aa34eb, type: 2}
+  - {fileID: 11400000, guid: a35723424c922c643960d86ee2aa34eb, type: 2}
+  - {fileID: 11400000, guid: a35723424c922c643960d86ee2aa34eb, type: 2}
+  - {fileID: 11400000, guid: 67cc05b51dbec674bbac9a0249a07f24, type: 2}
+  background: {fileID: 21300000, guid: 08db75587297da24396de76d486db47b, type: 3}
+  levelNumber: 19
+  nextLevel: {fileID: 11400000, guid: 9ce7467f054f02e45a3f368ca06b1f18, type: 2}

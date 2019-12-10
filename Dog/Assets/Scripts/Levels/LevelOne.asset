@@ -19,5 +19,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4fddbdb891d20f940ada430eaa969494, type: 2}
   - {fileID: 11400000, guid: 4fddbdb891d20f940ada430eaa969494, type: 2}
   background: {fileID: 21300000, guid: 08db75587297da24396de76d486db47b, type: 3}
-  levelNumber: 0
+  levelNumber: 1
   nextLevel: {fileID: 11400000, guid: 8698afab2e7dedd4c80a9ec16cd1812f, type: 2}

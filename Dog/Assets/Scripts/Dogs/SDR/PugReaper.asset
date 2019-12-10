@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Floyd
   dogRarity: 2
-  MaxHealth: 100
-  BaseAttack: 30.9
-  BaseDefense: 27
-  BaseSpeed: 20
+  MaxHealth: 146
+  BaseAttack: 41.9
+  BaseDefense: 37.7
+  BaseSpeed: 31
   head: {fileID: 790762708131642277, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}
   body: {fileID: -6523331646920600897, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}
   FLleg: {fileID: 6276558328816259983, guid: 928fb811d67ebe64f8523bd91dbc059c, type: 3}

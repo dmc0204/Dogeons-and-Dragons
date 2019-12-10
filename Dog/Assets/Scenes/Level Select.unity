@@ -3443,7 +3443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doggies: {fileID: 11400000, guid: e89378142a6127f4397fb007c0b0026f, type: 2}
-  myPlayer: {fileID: 11400000, guid: c719cd5fc734cb74c865f12de817b0c2, type: 2}
+  myPlayer: {fileID: 11400000, guid: d87ad2059dbf8104f91e7f635a3d19c6, type: 2}
   sliders:
   - {fileID: 2100335021}
   - {fileID: 1855402360}
@@ -16161,7 +16161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db33666030d2194baec797a5d1d0e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCoolPlayer: {fileID: 11400000, guid: c719cd5fc734cb74c865f12de817b0c2, type: 2}
+  myCoolPlayer: {fileID: 11400000, guid: d87ad2059dbf8104f91e7f635a3d19c6, type: 2}
   texty: {fileID: 1402688771}
 --- !u!1 &1236580761
 GameObject:
@@ -17635,6 +17635,7 @@ GameObject:
   - component: {fileID: 1428561691}
   - component: {fileID: 1428561690}
   - component: {fileID: 1428561692}
+  - component: {fileID: 1428561693}
   m_Layer: 0
   m_Name: NavBar
   m_TagString: Untagged
@@ -17763,6 +17764,102 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1428561693
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428561686}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f3ba7cbc9aa22b148b97b935b66117c9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -24720,7 +24817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hackyWorkaround: {fileID: 11400000, guid: 0380704b768d75443b678ede51e420cf, type: 2}
-  myPlayer: {fileID: 11400000, guid: c719cd5fc734cb74c865f12de817b0c2, type: 2}
+  myPlayer: {fileID: 11400000, guid: d87ad2059dbf8104f91e7f635a3d19c6, type: 2}
   levelContainer: {fileID: 233125082}
   unknown: {fileID: 3311686938078076659, guid: 64f98745157652a4fb8333366e61f102, type: 3}
   levels:
@@ -24741,9 +24838,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 079a1ee5a83bfc64aa68e4560368cc4c, type: 2}
   - {fileID: 11400000, guid: c94d5826d03d3cd4aa024df1a4c84e31, type: 2}
   - {fileID: 11400000, guid: 5d9e9d8bbd0d5674b85edda6829521b3, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b1f5d43f6fa1ae54d94adc2d1f51d89c, type: 2}
+  - {fileID: 11400000, guid: cceed14992603d945962c43a2558566b, type: 2}
+  - {fileID: 11400000, guid: 1188d52dd1011d14a8d6f513eb574e64, type: 2}
   yourDogs:
   - {fileID: 198782007}
   - {fileID: 519713434}
@@ -25098,7 +25195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f018c140dbccad4e8a5346a0ddf77cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPlayer: {fileID: 11400000, guid: c719cd5fc734cb74c865f12de817b0c2, type: 2}
+  myPlayer: {fileID: 11400000, guid: d87ad2059dbf8104f91e7f635a3d19c6, type: 2}
   dogButtons:
   - {fileID: 1425184120}
   - {fileID: 527905195}

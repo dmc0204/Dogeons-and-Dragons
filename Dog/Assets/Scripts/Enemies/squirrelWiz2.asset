@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Squirrel Wizzy
   MaxHealth: 358
   BaseAttack: 1
-  BaseDefense: 38.3
+  BaseDefense: 7.5
   BaseSpeed: 25
   head: {fileID: -480789866984152725, guid: 8473f592acfdc40409e0bd2fe746ba16, type: 3}
   body: {fileID: -3530704675703015914, guid: 8473f592acfdc40409e0bd2fe746ba16, type: 3}

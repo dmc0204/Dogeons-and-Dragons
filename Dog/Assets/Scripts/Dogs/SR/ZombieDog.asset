@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Karpinski
   dogRarity: 1
-  MaxHealth: 87.9
+  MaxHealth: 117.4
   BaseAttack: 35
   BaseDefense: 30
-  BaseSpeed: 12
+  BaseSpeed: 18.7
   head: {fileID: 4818161020974682963, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}
   body: {fileID: 1976933797225851707, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}
   FLleg: {fileID: 2084268700893172107, guid: 813fa23b4b3616d4caeaba7562620268, type: 3}

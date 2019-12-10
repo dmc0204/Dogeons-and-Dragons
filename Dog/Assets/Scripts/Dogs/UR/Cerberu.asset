@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Hurd
   dogRarity: 3
-  MaxHealth: 144
+  MaxHealth: 154
   BaseAttack: 50
   BaseDefense: 35
-  BaseSpeed: 20
+  BaseSpeed: 26.4
   head: {fileID: 5050774830912783583, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
   body: {fileID: 4600473902918976563, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
   FLleg: {fileID: -3916353780073835212, guid: ff39686940df1a14fbcfc4b89d597793, type: 3}
