@@ -24,14 +24,15 @@ MonoBehaviour:
   FRleg: {fileID: -3819643073700884999, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
   BLleg: {fileID: 7451944558286593922, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
   BRleg: {fileID: -5445840450410547475, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
-  accesory: {fileID: 0}
+  accesory: {fileID: 1408055918070198197, guid: eb3b3d043dd304646bc53da5c935e9f6,
+    type: 3}
   headPosition: {x: 0.162, y: -0.264, z: 0}
   bodyPosition: {x: -0.174, y: -0.167, z: 0}
   FLlegPosition: {x: -0.132, y: -0.294, z: 0}
   FRlegPosition: {x: -0.21, y: -0.328, z: 0}
   BLlegPosition: {x: 0.03, y: -0.252, z: 0}
   BRlegPosition: {x: 0.006, y: -0.335, z: 0}
-  accesoryPosition: {x: 0, y: 0, z: 0}
+  accesoryPosition: {x: -0.182, y: -0.162, z: 0}
   animator: {fileID: 9100000, guid: 35c30d07400e36a49a468c2ef3818150, type: 2}
   specialEffects:
   - targets: 0

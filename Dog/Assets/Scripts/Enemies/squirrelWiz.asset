@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddbd52623426a646a6d3362b4aa1358, type: 3}
+  m_Name: squirrelWiz
+  m_EditorClassIdentifier: 
+  enemyName: Squirrel Wiz
+  MaxHealth: 25
+  BaseAttack: 6
+  BaseDefense: 20
+  BaseSpeed: 2
+  head: {fileID: -8810726313396481069, guid: b9911f86468340a47bed3a9aee408b44, type: 3}
+  body: {fileID: -3530704675703015914, guid: b9911f86468340a47bed3a9aee408b44, type: 3}
+  leftArm: {fileID: 0}
+  rightArm: {fileID: 0}
+  leftLeg: {fileID: 0}
+  rightLeg: {fileID: 0}
+  bodyPosition: {x: 0.5189999, y: 0.045, z: 0}
+  headPosition: {x: 0.369, y: 0.315, z: 0}
+  leftArmPosition: {x: 0, y: 0, z: 0}
+  rightArmPosition: {x: 0, y: 0, z: 0}
+  leftLegPosition: {x: 0, y: 0, z: 0}
+  rightLegPosition: {x: 0, y: 0, z: 0}
+  animator: {fileID: 9100000, guid: 5d535536aa353e2489478a0b8e566e7d, type: 2}
+  specialEffects: []
