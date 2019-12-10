@@ -6,16 +6,32 @@ using UnityEngine;
 public class SummonController : MonoBehaviour
 {
     public ArrayOfDogs dogs;
+    public PlayerConfig myPlayer;
+    public GameObject check;
 
     //public DogStatsConfig[][] Pool;
 
 
     [SerializeField] private DogStatsEvent summon;
 
+    public void checkThing()
+    {
+        if (myPlayer.currency >= 100)
+        {
+            check.SetActive(true);
+        }
+    }
+
+    public void playerSet(PlayerConfig newPlayer)
+    {
+        myPlayer = newPlayer;
+    }
+
 
 
     public void summonTime()
     {
+        myPlayer.changeBones(-100);
         int i = dogs.generateRandom();
         int j = dogs.generateRandom();
         DogStatsConfig toSummon = returnDog(i, j);

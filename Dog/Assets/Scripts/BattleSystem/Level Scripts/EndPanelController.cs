@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class EndPanelController : MonoBehaviour
 {
     public PlayerLevelContainer playerLevelContainer;
     public int bones;
-    GameObject victory, defeat;
+    public GameObject victory, defeat;
 
+    public TextMeshProUGUI boner;
     public void levelEnd(int i)
     {
         playerLevelContainer.myCoolPlayer.changeBones(bones);
+        boner.text = bones.ToString();
         if (i == 1)
         {
             victory.SetActive(true);
@@ -27,6 +30,10 @@ public class EndPanelController : MonoBehaviour
     public void getBones(int i)
     {
         bones = i;
+        if (bones < 0)
+        {
+            bones = 0;
+        }
     }
 
     public void back()

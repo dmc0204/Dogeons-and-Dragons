@@ -302,6 +302,11 @@ public class DogController : MonoBehaviour
         dying.Raise();
     }
 
+    public void stop()
+    {
+        deathExplodeRef = null;
+    }
+
     public void spawnChewableParticle(Color particleColor)
     {
         Debug.Log("spawning stat change particles");

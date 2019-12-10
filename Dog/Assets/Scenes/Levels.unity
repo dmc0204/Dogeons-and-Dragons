@@ -2324,7 +2324,7 @@ GameObject:
   - component: {fileID: 574003998}
   - component: {fileID: 574003997}
   m_Layer: 0
-  m_Name: defeatScreenEndButton
+  m_Name: defeatScreenRetryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2391,7 +2391,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 574003998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957530176}
+        m_MethodName: retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &574003998
@@ -3068,7 +3079,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 795474894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957530176}
+        m_MethodName: next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &795474894
@@ -3438,13 +3460,15 @@ GameObject:
   - component: {fileID: 957530175}
   - component: {fileID: 957530174}
   - component: {fileID: 957530176}
+  - component: {fileID: 957530178}
+  - component: {fileID: 957530177}
   m_Layer: 0
   m_Name: EndPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &957530173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3520,6 +3544,67 @@ MonoBehaviour:
   playerLevelContainer: {fileID: 11400000, guid: 0380704b768d75443b678ede51e420cf,
     type: 2}
   bones: 0
+  victory: {fileID: 2095800608}
+  defeat: {fileID: 1431227745}
+  boner: {fileID: 126961053}
+--- !u!114 &957530177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957530172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a47835af635e749996bcac9b3eb924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 0606c9b6bd562f54199a0b7430278126, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957530176}
+        m_MethodName: levelEnd
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &957530178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957530172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a47835af635e749996bcac9b3eb924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: bb1ea21b782a6aa47a15b06ac0a92379, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957530176}
+        m_MethodName: getBones
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1003640325
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,6 +4966,7 @@ GameObject:
   - component: {fileID: 1348563662}
   - component: {fileID: 1348563663}
   - component: {fileID: 1348563664}
+  - component: {fileID: 1348563665}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: MainCamera
@@ -4992,6 +5078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc85fb93637d36f4781852669315f775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageTaken: 0
+  damageDealt: 0
   currentHP: []
   brrrr: {fileID: 11400000, guid: 0380704b768d75443b678ede51e420cf, type: 2}
   newLevel: {fileID: 0}
@@ -5000,6 +5088,7 @@ MonoBehaviour:
   chews: []
   background: {fileID: 0}
   backgroundSpriteRenderer: {fileID: 0}
+  endpanel: {fileID: 957530172}
   dogbtn:
   - {fileID: 1079985098}
   - {fileID: 131889945}
@@ -5014,6 +5103,8 @@ MonoBehaviour:
   gettingDogStats: {fileID: 11400000, guid: d52869da730d3e549895f2d7a17f2208, type: 2}
   hpSending: {fileID: 11400000, guid: 907ad95171ae7e9458d68d12a299cf4f, type: 2}
   chewing: {fileID: 11400000, guid: 0fe52021207acef49b278a6738236082, type: 2}
+  bboning: {fileID: 11400000, guid: bb1ea21b782a6aa47a15b06ac0a92379, type: 2}
+  ending: {fileID: 11400000, guid: 0606c9b6bd562f54199a0b7430278126, type: 2}
 --- !u!114 &1348563661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5119,6 +5210,35 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1348563660}
         m_MethodName: damaging
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityFloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1348563665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348563656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56463ee6d26aeb04b9f9aa9f2c5d244d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 02a341c7b7f395b49b151a69c1889f1e, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1348563660}
+        m_MethodName: enemyDamaging
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5342,7 +5462,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1365351447}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957530176}
+        m_MethodName: back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1365351447
@@ -7376,6 +7507,7 @@ GameObject:
   - component: {fileID: 232058773364913545}
   - component: {fileID: 232058773364913547}
   - component: {fileID: 232058773364913548}
+  - component: {fileID: 232058773364913549}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Player
@@ -7574,6 +7706,35 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityStatChangeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &232058773364913549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232058773364913542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a47835af635e749996bcac9b3eb924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 0606c9b6bd562f54199a0b7430278126, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 232058773364913543}
+        m_MethodName: stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &232058773567326441
 Transform:
   m_ObjectHideFlags: 0
@@ -7731,6 +7892,7 @@ GameObject:
   - component: {fileID: 2106447773843753894}
   - component: {fileID: 2106447773843753896}
   - component: {fileID: 2106447773843753898}
+  - component: {fileID: 2106447773843753899}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -7846,6 +8008,8 @@ MonoBehaviour:
   enemyLeftLegTransform: {fileID: 852392805}
   enemyRightLegTransform: {fileID: 1853587983}
   enemyAnimator: {fileID: 2106447773843753892}
+  deathExplodeRef: {fileID: 2316677459080785269, guid: 2fc0869a65962954caf4581edaddfabc,
+    type: 3}
   chargeCount: 0
   dying: {fileID: 11400000, guid: b86d0a0fb321737488da0ab48369d57f, type: 2}
   enemyFetching: {fileID: 11400000, guid: 131070bc56888a446825ecf82ca291d5, type: 2}
@@ -7853,6 +8017,7 @@ MonoBehaviour:
   attacking: {fileID: 11400000, guid: ae52aa10a45e9304ca49e73212f60325, type: 2}
   healthUpdating: {fileID: 11400000, guid: 9df81b036b73f204d97d328ce1852aad, type: 2}
   basicAttackTiming: {fileID: 11400000, guid: 339c53b4e8128bc47a251bd62485b7fb, type: 2}
+  enemydamaging: {fileID: 11400000, guid: 02a341c7b7f395b49b151a69c1889f1e, type: 2}
   statChanging: {fileID: 11400000, guid: c5e75a682ecb3364d8c0d0f2416c9147, type: 2}
 --- !u!114 &2106447773843753898
 MonoBehaviour:
@@ -7882,6 +8047,35 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityStatChangeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &2106447773843753899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106447773843753893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a47835af635e749996bcac9b3eb924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 0606c9b6bd562f54199a0b7430278126, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2106447773843753897}
+        m_MethodName: stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &2106447773954179620
 GameObject:

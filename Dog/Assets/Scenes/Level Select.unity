@@ -596,8 +596,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000000059605, y: 338}
-  m_SizeDelta: {x: 404.86, y: 46.9}
+  m_AnchoredPosition: {x: 0.000000059605, y: 283.4}
+  m_SizeDelta: {x: 404.9, y: 166.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76049911
 MonoBehaviour:
@@ -2262,6 +2262,7 @@ GameObject:
   - component: {fileID: 219943496}
   - component: {fileID: 219943498}
   - component: {fileID: 219943499}
+  - component: {fileID: 219943500}
   m_Layer: 5
   m_Name: DogInfoPanel
   m_TagString: Untagged
@@ -2399,6 +2400,35 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityDogStatsEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &219943500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219943494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34293eda4d2d2984398cf28d223be0e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e3bc6adac4ab82641bddf0e314d9e92f, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 219943498}
+        m_MethodName: playerSet
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityPlayerEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &224080923
 GameObject:
@@ -11056,7 +11086,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24
+  m_fontSize: 18.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11102,7 +11132,7 @@ MonoBehaviour:
     spaceCount: 11
     wordCount: 12
     linkCount: 0
-    lineCount: 3
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -17085,7 +17115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000063425}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917752531
@@ -19561,7 +19591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0016708}
+  m_AnchoredPosition: {x: 0, y: 0.0016784668}
   m_SizeDelta: {x: 0, y: -20.161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &3785082782619081427
@@ -19922,6 +19952,7 @@ GameObject:
   - component: {fileID: 1386550924636122457}
   - component: {fileID: 3277602361064525708}
   - component: {fileID: 4402545581500902564}
+  - component: {fileID: 4402545581500902565}
   m_Layer: 5
   m_Name: SummonPanel
   m_TagString: Untagged
@@ -19942,7 +19973,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dogs: {fileID: 11400000, guid: e89378142a6127f4397fb007c0b0026f, type: 2}
+  myPlayer: {fileID: 0}
+  check: {fileID: 2085868563}
   summon: {fileID: 11400000, guid: e9a354a0876688a49b1bbadf4f06a138, type: 2}
+--- !u!114 &4402545581500902565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4402545581500902563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34293eda4d2d2984398cf28d223be0e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e3bc6adac4ab82641bddf0e314d9e92f, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4402545581500902564}
+        m_MethodName: playerSet
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityPlayerEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &5896554420333342922
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
-    private float damageTaken, damageDealt;
+    public float damageTaken, damageDealt;
     //TODO:funcs to track these, get passed numbers
 
     public float[] currentHP;
@@ -38,6 +38,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private DogStatsEvent gettingDogStats;
     [SerializeField] private FloatEvent hpSending;
     [SerializeField] private ChewableEvent chewing;
+    [SerializeField] private IntEvent bboning, ending;
 
     //initializes level values
     public void initialize()
@@ -127,19 +128,10 @@ public class LevelController : MonoBehaviour
 
     public void endLevel(int code)
     {
+        Time.timeScale = 0;
+        calcScore();
         endpanel.SetActive(true);
-        switch (code)
-        {
-
-            case 0:
-                //ends in game over, called when party dies
-                break;
-            case 1:
-                //ends in victory
-                break;
-            default:
-                break;
-        }
+        ending.Raise(code);
     }
 
     // // // // // // // // // // // // // //
@@ -207,9 +199,26 @@ public class LevelController : MonoBehaviour
     {
         damageDealt += damage;
     }
+
+
+    public void calcScore()
+    {
+        int bones = 0;
+        bones = (int)(damageDealt - damageTaken);
+        if (numDogsDied == 1)
+        {
+            bones = bones / 2;
+        }
+        else if (numDogsDied == 2)
+        {
+            bones = bones / 3;
+        }
+        bboning.Raise(bones);
+    }
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         initialize();
         initHP();
         initBtn();
