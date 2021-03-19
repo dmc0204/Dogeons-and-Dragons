@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891e0e584e5225e45b9aee1198f6535b, type: 3}
   m_Name: PLC
   m_EditorClassIdentifier: 
-  myCoolPlayer: {fileID: 11400000, guid: d87ad2059dbf8104f91e7f635a3d19c6, type: 2}
+  myCoolPlayer: {fileID: 11400000, guid: c719cd5fc734cb74c865f12de817b0c2, type: 2}
   myCoolLevel: {fileID: 11400000, guid: 52c6da3b1578b76479a5614454a068fd, type: 2}

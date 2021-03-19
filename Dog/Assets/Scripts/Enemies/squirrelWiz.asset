@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: squirrelWiz
   m_EditorClassIdentifier: 
   enemyName: Squirrel Wiz
-  MaxHealth: 412
-  BaseAttack: 9
+  MaxHealth: 25
+  BaseAttack: 6
   BaseDefense: 20
-  BaseSpeed: 14.82
+  BaseSpeed: 2
   head: {fileID: -8810726313396481069, guid: b9911f86468340a47bed3a9aee408b44, type: 3}
   body: {fileID: -3530704675703015914, guid: b9911f86468340a47bed3a9aee408b44, type: 3}
   leftArm: {fileID: 0}

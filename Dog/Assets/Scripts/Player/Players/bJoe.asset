@@ -13,26 +13,16 @@ MonoBehaviour:
   m_Name: bJoe
   m_EditorClassIdentifier: 
   yourTeam:
-  - {fileID: 11400000, guid: e08536023f995ea4e93c2af2ccaf0779, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   yourPack:
-  - {fileID: 11400000, guid: d7c068df6a231e34cb96ba5cd6460876, type: 2}
-  - {fileID: 11400000, guid: a671907b31107bf4b972d4f1641e40ea, type: 2}
-  - {fileID: 11400000, guid: 67494a10971f5d9439f123b60bd47f45, type: 2}
-  - {fileID: 11400000, guid: 5e968ad3c7ec9a144a8e7beaefd998a9, type: 2}
-  - {fileID: 11400000, guid: 399bcc4f9de9f1c42ae51cf18e157b44, type: 2}
-  inventory:
-    keys:
-    - {fileID: 11400000, guid: d7c068df6a231e34cb96ba5cd6460876, type: 2}
-    - {fileID: 11400000, guid: a671907b31107bf4b972d4f1641e40ea, type: 2}
-    - {fileID: 11400000, guid: 67494a10971f5d9439f123b60bd47f45, type: 2}
-    - {fileID: 11400000, guid: 5e968ad3c7ec9a144a8e7beaefd998a9, type: 2}
-    - {fileID: 11400000, guid: 399bcc4f9de9f1c42ae51cf18e157b44, type: 2}
-    values: 0000000000000000000000000000000000000000
-  inventoryInitialized: 1
-  yourDogs:
-  - {fileID: 11400000, guid: e08536023f995ea4e93c2af2ccaf0779, type: 2}
-  currency: 300
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  yourDogs: []
+  currency: 0
   currentLevel: 0
   currencyDisplaying: {fileID: 11400000, guid: 37a6ad2aa306e9541abd5f86183b7e76, type: 2}

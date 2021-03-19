@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogName: Sven
   dogRarity: 3
-  MaxHealth: 200
+  MaxHealth: 100
   BaseAttack: 32
   BaseDefense: 50
-  BaseSpeed: 15
+  BaseSpeed: 21
   head: {fileID: -8873258779957618712, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
   body: {fileID: 1408055918070198197, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}
   FLleg: {fileID: 2477645917287506438, guid: eb3b3d043dd304646bc53da5c935e9f6, type: 3}

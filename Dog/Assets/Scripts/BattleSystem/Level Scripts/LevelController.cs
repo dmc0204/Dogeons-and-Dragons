@@ -14,7 +14,7 @@ public class LevelController : MonoBehaviour
 
     private int currentDog;
 
-    private int numDogsDied, howManyDogs;
+    private int numDogsDied;
     private bool[] dead;
 
     //public int count;
@@ -55,14 +55,6 @@ public class LevelController : MonoBehaviour
         background = newLevel.background;
         backgroundSpriteRenderer = GetComponent<SpriteRenderer>();
         backgroundSpriteRenderer.sprite = background;
-        howManyDogs = 0;
-        for (int i = 0; i < dogs.Length; i++)
-        {
-            if (dogs[i] != null)
-            {
-                howManyDogs++;
-            }
-        }
     }
 
     public void initHP()
@@ -136,7 +128,6 @@ public class LevelController : MonoBehaviour
 
     public void endLevel(int code)
     {
-        Debug.Log("ending level with code " + code);
         Time.timeScale = 0;
         calcScore();
         endpanel.SetActive(true);
@@ -176,7 +167,7 @@ public class LevelController : MonoBehaviour
         dead[currentDog] = true;
         dogbtn[currentDog].color = new Color(0, 0, 0, 1);
         numDogsDied++;
-        if (numDogsDied < howManyDogs)
+        if (numDogsDied < dogs.Length)
         {
             num = (currentDog + 1) % dogs.Length;
             if (currentHP[num] < 0)
@@ -185,11 +176,7 @@ public class LevelController : MonoBehaviour
             }
             switchDogs(num);
         }
-        else
-        {
-            endLevel(0);
-        }
-
+        endLevel(0);
     }
 
     // // / // // // // // // // /// 
@@ -197,9 +184,8 @@ public class LevelController : MonoBehaviour
     public void chewableTime(int i)
     {
         chewBtn[i].color = new Color(0, 0, 0, 1);
-
-        chewing.Raise(chews[i]);
         playa.chewableGotUsed(i);
+        chewing.Raise(chews[i]);
     }
 
 

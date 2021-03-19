@@ -7,14 +7,11 @@ using UnityEngine.UI;
 public class EnemyStatsConfig : ScriptableObject
 {
     public string enemyName;
-    [Range(1, 1000)]
+    [Range(1, 200)]
     public float MaxHealth;
 
     [Range(1, 100)]
-    public float BaseAttack, BaseDefense;
-
-    [Range(5, 25)]
-    public float BaseSpeed;
+    public float BaseAttack, BaseDefense, BaseSpeed;
 
     public Sprite head, body, leftArm, rightArm, leftLeg, rightLeg;
 

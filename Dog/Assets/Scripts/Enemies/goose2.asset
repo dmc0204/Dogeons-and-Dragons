@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: goose2
   m_EditorClassIdentifier: 
   enemyName: Black Goose
-  MaxHealth: 309
-  BaseAttack: 24.6
-  BaseDefense: 35.4
-  BaseSpeed: 9.78
+  MaxHealth: 25
+  BaseAttack: 5
+  BaseDefense: 20
+  BaseSpeed: 2
   head: {fileID: -3169977200507450595, guid: 212d7e3692f42b040be996b09ddeaae5, type: 3}
   body: {fileID: -4377572990963801420, guid: 212d7e3692f42b040be996b09ddeaae5, type: 3}
   leftArm: {fileID: 0}

@@ -13,13 +13,7 @@ public class EndPanelController : MonoBehaviour
     public TextMeshProUGUI boner;
     public void levelEnd(int i)
     {
-        victory.SetActive(false);
-        defeat.SetActive(false);
         playerLevelContainer.myCoolPlayer.changeBones(bones);
-        if (playerLevelContainer.myCoolLevel.levelNumber > playerLevelContainer.myCoolPlayer.currentLevel)
-        {
-            playerLevelContainer.myCoolPlayer.currentLevel = playerLevelContainer.myCoolLevel.levelNumber;
-        }
         boner.text = bones.ToString();
         if (i == 1)
         {
@@ -33,9 +27,9 @@ public class EndPanelController : MonoBehaviour
         }
     }
 
-    public void getBones(int j)
+    public void getBones(int i)
     {
-        bones = j;
+        bones = i;
         if (bones < 0)
         {
             bones = 0;

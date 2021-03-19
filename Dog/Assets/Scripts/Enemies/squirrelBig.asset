@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: squirrelBig
   m_EditorClassIdentifier: 
   enemyName: Squirrel Big
-  MaxHealth: 852
-  BaseAttack: 34.9
-  BaseDefense: 34.9
-  BaseSpeed: 5
+  MaxHealth: 0
+  BaseAttack: 0
+  BaseDefense: 0
+  BaseSpeed: 0
   head: {fileID: 6880446469574687578, guid: 3104783704274b1499bc9b82f6a65534, type: 3}
   body: {fileID: -7813047112243082472, guid: 3104783704274b1499bc9b82f6a65534, type: 3}
   leftArm: {fileID: 0}
